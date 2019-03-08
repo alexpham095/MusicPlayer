@@ -1,8 +1,7 @@
-import java.awt.BorderLayout;
-import java.awt.FlowLayout;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+import java.awt.*;
+import java.awt.event.*;
 import java.io.File;
+import java.io.FileReader;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -10,16 +9,7 @@ import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
-
-import javax.swing.JButton;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
-import javax.swing.JScrollPane;
-import javax.swing.JTable;
+import javax.swing.*;
 import javax.swing.table.TableColumn;
 
 import com.mpatric.mp3agic.*;
@@ -36,7 +26,12 @@ public class MusicPlayerGUI extends JFrame{
     JScrollPane scrollPane;
     JButton play, stop, pause, skip, previous;
     JPanel buttonPanel, musicPanel;
+    JMenuBar menuBar;
+    JMenu menu;
+    JMenuItem open, newPlaylist, newFile;
     ButtonListener bl;
+    ActionListener al;
+    JFileChooser dialog = new JFileChooser(System.getProperty("user.dir"));
     int CurrentSelectedRow;
     Database data;
 
@@ -46,7 +41,39 @@ public class MusicPlayerGUI extends JFrame{
         buttonPanel = new JPanel();
         musicPanel = new JPanel();
         main.setLayout(new BorderLayout());
+        main.addWindowListener(new WindowAdapter(){
+            @Override
+            public void windowClosing(WindowEvent e)
+            {
+                super.windowClosing(e);
+                data.shutdown();
+            }
+        });
         bl=new ButtonListener();
+        menuBar = new JMenuBar();
+
+        menu = new JMenu("File");
+        menuBar.add(menu);
+
+        open = new JMenuItem("Open");
+        newPlaylist = new JMenuItem("New Playlist");
+        newFile = new JMenuItem("Add File To Library");
+
+        MouseListener mouseListener1 = new MouseAdapter() {
+            //this will print the selected row index when a user clicks the table
+            public void mousePressed(MouseEvent e) {
+                if(dialog.showOpenDialog(null) == JFileChooser.APPROVE_OPTION){
+                    data.insertSong(dialog.getSelectedFile().getAbsolutePath());
+                    //update table
+                }
+            }
+        };
+
+        open.addMouseListener(mouseListener1);
+        menu.add(open);
+        menu.add(newPlaylist);
+        menu.add(newFile);
+        menu.addSeparator();
 
         //table creation and mouseListener.
         table = new JTable(data.buildSongs());
@@ -86,6 +113,7 @@ public class MusicPlayerGUI extends JFrame{
         buttonPanel.add(play);
         buttonPanel.add(skip);
         main.setSize(700,200);
+        main.setJMenuBar(menuBar);
         main.add(scrollPane, BorderLayout.CENTER);
         main.add(buttonPanel, BorderLayout.SOUTH);
     }
@@ -94,6 +122,7 @@ public class MusicPlayerGUI extends JFrame{
         main.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         main.setVisible(true);
     }
+
 
     class ButtonListener implements ActionListener {
 
@@ -163,4 +192,6 @@ public class MusicPlayerGUI extends JFrame{
             }
         }
     }
+
+
 }

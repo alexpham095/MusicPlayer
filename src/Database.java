@@ -41,12 +41,12 @@ public class Database {
         }
     }
 
-    protected static void insertSong()
+    protected static void insertSong(String songPath)
     {
         try
         {
-            File file = new File("C:\\Users\\aPham\\Google Drive\\CSULB\\CECES 543\\MusicPlayer\\javaMP\\KDA_POPSTARS_INSTRUMENTAL_320kbps.mp3");
-            String songPath = file.getAbsolutePath();
+            //File file = new File("C:\\Users\\aPham\\Google Drive\\CSULB\\CECES 543\\MusicPlayer\\javaMP\\KDA_POPSTARS_INSTRUMENTAL_320kbps.mp3");
+            //songPath = file.getAbsolutePath();
 
 
             Mp3File mp3file = new Mp3File(songPath);
@@ -137,5 +137,22 @@ public class Database {
 
         }
 
+    }
+
+    protected static boolean hasTable(){
+        try {
+            DatabaseMetaData meta = conn.getMetaData();
+            ResultSet tables = meta.getTables(conn.getCatalog(), "APP", "SONGS", new String[] {"TABLE"});
+            stmt = conn.createStatement();
+            if (!tables.next()) {
+                return false;
+            } else {
+                return true;
+            }
+        }
+        catch( SQLException sqlExcept){
+            sqlExcept.printStackTrace();
+            return false;
+        }
     }
 }
