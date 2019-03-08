@@ -20,6 +20,7 @@ public class Database {
             Class.forName("org.apache.derby.jdbc.ClientDriver");
             //Get a connection
             conn = DriverManager.getConnection(dbURL);
+
         }
         catch (Exception except)
         {

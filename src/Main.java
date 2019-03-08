@@ -10,6 +10,7 @@ public class Main {
             data.buildTable();
         }
 
+
         MusicPlayerGUI music = new MusicPlayerGUI(data);
         music.go();
     }
