@@ -28,7 +28,7 @@ public class MusicPlayerGUI extends JFrame{
     JPanel buttonPanel, musicPanel;
     JMenuBar menuBar;
     JMenu menu;
-    JMenuItem open, newPlaylist, newFile;
+    JMenuItem add, open, newPlaylist, newFile;
     ButtonListener bl;
     ActionListener al;
     JFileChooser dialog = new JFileChooser(System.getProperty("user.dir"));
@@ -55,7 +55,7 @@ public class MusicPlayerGUI extends JFrame{
         menu = new JMenu("File");
         menuBar.add(menu);
 
-        open = new JMenuItem("Open");
+        add = new JMenuItem("Add Song");
         newPlaylist = new JMenuItem("New Playlist");
         newFile = new JMenuItem("Add File To Library");
 
@@ -69,14 +69,14 @@ public class MusicPlayerGUI extends JFrame{
             }
         };
 
-        open.addMouseListener(mouseListener1);
-        menu.add(open);
+        add.addMouseListener(mouseListener1);
+        menu.add(add);
         menu.add(newPlaylist);
         menu.add(newFile);
         menu.addSeparator();
 
         //table creation and mouseListener.
-        table = new JTable(data.buildSongs());
+        table = new JTable(data.buildSongsTable());
         MouseListener mouseListener = new MouseAdapter() {
             //this will print the selected row index when a user clicks the table
             public void mousePressed(MouseEvent e) {

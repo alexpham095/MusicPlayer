@@ -83,7 +83,7 @@ public class Database {
         }
     }
 
-    protected static DefaultTableModel buildSongs()
+    protected static DefaultTableModel buildSongsTable()
     {
         Vector<Vector<Object>> output = new Vector<Vector<Object>>();
         Vector<String> columnNames = new Vector<String>();
@@ -117,6 +117,22 @@ public class Database {
             sqlExcept.printStackTrace();
         }
         return new DefaultTableModel(output, columnNames);
+    }
+
+    protected static void deleteSong(String songPath)
+    {
+
+        try
+        {
+            stmt = conn.createStatement();
+            ResultSet results = stmt.executeQuery("DELETE FROM"+ tableName +  " WHERE " + "FILE=" + songPath);
+            results.deleteRow();
+            results.close();
+            stmt.close();
+        }
+        catch (SQLException sqlExcept) {
+            sqlExcept.printStackTrace();
+        }
     }
 
     protected static void shutdown()

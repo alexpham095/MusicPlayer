@@ -2,22 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c7cf20bc-a9aa-4f5c-9fca-4256dc55e87f" name="Default Changelist" comment="Got music to start playing and library to be available.">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MusicPlayer.iml" beforeDir="false" afterPath="$PROJECT_DIR$/MusicPlayer.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SongsDB/log/log.ctrl" beforeDir="false" afterPath="$PROJECT_DIR$/SongsDB/log/log.ctrl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SongsDB/log/log1.dat" beforeDir="false" afterPath="$PROJECT_DIR$/SongsDB/log/log1.dat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SongsDB/log/logmirror.ctrl" beforeDir="false" afterPath="$PROJECT_DIR$/SongsDB/log/logmirror.ctrl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SongsDB/seg0/c490.dat" beforeDir="false" afterPath="$PROJECT_DIR$/SongsDB/seg0/c490.dat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/derby.log" beforeDir="false" afterPath="$PROJECT_DIR$/derby.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/musicPlayer/musicPlayer.iml" beforeDir="false" afterPath="$PROJECT_DIR$/musicPlayer/musicPlayer.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MusicPlayer/Database.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MusicPlayer/Database.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MusicPlayer/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MusicPlayer/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MusicPlayer/MusicPlayerGUI$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MusicPlayer/MusicPlayerGUI$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MusicPlayer/MusicPlayerGUI$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MusicPlayer/MusicPlayerGUI$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MusicPlayer/MusicPlayerGUI$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MusicPlayer/MusicPlayerGUI$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MusicPlayer/MusicPlayerGUI$ButtonListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MusicPlayer/MusicPlayerGUI$ButtonListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MusicPlayer/MusicPlayerGUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MusicPlayer/MusicPlayerGUI.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Database.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MusicPlayerGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MusicPlayerGUI.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/musicPlayer/target/" />
@@ -35,8 +25,15 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/MusicPlayerGUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="10" selection-start-line="10" selection-end-line="10" />
+            <state relative-caret-position="256">
+              <caret line="131" column="21" lean-forward="true" selection-start-line="131" selection-start-column="21" selection-end-line="131" selection-end-column="21" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1768#2161#0" expanded="true" />
+                <element signature="e#2160#2161#0" expanded="true" />
+                <element signature="e#2452#2772#0" expanded="true" />
+                <element signature="e#2771#2772#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -44,8 +41,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Database.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="9" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
+            <state relative-caret-position="272">
+              <caret line="130" column="25" selection-start-line="130" selection-start-column="25" selection-end-line="130" selection-end-column="25" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -89,9 +86,9 @@
         <option value="$PROJECT_DIR$/.idea/libraries/basicplayer3_0.xml" />
         <option value="$PROJECT_DIR$/musicPlayer/pom.xml" />
         <option value="$PROJECT_DIR$/musicPlayer/musicPlayer.iml" />
-        <option value="$PROJECT_DIR$/src/MusicPlayerGUI.java" />
-        <option value="$PROJECT_DIR$/src/Database.java" />
         <option value="$PROJECT_DIR$/src/Main.java" />
+        <option value="$PROJECT_DIR$/src/Database.java" />
+        <option value="$PROJECT_DIR$/src/MusicPlayerGUI.java" />
       </list>
     </option>
   </component>
@@ -135,7 +132,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552084188018" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552085414237" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/jar files/vorbisspi1.0.2.jar!/" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
@@ -317,13 +314,6 @@
       </provider>
     </entry>
     <entry file="jar://C:/Program Files/Java/jdk-11.0.1/lib/src.zip!/java.base/java/lang/ClassLoader.java" />
-    <entry file="file://$PROJECT_DIR$/src/MusicPlayerGUI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
@@ -331,10 +321,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/MusicPlayerGUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="131" column="21" lean-forward="true" selection-start-line="131" selection-start-column="21" selection-end-line="131" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1768#2161#0" expanded="true" />
+            <element signature="e#2160#2161#0" expanded="true" />
+            <element signature="e#2452#2772#0" expanded="true" />
+            <element signature="e#2771#2772#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Database.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="9" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
+        <state relative-caret-position="272">
+          <caret line="130" column="25" selection-start-line="130" selection-start-column="25" selection-end-line="130" selection-end-column="25" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
