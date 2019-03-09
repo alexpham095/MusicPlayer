@@ -28,12 +28,14 @@ public class Database {
         }
     }
 
+    //Basically creating the table for the first time.
     protected static void buildTable()
     {
         try
         {
             stmt = conn.createStatement();
-            stmt.execute("CREATE TABLE " + tableName + " (File CHAR(150), " + "Title CHAR(150), " + "Artist CHAR(100) " + ")");
+            stmt.execute("CREATE TABLE " + tableName + " (File CHAR(150), " + "Title CHAR(150), " + "Artist CHAR(150), " + "Album CHAR(150), "
+                    + "\"Year\" CHAR(150), " + "Comment CHAR(150), " + "Genre CHAR(150) " + ")");
             stmt.close();
         }
         catch (SQLException sqlExcept)
@@ -42,34 +44,62 @@ public class Database {
         }
     }
 
-    protected static void insertSong(String songPath)
+    protected static boolean insertSong(String songPath)
     {
         try
         {
-            //File file = new File("C:\\Users\\aPham\\Google Drive\\CSULB\\CECES 543\\MusicPlayer\\javaMP\\KDA_POPSTARS_INSTRUMENTAL_320kbps.mp3");
-            //songPath = file.getAbsolutePath();
-
-
+            //mp3 file information is being assigned depending on which type of tag it has.
             Mp3File mp3file = new Mp3File(songPath);
             String title = " ";
             String artist = " ";
+            String album = " ";
+            String comment = " ";
+            String genre = " ";
+            String year = " ";
             if(mp3file.hasId3v1Tag()){
                 ID3v1 id3v1Tag = mp3file.getId3v1Tag();
                 title = id3v1Tag.getTitle();
                 artist = id3v1Tag.getArtist();
+                album = id3v1Tag.getAlbum();
+                comment = id3v1Tag.getComment();
+                genre = id3v1Tag.getGenreDescription();
+                year = id3v1Tag.getYear();
             }
             if(mp3file.hasId3v2Tag()){
                 ID3v2 id3v2Tag = mp3file.getId3v2Tag();
                 title = id3v2Tag.getTitle();
                 artist = id3v2Tag.getArtist();
+                album = id3v2Tag.getAlbum();
+                comment = id3v2Tag.getComment();
+                genre = id3v2Tag.getGenreDescription();
+                year = id3v2Tag.getYear();
             }
 
-            PreparedStatement statement = conn.prepareStatement("INSERT INTO " + tableName + " values (?,?,?)");
-            statement.setString(1,songPath);
-            statement.setString(2,title);
-            statement.setString(3,artist);
-            statement.executeUpdate();
+            //check if the song exists already
+            String queryCheck = "SELECT count(*) from SONGS WHERE file = ?";
+            PreparedStatement statement = conn.prepareStatement(queryCheck);
+            statement.setString(1, songPath);
+            final ResultSet resultSet = statement.executeQuery();
+            int count = 0;
+            if(resultSet.next()) {
+                count = resultSet.getInt(1);
+            }
 
+            //insert the song
+            if(count == 0) {
+                statement = conn.prepareStatement("INSERT INTO " + tableName + " values (?,?,?,?,?,?,?)");
+                statement.setString(1, songPath);
+                statement.setString(2, title);
+                statement.setString(3, artist);
+                statement.setString(4, album);
+                statement.setString(5, year);
+                statement.setString(6, comment);
+                statement.setString(7, genre);
+                statement.executeUpdate();
+                return true;
+            } else {
+                return false;
+            }
         }
         catch (SQLException sqlExcept)
         {
@@ -81,8 +111,10 @@ public class Database {
         } catch (InvalidDataException e) {
             e.printStackTrace();
         }
+        return false;
     }
 
+    //This is a method used for the GUI. This is relaying the information back for the table to use.
     protected static DefaultTableModel buildSongsTable()
     {
         Vector<Vector<Object>> output = new Vector<Vector<Object>>();
@@ -98,8 +130,6 @@ public class Database {
                 //print Column Names
                 columnNames.add(rsmd.getColumnLabel(i));
             }
-
-            System.out.println("\n-------------------------------------------------");
 
             while(results.next())
             {
@@ -119,16 +149,15 @@ public class Database {
         return new DefaultTableModel(output, columnNames);
     }
 
+    //delete a song by removing it from the database
     protected static void deleteSong(String songPath)
     {
 
         try
         {
-            stmt = conn.createStatement();
-            ResultSet results = stmt.executeQuery("DELETE FROM"+ tableName +  " WHERE " + "FILE=" + songPath);
-            results.deleteRow();
-            results.close();
-            stmt.close();
+            PreparedStatement st = conn.prepareStatement("DELETE FROM " + tableName + " WHERE file = ?");
+            st.setString(1,songPath);
+            st.executeUpdate();
         }
         catch (SQLException sqlExcept) {
             sqlExcept.printStackTrace();

@@ -1,11 +1,7 @@
 import java.awt.*;
 import java.awt.event.*;
 import java.io.File;
-import java.io.FileReader;
 import java.io.IOException;
-import java.net.MalformedURLException;
-import java.net.URL;
-import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -28,7 +24,7 @@ public class MusicPlayerGUI extends JFrame{
     JPanel buttonPanel, musicPanel;
     JMenuBar menuBar;
     JMenu menu;
-    JMenuItem add, open, newPlaylist, newFile;
+    JMenuItem newFile, deleteFile, open, newPlaylist, close;
     ButtonListener bl;
     ActionListener al;
     JFileChooser dialog = new JFileChooser(System.getProperty("user.dir"));
@@ -55,24 +51,46 @@ public class MusicPlayerGUI extends JFrame{
         menu = new JMenu("File");
         menuBar.add(menu);
 
-        add = new JMenuItem("Add Song");
+        newFile = new JMenuItem("Add Song");
+        deleteFile = new JMenuItem("Delete Song");
         newPlaylist = new JMenuItem("New Playlist");
-        newFile = new JMenuItem("Add File To Library");
+        open = new JMenuItem("Open");
+        close = new JMenuItem("Close");
 
-        MouseListener mouseListener1 = new MouseAdapter() {
-            //this will print the selected row index when a user clicks the table
-            public void mousePressed(MouseEvent e) {
+        //listener for adding a file
+        newFile.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
                 if(dialog.showOpenDialog(null) == JFileChooser.APPROVE_OPTION){
-                    data.insertSong(dialog.getSelectedFile().getAbsolutePath());
-                    //update table
+                    if(data.insertSong(dialog.getSelectedFile().getAbsolutePath()) == false){
+                        JOptionPane.showMessageDialog(musicPanel, "Song already exists", "Error", JOptionPane.ERROR_MESSAGE);
+                    }
+                    table.setModel(data.buildSongsTable()); //refresh table
                 }
             }
-        };
 
-        add.addMouseListener(mouseListener1);
-        menu.add(add);
+        });
+
+        //listener for deleting a file
+        deleteFile.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                dialog.setDialogTitle("Delete Song");
+                dialog.setApproveButtonText("Delete");
+                if(dialog.showOpenDialog(null) == JFileChooser.APPROVE_OPTION){
+                    data.deleteSong(dialog.getSelectedFile().getAbsolutePath());
+                    table.setModel(data.buildSongsTable()); //refresh table
+                }
+            }
+
+        });
+
+        //add to the menu
+        menu.add(open);
         menu.add(newPlaylist);
         menu.add(newFile);
+        menu.add(deleteFile);
+        menu.add(close);
         menu.addSeparator();
 
         //table creation and mouseListener.
@@ -95,27 +113,33 @@ public class MusicPlayerGUI extends JFrame{
         play = new JButton(">");
         play.addActionListener(bl);
 
+        //stop button
         stop = new JButton("[]");
         stop.addActionListener(bl);
 
+        //pause button
         pause = new JButton("=");
         pause.addActionListener(bl);
 
+        //skip button
         skip = new JButton(">|");
         skip.addActionListener(bl);
 
+        //back button
         previous = new JButton("|<");
         previous.addActionListener(bl);
 
+        //add button panel and menubar to the main panel.
         buttonPanel.add(previous);
         buttonPanel.add(pause);
         buttonPanel.add(stop);
         buttonPanel.add(play);
         buttonPanel.add(skip);
-        main.setSize(700,200);
+        main.setSize(1200,900);
         main.setJMenuBar(menuBar);
         main.add(scrollPane, BorderLayout.CENTER);
         main.add(buttonPanel, BorderLayout.SOUTH);
+        main.setLocationRelativeTo(null);
     }
 
     public void go(){
@@ -123,9 +147,8 @@ public class MusicPlayerGUI extends JFrame{
         main.setVisible(true);
     }
 
-
+    //Button listener instructions
     class ButtonListener implements ActionListener {
-
         @Override
         public void actionPerformed(ActionEvent e) {
             if(">".equals(e.getActionCommand())) {
