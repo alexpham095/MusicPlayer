@@ -11,6 +11,7 @@ import java.util.List;
 
 import javax.swing.*;
 import javax.swing.table.TableColumn;
+import javax.swing.JPopupMenu;
 
 import com.mpatric.mp3agic.*;
 import javazoom.jlgui.basicplayer.BasicPlayer;
@@ -28,6 +29,7 @@ public class MusicPlayerGUI extends JFrame{
     JPanel buttonPanel, musicPanel;
     JMenuBar menuBar;
     JMenu menu;
+    JPopupMenu popupMenu;
     JMenuItem newFile, deleteFile, open, newPlaylist, close;
     ButtonListener bl;
     ActionListener al;
@@ -139,6 +141,26 @@ public class MusicPlayerGUI extends JFrame{
         menu.add(deleteFile);
         menu.add(close);
         menu.addSeparator();
+
+        // constructs the popup menu
+        popupMenu = new JPopupMenu();
+        newFile = new JMenuItem("Add New Song");
+        deleteFile = new JMenuItem("Remove Song");
+
+
+        newFile.addActionListener(this);
+        deleteFile.addActionListener(this);
+
+
+        popupMenu.add(newFile);
+        popupMenu.add(deleteFile);
+
+
+        // sets the popup menu for the table
+        table.setComponentPopupMenu(popupMenu);
+
+        table.addMouseListener(new TableMouseListener(table));
+
 
         //table creation and mouseListener.
         table = new JTable(data.buildSongsTable());

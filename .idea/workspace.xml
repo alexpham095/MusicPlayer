@@ -3,22 +3,22 @@
   <component name="ChangeListManager">
     <list default="true" id="c7cf20bc-a9aa-4f5c-9fca-4256dc55e87f" name="Default Changelist" comment="Got music to start playing and library to be available.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SongsDB/log/log.ctrl" beforeDir="false" afterPath="$PROJECT_DIR$/SongsDB/log/log.ctrl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SongsDB/log/log1.dat" beforeDir="false" afterPath="$PROJECT_DIR$/SongsDB/log/log1.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SongsDB/log/logmirror.ctrl" beforeDir="false" afterPath="$PROJECT_DIR$/SongsDB/log/logmirror.ctrl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/derby.log" beforeDir="false" afterPath="$PROJECT_DIR$/derby.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MusicPlayer.iml" beforeDir="false" afterPath="$PROJECT_DIR$/MusicPlayer.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/MusicPlayer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MusicPlayer/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MusicPlayer/Database.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MusicPlayer/Database.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MusicPlayer/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MusicPlayer/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MusicPlayer/MusicPlayerGUI$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MusicPlayer/MusicPlayerGUI$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MusicPlayer/MusicPlayerGUI$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MusicPlayer/MusicPlayerGUI$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MusicPlayer/MusicPlayerGUI$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MusicPlayer/MusicPlayerGUI$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MusicPlayer/MusicPlayerGUI$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MusicPlayer/MusicPlayerGUI$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MusicPlayer/MusicPlayerGUI$ButtonListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MusicPlayer/MusicPlayerGUI$ButtonListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MusicPlayer/MusicPlayerGUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MusicPlayer/MusicPlayerGUI.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MusicPlayer/SongsDB/log/log.ctrl" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MusicPlayer/SongsDB/log/log.ctrl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MusicPlayer/Database.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MusicPlayer/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MusicPlayer/MusicPlayer.iml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MusicPlayer/MusicPlayer.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MusicPlayer/MusicPlayerGUI$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MusicPlayer/MusicPlayerGUI$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MusicPlayer/MusicPlayerGUI$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MusicPlayer/MusicPlayerGUI$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MusicPlayer/MusicPlayerGUI$5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MusicPlayer/MusicPlayerGUI$6.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MusicPlayer/MusicPlayerGUI$ButtonListener.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MusicPlayer/MusicPlayerGUI$DragAndDrop.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MusicPlayer/MusicPlayerGUI.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MusicPlayer/SongsDB/db.lck" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MusicPlayer/SongsDB/db.lck" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/MusicPlayer/SongsDB/log/log1.dat" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MusicPlayer/SongsDB/log/log1.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MusicPlayer/SongsDB/log/logmirror.ctrl" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MusicPlayer/SongsDB/log/logmirror.ctrl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/MusicPlayer/derby.log" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MusicPlayer/derby.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MusicPlayerGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MusicPlayerGUI.java" afterDir="false" />
     </list>
@@ -35,35 +35,37 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Main.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="30" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/MusicPlayerGUI.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="137">
-              <caret line="40" column="57" selection-start-line="40" selection-start-column="57" selection-end-line="40" selection-end-column="57" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#4709#4710#0" expanded="true" />
-                <element signature="e#4755#4756#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Database.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
+            <state relative-caret-position="3060">
+              <caret line="186" selection-start-line="186" selection-end-line="186" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="12" column="19" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/MusicPlayerGUI.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="483">
+              <caret line="163" column="8" selection-start-line="163" selection-start-column="8" selection-end-line="163" selection-end-column="8" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#1465#1671#0" expanded="true" />
+                <element signature="e#1670#1671#0" expanded="true" />
+                <element signature="e#4709#4710#0" expanded="true" />
+                <element signature="e#4755#4756#0" expanded="true" />
+                <element signature="e#5098#5418#0" expanded="true" />
+                <element signature="e#5417#5418#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -119,11 +121,11 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="715" />
-    <option name="y" value="22" />
-    <option name="width" value="1135" />
-    <option name="height" value="1009" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -131,15 +133,45 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Project" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Project" type="462c0819:PsiDirectoryNode" />
+              <item name=".idea" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Project" type="462c0819:PsiDirectoryNode" />
+              <item name="jar files" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Project" type="462c0819:PsiDirectoryNode" />
+              <item name="javaMP" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Project" type="462c0819:PsiDirectoryNode" />
+              <item name="musicPlayer" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="PackagesPane" />
       <pane id="Scope" />
-      <pane id="ProjectPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552351329306" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/jar files/vorbisspi1.0.2.jar!/" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="settings.github" />
@@ -229,9 +261,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="572" y="18" width="908" height="807" extended-state="0" />
+    <frame x="-8" y="32" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49919224" visible="true" weight="0.12853773" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49919224" visible="true" weight="0.2782516" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -246,9 +279,9 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.4986577" weight="0.3286119" />
       <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49731544" weight="0.3286119" />
-      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5271226" side_tool="true" visible="true" weight="0.34074074" />
+      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5165245" side_tool="true" visible="true" weight="0.33152762" />
       <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.49731544" weight="0.3286119" />
-      <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.4854369" weight="0.3323782" />
+      <window_info active="true" anchor="bottom" id="Messages" order="10" sideWeight="0.48347548" visible="true" weight="0.33152762" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Maven" order="1" weight="0.3295302" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -312,29 +345,31 @@
     <entry file="jar://C:/Program Files/Java/jdk-11.0.1/lib/src.zip!/java.base/java/lang/ClassLoader.java" />
     <entry file="file://$PROJECT_DIR$/src/Database.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="3060">
+          <caret line="186" selection-start-line="186" selection-end-line="186" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/MusicPlayerGUI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="137">
-          <caret line="40" column="57" selection-start-line="40" selection-start-column="57" selection-end-line="40" selection-end-column="57" />
+        <state relative-caret-position="483">
+          <caret line="163" column="8" selection-start-line="163" selection-start-column="8" selection-end-line="163" selection-end-column="8" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#1465#1671#0" expanded="true" />
+            <element signature="e#1670#1671#0" expanded="true" />
             <element signature="e#4709#4710#0" expanded="true" />
             <element signature="e#4755#4756#0" expanded="true" />
+            <element signature="e#5098#5418#0" expanded="true" />
+            <element signature="e#5417#5418#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="30" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
+        <state relative-caret-position="204">
+          <caret line="12" column="19" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="19" />
         </state>
       </provider>
     </entry>
@@ -395,7 +430,6 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
-                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>
