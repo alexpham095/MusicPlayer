@@ -1,9 +1,13 @@
 import java.awt.*;
+import java.awt.datatransfer.DataFlavor;
+import java.awt.datatransfer.Transferable;
+import java.awt.dnd.*;
 import java.awt.event.*;
 import java.io.File;
 import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import java.util.List;
 
 import javax.swing.*;
 import javax.swing.table.TableColumn;
@@ -29,7 +33,12 @@ public class MusicPlayerGUI extends JFrame{
     ActionListener al;
     JFileChooser dialog = new JFileChooser(System.getProperty("user.dir"));
     int CurrentSelectedRow;
+    Mp3File songNotInLibrary;
     Database data;
+
+    //Connecting the DragAndDrop class to the main JFrame
+    DragAndDrop dndObj = new DragAndDrop();
+    DropTarget targetOfDND = new DropTarget(main,dndObj);
 
     public MusicPlayerGUI(Database database) {
         data = database;
@@ -57,6 +66,35 @@ public class MusicPlayerGUI extends JFrame{
         open = new JMenuItem("Open");
         close = new JMenuItem("Close");
 
+
+        //listener for opening a song to play without adding it to the library
+        open.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                dialog.setDialogTitle("Play a song");
+                dialog.setApproveButtonText("Play");
+                if(dialog.showOpenDialog(null) == JFileChooser.APPROVE_OPTION){
+                    try {
+                        songNotInLibrary = new Mp3File(dialog.getSelectedFile().getAbsolutePath());
+                        player.open(new File(dialog.getSelectedFile().getAbsolutePath()));
+                        player.play();
+                        System.out.println(player.getStatus());
+                    } catch (BasicPlayerException ex) {
+                        System.out.println("BasicPlayer exception");
+                        Logger.getLogger(MusicPlayerGUI.class.getName()).log(Level.SEVERE, null, ex);
+                    } catch (UnsupportedTagException e1) {
+                        e1.printStackTrace();
+                    } catch (IOException e1) {
+                        e1.printStackTrace();
+                    } catch (InvalidDataException e1) {
+                        e1.printStackTrace();
+                    }
+                }
+            }
+
+        });
+
+
         //listener for adding a file
         newFile.addActionListener(new ActionListener() {
             @Override
@@ -81,6 +119,15 @@ public class MusicPlayerGUI extends JFrame{
                     data.deleteSong(dialog.getSelectedFile().getAbsolutePath());
                     table.setModel(data.buildSongsTable()); //refresh table
                 }
+            }
+
+        });
+
+        //listener for closing the player
+        close.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                main.dispose();
             }
 
         });
@@ -212,6 +259,65 @@ public class MusicPlayerGUI extends JFrame{
                     System.out.println("BasicPlayer exception");
                     Logger.getLogger(MusicPlayerGUI.class.getName()).log(Level.SEVERE, null, ex);
                 }
+            }
+        }
+    }
+
+    //Creating a class for Drag and Drop
+
+    public class DragAndDrop implements DropTargetListener {
+
+        @Override
+        public void dragEnter(DropTargetDragEvent dtde) {
+
+        }
+
+        @Override
+        public void dragOver(DropTargetDragEvent dtde) {
+
+        }
+
+        @Override
+        public void dropActionChanged(DropTargetDragEvent dtde) {
+
+        }
+
+        @Override
+        public void dragExit(DropTargetEvent dte) {
+
+        }
+
+        //This method will get the dropped files
+        @Override
+        public void drop(DropTargetDropEvent fileDropped)
+        {
+            fileDropped.acceptDrop(DnDConstants.ACTION_COPY);
+
+            Transferable transfer = fileDropped.getTransferable();
+
+            DataFlavor[] dataFlavor = transfer.getTransferDataFlavors();
+
+            for(DataFlavor flavor:dataFlavor)
+            {
+                try
+                {
+                    if(flavor.isFlavorJavaFileListType())
+                    {
+                        List<File> files = (List<File>) transfer.getTransferData(flavor);
+
+                        for(File file : files)
+                        {
+                            if(data.insertSong(file.getAbsolutePath()) == false){
+                                JOptionPane.showMessageDialog(musicPanel, "Song already exists", "Error", JOptionPane.ERROR_MESSAGE);
+                            }
+                            table.setModel(data.buildSongsTable()); //refresh table
+                        }
+                    }
+                }catch(Exception problem)
+                {
+                    JOptionPane.showMessageDialog(null, problem);
+                }
+
             }
         }
     }
