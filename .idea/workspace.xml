@@ -1,26 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c7cf20bc-a9aa-4f5c-9fca-4256dc55e87f" name="Default Changelist" comment="Got music to start playing and library to be available.">
+    <list default="true" id="c7cf20bc-a9aa-4f5c-9fca-4256dc55e87f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MusicPlayer.iml" beforeDir="false" afterPath="$PROJECT_DIR$/MusicPlayer.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/MusicPlayer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MusicPlayer/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MusicPlayer/Database.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MusicPlayer/Main.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/MusicPlayer/MusicPlayer.iml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MusicPlayer/MusicPlayer.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MusicPlayer/MusicPlayerGUI$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MusicPlayer/MusicPlayerGUI$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MusicPlayer/MusicPlayerGUI$3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MusicPlayer/MusicPlayerGUI$4.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MusicPlayer/MusicPlayerGUI$5.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MusicPlayer/MusicPlayerGUI$6.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MusicPlayer/MusicPlayerGUI$ButtonListener.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MusicPlayer/MusicPlayerGUI$DragAndDrop.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MusicPlayer/MusicPlayerGUI.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/MusicPlayer/SongsDB/db.lck" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MusicPlayer/SongsDB/db.lck" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/MusicPlayer/SongsDB/log/log1.dat" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MusicPlayer/SongsDB/log/log1.dat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/MusicPlayer/derby.log" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MusicPlayer/derby.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MusicPlayerGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MusicPlayerGUI.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/musicPlayer/target/" />
@@ -57,7 +44,7 @@
         <entry file="file://$PROJECT_DIR$/src/MusicPlayerGUI.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="483">
-              <caret line="163" column="8" selection-start-line="163" selection-start-column="8" selection-end-line="163" selection-end-column="8" />
+              <caret line="163" selection-start-line="163" selection-end-line="163" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1465#1671#0" expanded="true" />
@@ -169,7 +156,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552351329306" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552440055680" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/jar files/vorbisspi1.0.2.jar!/" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
@@ -248,7 +235,14 @@
       <option name="project" value="LOCAL" />
       <updated>1552075803737</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Implemented the popup menu for music player">
+      <created>1552364979808</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1552364979808</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TodoView">
@@ -262,7 +256,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="32" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49919224" visible="true" weight="0.2782516" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -294,7 +287,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Got music to start playing and library to be available." />
-    <option name="LAST_COMMIT_MESSAGE" value="Got music to start playing and library to be available." />
+    <MESSAGE value="Implemented the popup menu for music player" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implemented the popup menu for music player" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -353,7 +347,7 @@
     <entry file="file://$PROJECT_DIR$/src/MusicPlayerGUI.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="483">
-          <caret line="163" column="8" selection-start-line="163" selection-start-column="8" selection-end-line="163" selection-end-column="8" />
+          <caret line="163" selection-start-line="163" selection-end-line="163" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1465#1671#0" expanded="true" />
