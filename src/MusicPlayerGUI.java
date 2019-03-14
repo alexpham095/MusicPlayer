@@ -31,6 +31,7 @@ public class MusicPlayerGUI extends JFrame{
     JMenu menu;
     JPopupMenu popupMenu;
     JMenuItem newFile, deleteFile, open, newPlaylist, close;
+    JMenuItem newFilepop, deleteFilepop;
     ButtonListener bl;
     ActionListener al;
     JFileChooser dialog = new JFileChooser(System.getProperty("user.dir"));
@@ -144,23 +145,56 @@ public class MusicPlayerGUI extends JFrame{
 
         // constructs the popup menu
         popupMenu = new JPopupMenu();
-        newFile = new JMenuItem("Add New Song");
-        deleteFile = new JMenuItem("Remove Song");
+        newFilepop = new JMenuItem("Add New Song");
+        deleteFilepop = new JMenuItem("Remove Song");
 
 
-        newFile.addActionListener(this);
-        deleteFile.addActionListener(this);
+        //listener for adding a file in popup
+        newFilepop.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if(dialog.showOpenDialog(null) == JFileChooser.APPROVE_OPTION){
+                    if(data.insertSong(dialog.getSelectedFile().getAbsolutePath()) == false){
+                        JOptionPane.showMessageDialog(musicPanel, "Song already exists", "Error", JOptionPane.ERROR_MESSAGE);
+                    }
+                    table.setModel(data.buildSongsTable()); //refresh table
+                }
+            }
 
+        });
 
-        popupMenu.add(newFile);
-        popupMenu.add(deleteFile);
+        //listener for deleting a file in popup
+        deleteFilepop.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                dialog.setDialogTitle("Delete Song");
+                dialog.setApproveButtonText("Delete");
+                if(dialog.showOpenDialog(null) == JFileChooser.APPROVE_OPTION){
+                    data.deleteSong(dialog.getSelectedFile().getAbsolutePath());
+                    table.setModel(data.buildSongsTable()); //refresh table
+                }
+            }
+
+        });
+
+        popupMenu.add(newFilepop);
+        popupMenu.add(deleteFilepop);
 
 
         // sets the popup menu for the table
         table.setComponentPopupMenu(popupMenu);
 
-        table.addMouseListener(new TableMouseListener(table));
+        MouseListener mouseListenerpop = new MouseAdapter() {
+            //this will print the selected row index when a user clicks the table
+            public void mousePressed(MouseEvent e) {
+                CurrentSelectedRow = table.getSelectedRow();
+                songPath = (table.getValueAt(CurrentSelectedRow,0)).toString();
+            }
+        };
 
+        table.addMouseListener(mouseListenerpop);
+
+        ////////////end popup//////////////////////
 
         //table creation and mouseListener.
         table = new JTable(data.buildSongsTable());
