@@ -12,6 +12,7 @@ import java.util.List;
 import javax.swing.*;
 import javax.swing.event.PopupMenuEvent;
 import javax.swing.event.PopupMenuListener;
+import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableColumn;
 import javax.swing.JPopupMenu;
 
@@ -135,7 +136,7 @@ public class MusicPlayerGUI extends JFrame{
 
         //add to the menu
         menu.add(open);
-        menu.add(newPlaylist);
+        //menu.add(newPlaylist);
         menu.add(newFile);
         menu.add(deleteFile);
         menu.add(close);
@@ -193,7 +194,9 @@ public class MusicPlayerGUI extends JFrame{
         ////////////end popup//////////////////////
 
         //table creation and mouseListener.
+
         table = new JTable(data.buildSongsTable());
+        table.setDefaultEditor(Object.class, null);
         MouseListener mouseListener = new MouseAdapter() {
             //this will print the selected row index when a user clicks the table
             public void mousePressed(MouseEvent e) {
@@ -209,6 +212,7 @@ public class MusicPlayerGUI extends JFrame{
         column.setPreferredWidth(250);
         column = table.getColumnModel().getColumn(1);
         column.setPreferredWidth(20);
+
         scrollPane = new JScrollPane(table);
 
         //play button
@@ -237,7 +241,7 @@ public class MusicPlayerGUI extends JFrame{
         buttonPanel.add(stop);
         buttonPanel.add(play);
         buttonPanel.add(skip);
-        main.setSize(1200,900);
+        main.setSize(1200,700);
         main.setJMenuBar(menuBar);
         main.add(scrollPane, BorderLayout.CENTER);
         main.add(buttonPanel, BorderLayout.SOUTH);
@@ -255,10 +259,14 @@ public class MusicPlayerGUI extends JFrame{
         public void actionPerformed(ActionEvent e) {
             if(">".equals(e.getActionCommand())) {
                 try {
-                    Mp3File mp3file = new Mp3File(songPath);
-                    player.open(new File(songPath));
-                    player.play();
-                    System.out.println(player.getStatus());
+                   // if(player.getStatus() == 1){
+                      //  player.resume();
+                    //} else {
+                        Mp3File mp3file = new Mp3File(songPath);
+                        player.open(new File(songPath));
+                        player.play();
+                        System.out.println(player.getStatus());
+                   // }
                 } catch (BasicPlayerException ex) {
                     System.out.println("BasicPlayer exception");
                     Logger.getLogger(MusicPlayerGUI.class.getName()).log(Level.SEVERE, null, ex);
@@ -294,10 +302,20 @@ public class MusicPlayerGUI extends JFrame{
             }
             else if("|<".equals(e.getActionCommand())) {
                 try {
-                    songPath = (table.getValueAt(--CurrentSelectedRow,0)).toString();
-                    player.open(new File(songPath));
-                    player.play();
-                    System.out.println(player.getStatus());
+                    String firstSong = (table.getValueAt(0,0).toString());
+                    if(firstSong == songPath){
+                        songPath = (table.getValueAt(table.getModel().getRowCount()-1,0).toString());
+                        table.setRowSelectionInterval(table.getModel().getRowCount()-1, table.getModel().getRowCount()-1);
+                        player.open(new File(songPath));
+                        player.play();
+                    } else {
+                        songPath = (table.getValueAt(--CurrentSelectedRow, 0)).toString();
+                        table.setRowSelectionInterval(CurrentSelectedRow, CurrentSelectedRow);
+                        player.open(new File(songPath));
+                        player.play();
+                    }
+                    //table.setModel(data.buildSongsTable()); //refresh table
+                    //System.out.println(player.getStatus());
                 } catch (BasicPlayerException ex) {
                     System.out.println("BasicPlayer exception");
                     Logger.getLogger(MusicPlayerGUI.class.getName()).log(Level.SEVERE, null, ex);
@@ -305,11 +323,21 @@ public class MusicPlayerGUI extends JFrame{
             }
             else if(">|".equals(e.getActionCommand())) {
                 try {
-                    songPath = (table.getValueAt(++CurrentSelectedRow,0)).toString();
-                    player.open(new File(songPath));
-                    player.play();
-                    System.out.println(songPath);
-                    System.out.println(player.getStatus());
+                    String lastSong = (table.getValueAt(table.getModel().getRowCount()-1,0).toString());
+                    if(lastSong == songPath){
+                        songPath = (table.getValueAt(0,0).toString());
+                        table.setRowSelectionInterval(0, 0);
+                        player.open(new File(songPath));
+                        player.play();
+                    } else {
+                        songPath = (table.getValueAt(++CurrentSelectedRow, 0)).toString();
+                        table.setRowSelectionInterval(CurrentSelectedRow, CurrentSelectedRow);
+                        player.open(new File(songPath));
+                        player.play();
+                    }
+                    //table.setModel(data.buildSongsTable()); //refresh table
+                    //System.out.println(songPath);
+                    //System.out.println(player.getStatus());
                 } catch (BasicPlayerException ex) {
                     System.out.println("BasicPlayer exception");
                     Logger.getLogger(MusicPlayerGUI.class.getName()).log(Level.SEVERE, null, ex);
