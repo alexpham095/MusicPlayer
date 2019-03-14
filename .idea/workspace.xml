@@ -219,8 +219,8 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="193" />
-    <option name="y" value="-20" />
+    <option name="x" value="74" />
+    <option name="y" value="-22" />
     <option name="width" value="1936" />
     <option name="height" value="1056" />
   </component>
@@ -251,7 +251,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552530288387" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552530341310" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/jar files/vorbisspi1.0.2.jar!/" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
