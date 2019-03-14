@@ -10,6 +10,8 @@ import java.util.logging.Logger;
 import java.util.List;
 
 import javax.swing.*;
+import javax.swing.event.PopupMenuEvent;
+import javax.swing.event.PopupMenuListener;
 import javax.swing.table.TableColumn;
 import javax.swing.JPopupMenu;
 
@@ -116,12 +118,8 @@ public class MusicPlayerGUI extends JFrame{
         deleteFile.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                dialog.setDialogTitle("Delete Song");
-                dialog.setApproveButtonText("Delete");
-                if(dialog.showOpenDialog(null) == JFileChooser.APPROVE_OPTION){
-                    data.deleteSong(dialog.getSelectedFile().getAbsolutePath());
-                    table.setModel(data.buildSongsTable()); //refresh table
-                }
+                data.deleteSong(songPath);
+                table.setModel(data.buildSongsTable()); //refresh table
             }
 
         });
@@ -167,22 +165,22 @@ public class MusicPlayerGUI extends JFrame{
         deleteFilepop.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                data.deleteSong(songPath);
+                table.setModel(data.buildSongsTable()); //refresh table
+                /***
                 dialog.setDialogTitle("Delete Song");
                 dialog.setApproveButtonText("Delete");
                 if(dialog.showOpenDialog(null) == JFileChooser.APPROVE_OPTION){
                     data.deleteSong(dialog.getSelectedFile().getAbsolutePath());
                     table.setModel(data.buildSongsTable()); //refresh table
                 }
+                 ***/
             }
 
         });
 
         popupMenu.add(newFilepop);
         popupMenu.add(deleteFilepop);
-
-
-        // sets the popup menu for the table
-        table.setComponentPopupMenu(popupMenu);
 
         MouseListener mouseListenerpop = new MouseAdapter() {
             //this will print the selected row index when a user clicks the table
@@ -191,8 +189,6 @@ public class MusicPlayerGUI extends JFrame{
                 songPath = (table.getValueAt(CurrentSelectedRow,0)).toString();
             }
         };
-
-        table.addMouseListener(mouseListenerpop);
 
         ////////////end popup//////////////////////
 
@@ -206,6 +202,9 @@ public class MusicPlayerGUI extends JFrame{
             }
         };
         table.addMouseListener(mouseListener);
+        // sets the popup menu for the table
+        table.setComponentPopupMenu(popupMenu);
+        table.addMouseListener(mouseListenerpop);
         TableColumn column = table.getColumnModel().getColumn(0);
         column.setPreferredWidth(250);
         column = table.getColumnModel().getColumn(1);
