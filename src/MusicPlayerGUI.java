@@ -10,9 +10,6 @@ import java.util.logging.Logger;
 import java.util.List;
 
 import javax.swing.*;
-import javax.swing.event.PopupMenuEvent;
-import javax.swing.event.PopupMenuListener;
-import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableColumn;
 import javax.swing.JPopupMenu;
 
@@ -24,7 +21,7 @@ public class MusicPlayerGUI extends JFrame{
 
     BasicPlayer player;
 
-    String songPath;
+    String highlightedSongPath;
     JFrame  main = new JFrame("Music Player");
     JTable table;
     JScrollPane scrollPane;
@@ -40,14 +37,16 @@ public class MusicPlayerGUI extends JFrame{
     JFileChooser dialog = new JFileChooser(System.getProperty("user.dir"));
     int CurrentSelectedRow;
     Mp3File songNotInLibrary;
-    Database data;
+    boolean isExistingInLibrary = true;
+    Library library;
+    Song currentSong = new Song();
 
     //Connecting the DragAndDrop class to the main JFrame
     DragAndDrop dndObj = new DragAndDrop();
     DropTarget targetOfDND = new DropTarget(main,dndObj);
 
-    public MusicPlayerGUI(Database database) {
-        data = database;
+    public MusicPlayerGUI(Library lib) {
+        library = lib;
         player = new BasicPlayer();
         buttonPanel = new JPanel();
         musicPanel = new JPanel();
@@ -57,7 +56,7 @@ public class MusicPlayerGUI extends JFrame{
             public void windowClosing(WindowEvent e)
             {
                 super.windowClosing(e);
-                data.shutdown();
+                library.shutdown();
             }
         });
         bl=new ButtonListener();
@@ -83,8 +82,9 @@ public class MusicPlayerGUI extends JFrame{
                     try {
                         songNotInLibrary = new Mp3File(dialog.getSelectedFile().getAbsolutePath());
                         player.open(new File(dialog.getSelectedFile().getAbsolutePath()));
+                        isExistingInLibrary = false;
                         player.play();
-                        System.out.println(player.getStatus());
+                        //System.out.println(player.getStatus());
                     } catch (BasicPlayerException ex) {
                         System.out.println("BasicPlayer exception");
                         Logger.getLogger(MusicPlayerGUI.class.getName()).log(Level.SEVERE, null, ex);
@@ -106,10 +106,10 @@ public class MusicPlayerGUI extends JFrame{
             @Override
             public void actionPerformed(ActionEvent e) {
                 if(dialog.showOpenDialog(null) == JFileChooser.APPROVE_OPTION){
-                    if(data.insertSong(dialog.getSelectedFile().getAbsolutePath()) == false){
+                    if(library.insertSong(dialog.getSelectedFile().getAbsolutePath()) == false){
                         JOptionPane.showMessageDialog(musicPanel, "Song already exists", "Error", JOptionPane.ERROR_MESSAGE);
                     }
-                    table.setModel(data.buildSongsTable()); //refresh table
+                    table.setModel(library.buildTable()); //refresh table
                 }
             }
 
@@ -119,8 +119,8 @@ public class MusicPlayerGUI extends JFrame{
         deleteFile.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                data.deleteSong(songPath);
-                table.setModel(data.buildSongsTable()); //refresh table
+                library.deleteSong(highlightedSongPath);
+                table.setModel(library.buildTable()); //refresh table
             }
 
         });
@@ -153,10 +153,10 @@ public class MusicPlayerGUI extends JFrame{
             @Override
             public void actionPerformed(ActionEvent e) {
                 if(dialog.showOpenDialog(null) == JFileChooser.APPROVE_OPTION){
-                    if(data.insertSong(dialog.getSelectedFile().getAbsolutePath()) == false){
+                    if(library.insertSong(dialog.getSelectedFile().getAbsolutePath()) == false){
                         JOptionPane.showMessageDialog(musicPanel, "Song already exists", "Error", JOptionPane.ERROR_MESSAGE);
                     }
-                    table.setModel(data.buildSongsTable()); //refresh table
+                    table.setModel(library.buildTable()); //refresh table
                 }
             }
 
@@ -166,14 +166,14 @@ public class MusicPlayerGUI extends JFrame{
         deleteFilepop.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                data.deleteSong(songPath);
-                table.setModel(data.buildSongsTable()); //refresh table
+                library.deleteSong(highlightedSongPath);
+                table.setModel(library.buildTable()); //refresh table
                 /***
                 dialog.setDialogTitle("Delete Song");
                 dialog.setApproveButtonText("Delete");
                 if(dialog.showOpenDialog(null) == JFileChooser.APPROVE_OPTION){
-                    data.deleteSong(dialog.getSelectedFile().getAbsolutePath());
-                    table.setModel(data.buildSongsTable()); //refresh table
+                    library.deleteSong(dialog.getSelectedFile().getAbsolutePath());
+                    table.setModel(library.buildSongsTable()); //refresh table
                 }
                  ***/
             }
@@ -187,7 +187,7 @@ public class MusicPlayerGUI extends JFrame{
             //this will print the selected row index when a user clicks the table
             public void mousePressed(MouseEvent e) {
                 CurrentSelectedRow = table.getSelectedRow();
-                songPath = (table.getValueAt(CurrentSelectedRow,0)).toString();
+                highlightedSongPath = (table.getValueAt(CurrentSelectedRow,0)).toString();
             }
         };
 
@@ -195,13 +195,13 @@ public class MusicPlayerGUI extends JFrame{
 
         //table creation and mouseListener.
 
-        table = new JTable(data.buildSongsTable());
+        table = new JTable(library.buildTable());
         table.setDefaultEditor(Object.class, null);
         MouseListener mouseListener = new MouseAdapter() {
             //this will print the selected row index when a user clicks the table
             public void mousePressed(MouseEvent e) {
                 CurrentSelectedRow = table.getSelectedRow();
-                songPath = (table.getValueAt(CurrentSelectedRow,0)).toString();
+                highlightedSongPath = (table.getValueAt(CurrentSelectedRow,0)).toString();
             }
         };
         table.addMouseListener(mouseListener);
@@ -262,20 +262,16 @@ public class MusicPlayerGUI extends JFrame{
                    // if(player.getStatus() == 1){
                       //  player.resume();
                     //} else {
-                        Mp3File mp3file = new Mp3File(songPath);
-                        player.open(new File(songPath));
+                        //Mp3File mp3file = new Mp3File(highlightedSongPath);
+                        currentSong.setContents((table.getValueAt(CurrentSelectedRow,0)).toString(),
+                                CurrentSelectedRow, 0);
+                        player.open(new File(currentSong.getPath()));
                         player.play();
-                        System.out.println(player.getStatus());
+                        //System.out.println(player.getStatus());
                    // }
                 } catch (BasicPlayerException ex) {
                     System.out.println("BasicPlayer exception");
                     Logger.getLogger(MusicPlayerGUI.class.getName()).log(Level.SEVERE, null, ex);
-                } catch (UnsupportedTagException e1) {
-                    e1.printStackTrace();
-                } catch (IOException e1) {
-                    e1.printStackTrace();
-                } catch (InvalidDataException e1) {
-                    e1.printStackTrace();
                 }
             } else if("=".equals(e.getActionCommand())) {
                 try {
@@ -303,18 +299,18 @@ public class MusicPlayerGUI extends JFrame{
             else if("|<".equals(e.getActionCommand())) {
                 try {
                     String firstSong = (table.getValueAt(0,0).toString());
-                    if(firstSong == songPath){
-                        songPath = (table.getValueAt(table.getModel().getRowCount()-1,0).toString());
-                        table.setRowSelectionInterval(table.getModel().getRowCount()-1, table.getModel().getRowCount()-1);
-                        player.open(new File(songPath));
+                    if(firstSong == currentSong.getPath()){
+                        currentSong.setContents((table.getValueAt(table.getModel().getRowCount()-1,0).toString()), table.getModel().getRowCount()-1, 0);
+                        table.setRowSelectionInterval(currentSong.getRow(), currentSong.getRow());
+                        player.open(new File(currentSong.getPath()));
                         player.play();
                     } else {
-                        songPath = (table.getValueAt(--CurrentSelectedRow, 0)).toString();
-                        table.setRowSelectionInterval(CurrentSelectedRow, CurrentSelectedRow);
-                        player.open(new File(songPath));
+                        currentSong.setContents((table.getValueAt(currentSong.getRow()-1, 0)).toString(), currentSong.getRow()-1, 0);
+                        table.setRowSelectionInterval(currentSong.getRow(), currentSong.getRow());
+                        player.open(new File(currentSong.getPath()));
                         player.play();
                     }
-                    //table.setModel(data.buildSongsTable()); //refresh table
+                    //table.setModel(library.buildSongsTable()); //refresh table
                     //System.out.println(player.getStatus());
                 } catch (BasicPlayerException ex) {
                     System.out.println("BasicPlayer exception");
@@ -324,19 +320,21 @@ public class MusicPlayerGUI extends JFrame{
             else if(">|".equals(e.getActionCommand())) {
                 try {
                     String lastSong = (table.getValueAt(table.getModel().getRowCount()-1,0).toString());
-                    if(lastSong == songPath){
-                        songPath = (table.getValueAt(0,0).toString());
+                    if(lastSong == currentSong.getPath()){
+                        //highlightedSongPath = (table.getValueAt(0,0).toString());
+                        currentSong.setContents((table.getValueAt(0,0).toString()), 0, 0);
                         table.setRowSelectionInterval(0, 0);
-                        player.open(new File(songPath));
+                        player.open(new File(currentSong.getPath()));
                         player.play();
                     } else {
-                        songPath = (table.getValueAt(++CurrentSelectedRow, 0)).toString();
-                        table.setRowSelectionInterval(CurrentSelectedRow, CurrentSelectedRow);
-                        player.open(new File(songPath));
+                        //highlightedSongPath = (table.getValueAt(++CurrentSelectedRow, 0)).toString();
+                        currentSong.setContents((table.getValueAt(currentSong.getRow()+1, 0)).toString(), currentSong.getRow()+1, 0);
+                        table.setRowSelectionInterval(currentSong.getRow(), currentSong.getRow());
+                        player.open(new File(currentSong.getPath()));
                         player.play();
                     }
-                    //table.setModel(data.buildSongsTable()); //refresh table
-                    //System.out.println(songPath);
+                    //table.setModel(library.buildSongsTable()); //refresh table
+                    //System.out.println(highlightedSongPath);
                     //System.out.println(player.getStatus());
                 } catch (BasicPlayerException ex) {
                     System.out.println("BasicPlayer exception");
@@ -390,10 +388,10 @@ public class MusicPlayerGUI extends JFrame{
 
                         for(File file : files)
                         {
-                            if(data.insertSong(file.getAbsolutePath()) == false){
+                            if(library.insertSong(file.getAbsolutePath()) == false){
                                 JOptionPane.showMessageDialog(musicPanel, "Song already exists", "Error", JOptionPane.ERROR_MESSAGE);
                             }
-                            table.setModel(data.buildSongsTable()); //refresh table
+                            table.setModel(library.buildTable()); //refresh table
                         }
                     }
                 }catch(Exception problem)

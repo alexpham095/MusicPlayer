@@ -1,0 +1,38 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="MusicPlayer:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/MusicPlayer_jar</output-path>
+    <root id="archive" name="MusicPlayer.jar">
+      <element id="module-output" name="MusicPlayer" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/jar files/jorbis-0.0.15.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/jar files/derbyLocale_fr.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/jar files/derbyclient.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/jar files/derbyLocale_cs.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/jar files/derbyLocale_de_DE.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/jar files/jspeex0.9.7.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/jar files/derbyLocale_ru.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/jar files/derbyshared.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/jar files/tritonus_share.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/jar files/jl1.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/jar files/derbyoptionaltools.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/jar files/derbyLocale_zh_CN.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/jar files/derbyrun.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/jar files/derbyLocale_it.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/jar files/vorbisspi1.0.2.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/jar files/mp3agic-0.8.3-SNAPSHOT.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/jar files/derbyLocale_pl.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/jar files/derbyLocale_hu.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/jar files/derbyLocale_ja_JP.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/jar files/derbyLocale_es.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/jar files/basicplayer3.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/jar files/mp3spi1.9.5.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/jar files/derbyLocale_zh_TW.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/jar files/derbyLocale_pt_BR.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/jar files/jogg-0.0.7.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/jar files/derbytools.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/jar files/derbyLocale_ko_KR.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/jar files/derbynet.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/jar files/derby.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/jar files/commons-logging-api.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

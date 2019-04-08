@@ -9,40 +9,13 @@
     <list default="true" id="c7cf20bc-a9aa-4f5c-9fca-4256dc55e87f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/derby.log" beforeDir="false" afterPath="$PROJECT_DIR$/derby.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MusicPlayer/.gitignore.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/MusicPlayer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MusicPlayer/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MusicPlayer/SongsDB/README_DO_NOT_TOUCH_FILES.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MusicPlayer/SongsDB/README_DO_NOT_TOUCH_FILES.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MusicPlayer/SongsDB/log/README_DO_NOT_TOUCH_FILES.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MusicPlayer/SongsDB/log/README_DO_NOT_TOUCH_FILES.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/MusicPlayer/SongsDB/log/log.ctrl" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MusicPlayer/SongsDB/log/log.ctrl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/MusicPlayer/SongsDB/log/log1.dat" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MusicPlayer/SongsDB/log/log1.dat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/MusicPlayer/SongsDB/log/logmirror.ctrl" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MusicPlayer/SongsDB/log/logmirror.ctrl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MusicPlayer/SongsDB/seg0/README_DO_NOT_TOUCH_FILES.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MusicPlayer/SongsDB/seg0/README_DO_NOT_TOUCH_FILES.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MusicPlayer/SongsDB/seg0/c10.dat" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MusicPlayer/SongsDB/seg0/c10.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MusicPlayer/SongsDB/seg0/c150.dat" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MusicPlayer/SongsDB/seg0/c150.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MusicPlayer/SongsDB/seg0/c161.dat" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MusicPlayer/SongsDB/seg0/c161.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MusicPlayer/SongsDB/seg0/c171.dat" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MusicPlayer/SongsDB/seg0/c171.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MusicPlayer/SongsDB/seg0/c180.dat" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MusicPlayer/SongsDB/seg0/c180.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MusicPlayer/SongsDB/seg0/c1a1.dat" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MusicPlayer/SongsDB/seg0/c1a1.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MusicPlayer/SongsDB/seg0/c1b1.dat" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MusicPlayer/SongsDB/seg0/c1b1.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MusicPlayer/SongsDB/seg0/c20.dat" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MusicPlayer/SongsDB/seg0/c20.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MusicPlayer/SongsDB/seg0/c230.dat" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MusicPlayer/SongsDB/seg0/c230.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MusicPlayer/SongsDB/seg0/c241.dat" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MusicPlayer/SongsDB/seg0/c241.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MusicPlayer/SongsDB/seg0/c31.dat" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MusicPlayer/SongsDB/seg0/c31.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MusicPlayer/SongsDB/seg0/c380.dat" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MusicPlayer/SongsDB/seg0/c380.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MusicPlayer/SongsDB/seg0/c391.dat" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MusicPlayer/SongsDB/seg0/c391.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MusicPlayer/SongsDB/seg0/c3a1.dat" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MusicPlayer/SongsDB/seg0/c3a1.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MusicPlayer/SongsDB/seg0/c3b1.dat" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MusicPlayer/SongsDB/seg0/c3b1.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MusicPlayer/SongsDB/seg0/c41.dat" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MusicPlayer/SongsDB/seg0/c41.dat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/MusicPlayer/SongsDB/seg0/c490.dat" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MusicPlayer/SongsDB/seg0/c490.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MusicPlayer/SongsDB/seg0/c51.dat" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MusicPlayer/SongsDB/seg0/c51.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MusicPlayer/SongsDB/seg0/c60.dat" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MusicPlayer/SongsDB/seg0/c60.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MusicPlayer/SongsDB/seg0/c71.dat" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MusicPlayer/SongsDB/seg0/c71.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MusicPlayer/SongsDB/seg0/c81.dat" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MusicPlayer/SongsDB/seg0/c81.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MusicPlayer/SongsDB/seg0/c90.dat" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MusicPlayer/SongsDB/seg0/c90.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MusicPlayer/SongsDB/seg0/ca1.dat" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MusicPlayer/SongsDB/seg0/ca1.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MusicPlayer/SongsDB/seg0/cb1.dat" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MusicPlayer/SongsDB/seg0/cb1.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MusicPlayer/SongsDB/service.properties" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MusicPlayer/SongsDB/service.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/MusicPlayer/derby.log" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MusicPlayer/derby.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MusicPlayerGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MusicPlayerGUI.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -63,16 +36,30 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/MusicPlayerGUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="299">
-              <caret line="92" column="45" selection-start-line="92" selection-start-column="45" selection-end-line="92" selection-end-column="45" />
+            <state relative-caret-position="51">
+              <caret line="203" column="29" selection-start-line="203" selection-start-column="29" selection-end-line="203" selection-end-column="29" />
               <folding>
-                <element signature="e#4643#4644#0" expanded="true" />
-                <element signature="e#4689#4690#0" expanded="true" />
-                <element signature="e#6567#6887#0" expanded="true" />
-                <element signature="e#6886#6887#0" expanded="true" />
-                <element signature="e#7077#7397#0" expanded="true" />
-                <element signature="e#7396#7397#0" expanded="true" />
+                <element signature="e#4709#4710#0" expanded="true" />
+                <element signature="e#4755#4756#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Song.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="15" selection-start-line="15" selection-end-line="18" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Library.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="21" column="34" selection-start-line="21" selection-start-column="34" selection-end-line="21" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -80,8 +67,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Database.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2584">
-              <caret line="158" column="37" selection-start-line="158" selection-start-column="37" selection-end-line="158" selection-end-column="37" />
+            <state relative-caret-position="2448">
+              <caret line="150" selection-start-line="150" selection-end-line="150" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -92,8 +79,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" selection-start-line="16" selection-end-line="16" />
+            <state relative-caret-position="221">
+              <caret line="13" column="53" selection-start-line="13" selection-start-column="53" selection-end-line="13" selection-end-column="53" />
             </state>
           </provider>
         </entry>
@@ -114,6 +101,8 @@
       <find>open</find>
       <find>actionlis</find>
       <find>delete</find>
+      <find>data.</find>
+      <find>data</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -129,9 +118,12 @@
         <option value="$PROJECT_DIR$/.idea/libraries/basicplayer3_0.xml" />
         <option value="$PROJECT_DIR$/musicPlayer/pom.xml" />
         <option value="$PROJECT_DIR$/musicPlayer/musicPlayer.iml" />
-        <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$PROJECT_DIR$/src/Database.java" />
         <option value="$PROJECT_DIR$/src/TableMouseListener.java" />
+        <option value="$PROJECT_DIR$/src/MyModel.java" />
+        <option value="$PROJECT_DIR$/src/Library.java" />
+        <option value="$PROJECT_DIR$/src/Main.java" />
+        <option value="$PROJECT_DIR$/src/Song.java" />
         <option value="$PROJECT_DIR$/src/MusicPlayerGUI.java" />
       </list>
     </option>
@@ -150,10 +142,10 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="72" />
-    <option name="y" value="-24" />
-    <option name="width" value="1938" />
-    <option name="height" value="1058" />
+    <option name="x" value="70" />
+    <option name="y" value="-25" />
+    <option name="width" value="1940" />
+    <option name="height" value="1060" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -182,7 +174,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552530341310" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554608660411" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/jar files/vorbisspi1.0.2.jar!/" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
@@ -276,7 +268,14 @@
       <option name="project" value="LOCAL" />
       <updated>1552440148118</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Fix highlighted row to move, Skip and previous is now cyclable, and table is noneditable.">
+      <created>1552601525195</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1552601525196</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TodoView">
@@ -290,8 +289,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49919224" visible="true" weight="0.27785236" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49919224" visible="true" weight="0.29395974" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -299,16 +299,16 @@
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" sideWeight="0.50080776" side_tool="true" weight="0.18710022" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.4986577" weight="0.3286119" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4704698" visible="true" weight="0.33994335" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49731544" weight="0.3286119" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.46778524" weight="0.33994335" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.4986577" weight="0.3286119" />
       <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49731544" weight="0.3286119" />
-      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5295302" side_tool="true" visible="true" weight="0.33994335" />
+      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.53221476" side_tool="true" visible="true" weight="0.33994335" />
       <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.4966443" weight="0.3286119" />
-      <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.48347548" weight="0.33152762" />
+      <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.4818792" weight="0.33144477" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Maven" order="1" weight="0.3295302" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -324,7 +324,8 @@
     <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="Got music to start playing and library to be available." />
     <MESSAGE value="Implemented the popup menu for music player" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implemented the popup menu for music player" />
+    <MESSAGE value="Fix highlighted row to move, Skip and previous is now cyclable, and table is noneditable." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix highlighted row to move, Skip and previous is now cyclable, and table is noneditable." />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -365,25 +366,36 @@
     <entry file="file://$PROJECT_DIR$/musicPlayer/musicPlayer.iml" />
     <entry file="jar://C:/Program Files/Java/jdk-11.0.1/lib/src.zip!/java.base/java/lang/ClassLoader.java" />
     <entry file="file://$PROJECT_DIR$/src/TableMouseListener.java" />
+    <entry file="file://$PROJECT_DIR$/src/MyModel.java" />
     <entry file="file://$PROJECT_DIR$/src/MusicPlayerGUI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="92" column="45" selection-start-line="92" selection-start-column="45" selection-end-line="92" selection-end-column="45" />
+        <state relative-caret-position="51">
+          <caret line="203" column="29" selection-start-line="203" selection-start-column="29" selection-end-line="203" selection-end-column="29" />
           <folding>
-            <element signature="e#4643#4644#0" expanded="true" />
-            <element signature="e#4689#4690#0" expanded="true" />
-            <element signature="e#6567#6887#0" expanded="true" />
-            <element signature="e#6886#6887#0" expanded="true" />
-            <element signature="e#7077#7397#0" expanded="true" />
-            <element signature="e#7396#7397#0" expanded="true" />
+            <element signature="e#4709#4710#0" expanded="true" />
+            <element signature="e#4755#4756#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Song.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="15" selection-start-line="15" selection-end-line="18" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Library.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="21" column="34" selection-start-line="21" selection-start-column="34" selection-end-line="21" selection-end-column="34" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Database.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2584">
-          <caret line="158" column="37" selection-start-line="158" selection-start-column="37" selection-end-line="158" selection-end-column="37" />
+        <state relative-caret-position="2448">
+          <caret line="150" selection-start-line="150" selection-end-line="150" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -392,8 +404,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
+        <state relative-caret-position="221">
+          <caret line="13" column="53" selection-start-line="13" selection-start-column="53" selection-end-line="13" selection-end-column="53" />
         </state>
       </provider>
     </entry>

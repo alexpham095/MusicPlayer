@@ -10,7 +10,8 @@ public class Main {
             data.buildTable();
         }
 
-        MusicPlayerGUI music = new MusicPlayerGUI(data);
+        Library lib = new Library(data);
+        MusicPlayerGUI music = new MusicPlayerGUI(lib);
         music.go();
     }
 }
