@@ -7,7 +7,7 @@ public class Library {
         data = database;
     }
 
-    protected DefaultTableModel buildTable(){
+    protected DefaultTableModel buildSongsTable(){
         return data.buildSongsTable();
     }
 
@@ -22,4 +22,5 @@ public class Library {
     protected void deleteSong(String songPath){
         data.deleteSong(songPath);
     }
+
 }

@@ -10,8 +10,14 @@ public class Main {
             data.buildTable();
         }
 
+        PlaylistDatabase playData = new PlaylistDatabase();
+        playData.createConnection();
+        if(!playData.hasTable()){
+            playData.buildTable();
+        }
+
         Library lib = new Library(data);
-        MusicPlayerGUI music = new MusicPlayerGUI(lib);
+        MusicPlayerGUI music = new MusicPlayerGUI(lib,playData);
         music.go();
     }
 }
