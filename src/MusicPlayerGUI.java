@@ -36,7 +36,7 @@ public class MusicPlayerGUI extends JFrame{
     JMenu menu,addToPlaylist;
     JPopupMenu popupLibraryMenu, popupTreeMenu;
     JMenuItem newFile, deleteFile, open, newPlaylist, close;
-    JMenuItem newFilepop, deleteFilepop, newWindowPop;
+    JMenuItem newFilepop, deleteFilepop, newWindowPop, deleteplayPop;
     MouseListener mouseListenerpop,mouseListenerTree;
     DefaultTreeModel model;
     ButtonListener bl;
@@ -76,7 +76,6 @@ public class MusicPlayerGUI extends JFrame{
         buttonPanel = new JPanel();
         musicPanel = new JPanel();
         isPlaylist = true;
-
         createPlaylistMain(name);
     }
 
@@ -276,6 +275,10 @@ public class MusicPlayerGUI extends JFrame{
         buttonPanel.add(stop);
         buttonPanel.add(play);
         buttonPanel.add(skip);
+        JSlider slider = new JSlider();
+        slider.setPaintLabels(true);
+        slider.setMajorTickSpacing(10);
+        buttonPanel.add(slider);
     }
 
     //create the file menu and options
@@ -581,7 +584,6 @@ public class MusicPlayerGUI extends JFrame{
     public void createTreePopup(){
         popupTreeMenu = new JPopupMenu();
         newWindowPop = new JMenuItem("Open in New Window");
-
 
 
         //listener for adding a file in popup

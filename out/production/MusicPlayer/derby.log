@@ -1,16 +1,29 @@
 ----------------------------------------------------------------
-Mon Apr 08 17:11:13 PDT 2019:
-Booting Derby version The Apache Software Foundation - Apache Derby - 10.15.1.3 - (1853019): instance a816c00e-0169-ff6f-3aed-00000f27f1d0 
-on database directory C:\Users\aPham\Google Drive\CSULB\CECES 543\MusicPlayer\SongsDB with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@77556fd 
-Loaded from file:/C:/Users/aPham/Google%20Drive/CSULB/CECES%20543/MusicPlayer/jar%20files/derby.jar
+Sun Apr 14 11:13:24 PDT 2019:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.15.1.3 - (1853019): instance a816c00e-016a-1d0d-cbab-00000f5849b0 
+on database directory C:\Users\seand\Iteration2\SongsDB with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@77556fd 
+Loaded from file:/C:/Users/seand/Iteration2/jar%20files/derby.jar
 java.vendor=Oracle Corporation
-java.runtime.version=11.0.1+13-LTS
-user.dir=C:\Users\aPham\Google Drive\CSULB\CECES 543\MusicPlayer
+java.runtime.version=11.0.2+9-LTS
+user.dir=C:\Users\seand\Iteration2
 os.name=Windows 10
 os.arch=amd64
 os.version=10.0
 derby.system.home=null
 Database Class Loader started - derby.database.classpath=''
 ----------------------------------------------------------------
-Mon Apr 08 17:11:17 PDT 2019:
-Shutting down instance a816c00e-0169-ff6f-3aed-00000f27f1d0 on database directory C:\Users\aPham\Google Drive\CSULB\CECES 543\MusicPlayer\SongsDB with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@77556fd 
+Sun Apr 14 11:13:25 PDT 2019:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.15.1.3 - (1853019): instance a02ac013-016a-1d0d-cbab-00000f5849b0 
+on database directory C:\Users\seand\Iteration2\playlistDB with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@77556fd 
+Loaded from file:/C:/Users/seand/Iteration2/jar%20files/derby.jar
+java.vendor=Oracle Corporation
+java.runtime.version=11.0.2+9-LTS
+user.dir=C:\Users\seand\Iteration2
+os.name=Windows 10
+os.arch=amd64
+os.version=10.0
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''
+----------------------------------------------------------------
+Sun Apr 14 11:13:31 PDT 2019:
+Shutting down instance a816c00e-016a-1d0d-cbab-00000f5849b0 on database directory C:\Users\seand\Iteration2\SongsDB with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@77556fd 
