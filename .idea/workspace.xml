@@ -6,7 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c7cf20bc-a9aa-4f5c-9fca-4256dc55e87f" name="Default Changelist" comment="">
+    <list default="true" id="c7cf20bc-a9aa-4f5c-9fca-4256dc55e87f" name="Default Changelist" comment="Refreshing .gitignore">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SongsDB/log/log.ctrl" beforeDir="false" afterPath="$PROJECT_DIR$/SongsDB/log/log.ctrl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SongsDB/log/log1.dat" beforeDir="false" afterPath="$PROJECT_DIR$/SongsDB/log/log1.dat" afterDir="false" />
@@ -17,47 +17,13 @@
       <change beforePath="$PROJECT_DIR$/out/production/MusicPlayer/SongsDB/log/log.ctrl" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MusicPlayer/SongsDB/log/log.ctrl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/MusicPlayer/SongsDB/log/log1.dat" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MusicPlayer/SongsDB/log/log1.dat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/MusicPlayer/SongsDB/log/logmirror.ctrl" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MusicPlayer/SongsDB/log/logmirror.ctrl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MusicPlayer/SongsDB/seg0/c10.dat" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MusicPlayer/SongsDB/seg0/c10.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MusicPlayer/SongsDB/seg0/c150.dat" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MusicPlayer/SongsDB/seg0/c150.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MusicPlayer/SongsDB/seg0/c161.dat" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MusicPlayer/SongsDB/seg0/c161.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MusicPlayer/SongsDB/seg0/c180.dat" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MusicPlayer/SongsDB/seg0/c180.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MusicPlayer/SongsDB/seg0/c1a1.dat" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MusicPlayer/SongsDB/seg0/c1a1.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MusicPlayer/SongsDB/seg0/c1b1.dat" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MusicPlayer/SongsDB/seg0/c1b1.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MusicPlayer/SongsDB/seg0/c20.dat" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MusicPlayer/SongsDB/seg0/c20.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MusicPlayer/SongsDB/seg0/c230.dat" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MusicPlayer/SongsDB/seg0/c230.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MusicPlayer/SongsDB/seg0/c241.dat" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MusicPlayer/SongsDB/seg0/c241.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MusicPlayer/SongsDB/seg0/c31.dat" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MusicPlayer/SongsDB/seg0/c31.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MusicPlayer/SongsDB/seg0/c380.dat" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MusicPlayer/SongsDB/seg0/c380.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MusicPlayer/SongsDB/seg0/c391.dat" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MusicPlayer/SongsDB/seg0/c391.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MusicPlayer/SongsDB/seg0/c3a1.dat" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MusicPlayer/SongsDB/seg0/c3a1.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MusicPlayer/SongsDB/seg0/c3b1.dat" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MusicPlayer/SongsDB/seg0/c3b1.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MusicPlayer/SongsDB/seg0/c41.dat" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MusicPlayer/SongsDB/seg0/c41.dat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/MusicPlayer/SongsDB/seg0/c490.dat" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MusicPlayer/SongsDB/seg0/c490.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MusicPlayer/SongsDB/seg0/c51.dat" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MusicPlayer/SongsDB/seg0/c51.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MusicPlayer/SongsDB/seg0/c60.dat" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MusicPlayer/SongsDB/seg0/c60.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MusicPlayer/SongsDB/seg0/c81.dat" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MusicPlayer/SongsDB/seg0/c81.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MusicPlayer/SongsDB/seg0/c90.dat" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MusicPlayer/SongsDB/seg0/c90.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MusicPlayer/SongsDB/seg0/ca1.dat" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MusicPlayer/SongsDB/seg0/ca1.dat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/MusicPlayer/derby.log" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MusicPlayer/derby.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/playlistDB/db.lck" beforeDir="false" afterPath="$PROJECT_DIR$/playlistDB/db.lck" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/playlistDB/log/log.ctrl" beforeDir="false" afterPath="$PROJECT_DIR$/playlistDB/log/log.ctrl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/playlistDB/log/log1.dat" beforeDir="false" afterPath="$PROJECT_DIR$/playlistDB/log/log1.dat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/playlistDB/log/logmirror.ctrl" beforeDir="false" afterPath="$PROJECT_DIR$/playlistDB/log/logmirror.ctrl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/playlistDB/seg0/c150.dat" beforeDir="false" afterPath="$PROJECT_DIR$/playlistDB/seg0/c150.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/playlistDB/seg0/c161.dat" beforeDir="false" afterPath="$PROJECT_DIR$/playlistDB/seg0/c161.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/playlistDB/seg0/c171.dat" beforeDir="false" afterPath="$PROJECT_DIR$/playlistDB/seg0/c171.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/playlistDB/seg0/c20.dat" beforeDir="false" afterPath="$PROJECT_DIR$/playlistDB/seg0/c20.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/playlistDB/seg0/c230.dat" beforeDir="false" afterPath="$PROJECT_DIR$/playlistDB/seg0/c230.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/playlistDB/seg0/c31.dat" beforeDir="false" afterPath="$PROJECT_DIR$/playlistDB/seg0/c31.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/playlistDB/seg0/c41.dat" beforeDir="false" afterPath="$PROJECT_DIR$/playlistDB/seg0/c41.dat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/playlistDB/seg0/c490.dat" beforeDir="false" afterPath="$PROJECT_DIR$/playlistDB/seg0/c490.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/playlistDB/seg0/c51.dat" beforeDir="false" afterPath="$PROJECT_DIR$/playlistDB/seg0/c51.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/playlistDB/seg0/c60.dat" beforeDir="false" afterPath="$PROJECT_DIR$/playlistDB/seg0/c60.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/playlistDB/seg0/c71.dat" beforeDir="false" afterPath="$PROJECT_DIR$/playlistDB/seg0/c71.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/playlistDB/seg0/c81.dat" beforeDir="false" afterPath="$PROJECT_DIR$/playlistDB/seg0/c81.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/playlistDB/seg0/c90.dat" beforeDir="false" afterPath="$PROJECT_DIR$/playlistDB/seg0/c90.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/playlistDB/seg0/ca1.dat" beforeDir="false" afterPath="$PROJECT_DIR$/playlistDB/seg0/ca1.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/playlistDB/seg0/cb1.dat" beforeDir="false" afterPath="$PROJECT_DIR$/playlistDB/seg0/cb1.dat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MusicPlayerGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MusicPlayerGUI.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -78,7 +44,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Database.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
+            <state relative-caret-position="-2958">
               <caret column="29" selection-start-column="29" selection-end-column="29" />
             </state>
           </provider>
@@ -87,7 +53,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Song.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
+            <state relative-caret-position="136">
               <caret line="10" column="5" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
               <folding>
                 <element signature="e#162#163#0" expanded="true" />
@@ -100,8 +66,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="23" selection-start-line="23" selection-end-line="23" />
+            <state relative-caret-position="357">
+              <caret line="21" column="5" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -109,13 +75,24 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/MusicPlayerGUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="280" column="32" lean-forward="true" selection-start-line="280" selection-start-column="32" selection-end-line="280" selection-end-column="32" />
+            <state relative-caret-position="382">
+              <caret line="293" column="17" selection-start-line="293" selection-start-column="17" selection-end-line="293" selection-end-column="17" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#18931#18932#0" expanded="true" />
-                <element signature="e#18966#18967#0" expanded="true" />
+                <element signature="e#11558#11559#0" expanded="true" />
+                <element signature="e#11603#11604#0" expanded="true" />
+                <element signature="e#14855#14856#0" expanded="true" />
+                <element signature="e#14901#14902#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://C:/Program Files/Java/jdk-11.0.2/lib/src.zip!/java.desktop/javax/swing/event/ChangeListener.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="41" column="9" selection-start-line="41" selection-start-column="9" selection-end-line="41" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -123,7 +100,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/PlaylistDatabase.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3349">
+            <state relative-caret-position="3417">
               <caret line="204" selection-start-line="204" selection-end-line="204" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -178,11 +155,11 @@
         <option value="$PROJECT_DIR$/musicPlayer/musicPlayer.iml" />
         <option value="$PROJECT_DIR$/src/TableMouseListener.java" />
         <option value="$PROJECT_DIR$/src/MyModel.java" />
-        <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$PROJECT_DIR$/src/Library.java" />
         <option value="$PROJECT_DIR$/src/Database.java" />
         <option value="$PROJECT_DIR$/src/PlaylistDatabase.java" />
         <option value="$PROJECT_DIR$/src/Song.java" />
+        <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$PROJECT_DIR$/src/MusicPlayerGUI.java" />
       </list>
     </option>
@@ -200,11 +177,11 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="953" />
-    <option name="y" value="40" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="2343" />
+    <option name="y" value="152" />
     <option name="width" value="974" />
-    <option name="height" value="1047" />
+    <option name="height" value="1040" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -212,6 +189,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -238,20 +216,10 @@
               <item name="basicplayer3.0.jar" type="ab9368bb:PsiFileNode" />
               <item name="basicplayer" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="Iteration2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-            </path>
-            <path>
-              <item name="Iteration2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; 11 &gt;" type="70bed36:NamedLibraryElementNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -366,7 +334,14 @@
       <option name="project" value="LOCAL" />
       <updated>1552530361994</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Refreshing .gitignore">
+      <created>1555265659880</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1555265659880</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TodoView">
@@ -379,10 +354,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="953" y="40" width="974" height="1047" extended-state="0" />
+    <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49919224" weight="0.3654267" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49919224" visible="true" weight="0.21588486" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -391,7 +366,7 @@
       <window_info id="Favorites" order="6" sideWeight="0.50080776" side_tool="true" weight="0.18710022" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.4986577" weight="0.3286119" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4717484" visible="true" weight="0.34354487" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4717484" visible="true" weight="0.34019503" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -399,7 +374,7 @@
       <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49731544" weight="0.3286119" />
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5282516" side_tool="true" weight="0.34127843" />
       <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.4966443" weight="0.3286119" />
-      <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.4818792" weight="0.33144477" />
+      <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.4818792" weight="0.33044422" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Maven" order="1" weight="0.3295302" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -498,16 +473,71 @@
     <entry file="file://$PROJECT_DIR$/src/TableMouseListener.java" />
     <entry file="file://$PROJECT_DIR$/src/MyModel.java" />
     <entry file="jar://C:/Program Files/Java/jdk-11.0.1/lib/src.zip!/java.desktop/java/awt/event/ActionEvent.java" />
+    <entry file="file://$PROJECT_DIR$/src/Library.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PlaylistDatabase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3417">
+          <caret line="204" selection-start-line="204" selection-end-line="204" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Database.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
+        <state relative-caret-position="-2958">
           <caret column="29" selection-start-column="29" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/jar files/basicplayer3.0.jar!/javazoom/jlgui/basicplayer/BasicController.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/jar files/basicplayer3.0.jar!/javazoom/jlgui/basicplayer/BasicPlayer.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="898">
+          <caret line="88" column="5" lean-forward="true" selection-start-line="88" selection-start-column="5" selection-end-line="88" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/jar files/basicplayer3.0.jar!/javazoom/jlgui/basicplayer/BasicPlayerEvent.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/jar files/basicplayer3.0.jar!/javazoom/jlgui/basicplayer/BasicPlayerEventLauncher.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/jar files/basicplayer3.0.jar!/javazoom/jlgui/basicplayer/BasicPlayerListener.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Song.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
+        <state relative-caret-position="136">
           <caret line="10" column="5" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
           <folding>
             <element signature="e#162#163#0" expanded="true" />
@@ -518,36 +548,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" selection-start-line="23" selection-end-line="23" />
+        <state relative-caret-position="357">
+          <caret line="21" column="5" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/PlaylistDatabase.java">
+    <entry file="jar://C:/Program Files/Java/jdk-11.0.2/lib/src.zip!/java.desktop/javax/swing/event/ChangeListener.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3349">
-          <caret line="204" selection-start-line="204" selection-end-line="204" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Library.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
+        <state relative-caret-position="306">
+          <caret line="41" column="9" selection-start-line="41" selection-start-column="9" selection-end-line="41" selection-end-column="9" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/MusicPlayerGUI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="280" column="32" lean-forward="true" selection-start-line="280" selection-start-column="32" selection-end-line="280" selection-end-column="32" />
+        <state relative-caret-position="382">
+          <caret line="293" column="17" selection-start-line="293" selection-start-column="17" selection-end-line="293" selection-end-column="17" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#18931#18932#0" expanded="true" />
-            <element signature="e#18966#18967#0" expanded="true" />
+            <element signature="e#11558#11559#0" expanded="true" />
+            <element signature="e#11603#11604#0" expanded="true" />
+            <element signature="e#14855#14856#0" expanded="true" />
+            <element signature="e#14901#14902#0" expanded="true" />
           </folding>
         </state>
       </provider>

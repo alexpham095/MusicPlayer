@@ -12,6 +12,8 @@ import java.util.logging.Logger;
 import java.util.List;
 
 import javax.swing.*;
+import javax.swing.event.ChangeEvent;
+import javax.swing.event.ChangeListener;
 import javax.swing.table.*;
 import javax.swing.JPopupMenu;
 import javax.swing.tree.*;
@@ -53,7 +55,7 @@ public class MusicPlayerGUI extends JFrame{
     PlaylistDatabase playDB;
     Song currentSong = new Song();
     String playlistName;
-
+    double volume;
     //Connecting the DragAndDrop class to the main JFrame
     DragAndDrop dndObj = new DragAndDrop();
     DropTarget targetOfDND = new DropTarget(main,dndObj);
@@ -278,6 +280,22 @@ public class MusicPlayerGUI extends JFrame{
         JSlider slider = new JSlider();
         slider.setPaintLabels(true);
         slider.setMajorTickSpacing(10);
+        slider.getValue();
+
+        slider.addChangeListener(new ChangeListener() {
+            @Override
+            public void stateChanged(ChangeEvent f) {
+             volume=slider.getValue()/100.0;
+                try {
+                    player.setGain(volume);
+
+                } catch (BasicPlayerException e) {
+                    e.printStackTrace();
+                }
+            }
+
+        });
+
         buttonPanel.add(slider);
     }
 
