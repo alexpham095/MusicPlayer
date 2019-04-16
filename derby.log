@@ -1,6 +1,6 @@
 ----------------------------------------------------------------
-Mon Apr 15 23:31:20 PDT 2019:
-Booting Derby version The Apache Software Foundation - Apache Derby - 10.15.1.3 - (1853019): instance a816c00e-016a-24d7-bf5d-00000f47a378 
+Tue Apr 16 03:54:50 PDT 2019:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.15.1.3 - (1853019): instance a816c00e-016a-25c8-fe8f-00000f473e38 
 on database directory C:\Users\Marcus Chiu\Documents\CSULB\Spring 2019\CECS 543\MyTunes Project\musicPlayer\SongsDB with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@77556fd 
 Loaded from file:/C:/Users/Marcus%20Chiu/Documents/CSULB/Spring%202019/CECS%20543/MyTunes%20Project/musicPlayer/jar%20files/derby.jar
 java.vendor=Oracle Corporation
@@ -12,8 +12,8 @@ os.version=10.0
 derby.system.home=null
 Database Class Loader started - derby.database.classpath=''
 ----------------------------------------------------------------
-Mon Apr 15 23:31:21 PDT 2019:
-Booting Derby version The Apache Software Foundation - Apache Derby - 10.15.1.3 - (1853019): instance c0a0c103-016a-24d7-bf5d-00000f47a378 
+Tue Apr 16 03:54:51 PDT 2019:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.15.1.3 - (1853019): instance a02ac013-016a-25c8-fe8f-00000f473e38 
 on database directory C:\Users\Marcus Chiu\Documents\CSULB\Spring 2019\CECS 543\MyTunes Project\musicPlayer\playlistDB with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@77556fd 
 Loaded from file:/C:/Users/Marcus%20Chiu/Documents/CSULB/Spring%202019/CECS%20543/MyTunes%20Project/musicPlayer/jar%20files/derby.jar
 java.vendor=Oracle Corporation
@@ -24,3 +24,6 @@ os.arch=amd64
 os.version=10.0
 derby.system.home=null
 Database Class Loader started - derby.database.classpath=''
+----------------------------------------------------------------
+Tue Apr 16 03:55:05 PDT 2019:
+Shutting down instance a816c00e-016a-25c8-fe8f-00000f473e38 on database directory C:\Users\Marcus Chiu\Documents\CSULB\Spring 2019\CECS 543\MyTunes Project\musicPlayer\SongsDB with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@77556fd 

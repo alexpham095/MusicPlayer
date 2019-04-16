@@ -143,6 +143,67 @@ public class PlaylistDatabase {
         return index;
     }
 
+    protected void deleteSong(String name, String songNum){
+        String index = "";
+        String indexVal ="";
+        try {
+
+            String query = "SELECT SongIndexes from PLAYLISTS WHERE Playlist = ?";
+            PreparedStatement statement = conn.prepareStatement(query);
+            statement.setString(1, name);
+            ResultSet rs = statement.executeQuery();
+
+            if (rs.next()) {
+                System.out.println(rs.getString(1));
+                if(!rs.getString(1).trim().equals("empty")) {
+                    index = rs.getString(1).trim();
+                    System.out.println("Song Num " + songNum);
+                    System.out.println("in database" + index);
+                    String[] indexes = index.split("\\s*,\\s");
+
+                    for(int i = 0; i < indexes.length; i++){
+                        System.out.println(indexes[i]);
+                        if(!indexes[i].equals(songNum)){
+                            if(!indexVal.equals("")) {
+                                indexVal = indexVal + ", " + indexes[i];
+                            } else {
+                                indexVal = indexes[i];
+                            }
+                        }
+
+                    }
+                    System.out.println(indexVal);
+                }
+
+                if (indexVal==""){
+                    indexVal = "empty";
+                }
+
+                statement = conn.prepareStatement("UPDATE PLAYLISTS set SongIndexes = ? WHERE Playlist = ?");
+                statement.setString(1, indexVal);
+                statement.setString(2, name);
+                statement.executeUpdate();
+            }
+
+        } catch (SQLException sqlExcept) {
+            sqlExcept.printStackTrace();
+        }
+    }
+
+    protected static void deletePlaylist(String name)
+    {
+
+        try
+        {
+            PreparedStatement st = conn.prepareStatement("DELETE FROM " + tableName + " WHERE Playlist = ?");
+            st.setString(1,name);
+            st.executeUpdate();
+        }
+        catch (SQLException sqlExcept) {
+            sqlExcept.printStackTrace();
+        }
+    }
+
     //return index of the playlist
     protected static String searchDB(String name){
         String index = "";
