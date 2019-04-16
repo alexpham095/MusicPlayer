@@ -9,7 +9,6 @@
     <list default="true" id="c7cf20bc-a9aa-4f5c-9fca-4256dc55e87f" name="Default Changelist" comment="Refreshing .gitignore">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SongsDB/README_DO_NOT_TOUCH_FILES.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SongsDB/db.lck" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/SongsDB/log/README_DO_NOT_TOUCH_FILES.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/SongsDB/log/log.ctrl" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/SongsDB/log/log1.dat" beforeDir="false" />
@@ -174,7 +173,6 @@
       <change beforePath="$PROJECT_DIR$/playlistDB/seg0/cf0.dat" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/playlistDB/service.properties" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MusicPlayerGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MusicPlayerGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PlaylistDatabase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PlaylistDatabase.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/musicPlayer/target/" />
@@ -203,11 +201,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/PlaylistDatabase.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="111" column="12" selection-start-line="111" selection-start-column="6" selection-end-line="111" selection-end-column="12" />
+            <state relative-caret-position="488">
+              <caret line="102" column="26" selection-start-line="102" selection-start-column="26" selection-end-line="102" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -221,21 +219,24 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/MusicPlayerGUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="226" column="70" selection-start-line="226" selection-start-column="70" selection-end-line="226" selection-end-column="70" />
+            <state relative-caret-position="213">
+              <caret line="877" column="42" lean-forward="true" selection-start-line="877" selection-start-column="42" selection-end-line="877" selection-end-column="42" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#11704#11705#0" expanded="true" />
-                <element signature="e#11749#11750#0" expanded="true" />
-                <element signature="e#17958#17959#0" expanded="true" />
-                <element signature="e#24705#24706#0" expanded="true" />
-                <element signature="e#27389#27390#0" expanded="true" />
-                <element signature="e#27424#27425#0" expanded="true" />
-                <element signature="e#22920#23843#0" expanded="true" />
-                <element signature="e#23842#23843#0" expanded="true" />
+                <element signature="e#1567#1578#0" expanded="true" />
+                <element signature="e#12213#12214#0" expanded="true" />
+                <element signature="e#12258#12259#0" expanded="true" />
+                <element signature="e#18421#18422#0" expanded="true" />
+                <element signature="e#18467#18468#0" expanded="true" />
+                <element signature="e#27607#27608#0" expanded="true" />
+                <element signature="e#27642#27643#0" expanded="true" />
+                <element signature="e#27995#28006#0" expanded="true" />
+                <element signature="e#34914#36660#0" expanded="true" />
+                <element signature="e#36659#36660#0" expanded="true" />
+                <element signature="e#55914#56297#0" expanded="true" />
+                <element signature="e#56296#56297#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -244,21 +245,12 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Library.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
+            <state relative-caret-position="153">
               <caret line="11" column="5" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
               <folding>
                 <element signature="e#125#126#0" expanded="true" />
                 <element signature="e#156#157#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files/Java/jdk-11.0.2/lib/src.zip!/java.desktop/javax/swing/event/ChangeListener.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="41" column="9" selection-start-line="41" selection-start-column="9" selection-end-line="41" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -274,19 +266,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>player</find>
-      <find>player.set</find>
-      <find>jtable</find>
-      <find>playListname</find>
-      <find>jTable</find>
-      <find>MusicPlayerGUI</find>
-      <find>insertSong</find>
-      <find>isPlaylist</find>
-      <find>createplayList</find>
-      <find>setDrag</find>
-      <find>dndObj</find>
-      <find>dragena</find>
-      <find>listen</find>
       <find>addsong</find>
       <find>musicpl</find>
       <find>populatePlaylist</find>
@@ -295,7 +274,6 @@
       <find>table.get</find>
       <find>highlighted</find>
       <find>deleteFile</find>
-      <find>popupLibrary</find>
       <find>mouse</find>
       <find>origin</find>
       <find>is a</find>
@@ -304,6 +282,20 @@
       <find>tree</find>
       <find>updateplaylist</find>
       <find>addpl</find>
+      <find>addplaylist</find>
+      <find>musicPanel</find>
+      <find>popup</find>
+      <find>scrollpane.setViewPort</find>
+      <find>popupLibrary</find>
+      <find>plTable</find>
+      <find>addtOPlaylist</find>
+      <find>menuItems</find>
+      <find>menuitems</find>
+      <find>addToPlaylist</find>
+      <find>addToplaylist</find>
+      <find>updatePlaylist</find>
+      <find>names.size</find>
+      <find>mouselistener</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -346,9 +338,9 @@
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="25" />
-    <option name="y" value="-17" />
-    <option name="width" value="1919" />
-    <option name="height" value="1029" />
+    <option name="y" value="-18" />
+    <option name="width" value="1920" />
+    <option name="height" value="1030" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -356,28 +348,28 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="musicPlayer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="musicPlayer" type="462c0819:PsiDirectoryNode" />
+              <item name="MusicPlayer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MusicPlayer" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="musicPlayer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="musicPlayer" type="462c0819:PsiDirectoryNode" />
+              <item name="MusicPlayer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MusicPlayer" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555396568562" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555447211826" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/jar files/vorbisspi1.0.2.jar!/" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
@@ -509,8 +501,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49919224" visible="true" weight="0.18791947" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49919224" visible="true" weight="0.19060403" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -519,7 +512,7 @@
       <window_info id="Favorites" order="6" sideWeight="0.50080776" side_tool="true" weight="0.18710022" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.4986577" weight="0.3286119" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4717484" weight="0.34135976" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4717484" visible="true" weight="0.34135976" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.398017" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -665,24 +658,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Song.java" />
-    <entry file="file://$PROJECT_DIR$/src/Library.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="11" column="5" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
-          <folding>
-            <element signature="e#125#126#0" expanded="true" />
-            <element signature="e#156#157#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-11.0.2/lib/src.zip!/java.desktop/javax/swing/event/ChangeListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="41" column="9" selection-start-line="41" selection-start-column="9" selection-end-line="41" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Database.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -700,28 +675,49 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/MusicPlayerGUI.java">
+    <entry file="file://$PROJECT_DIR$/src/Library.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="226" column="70" selection-start-line="226" selection-start-column="70" selection-end-line="226" selection-end-column="70" />
+        <state relative-caret-position="153">
+          <caret line="11" column="5" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#11704#11705#0" expanded="true" />
-            <element signature="e#11749#11750#0" expanded="true" />
-            <element signature="e#17958#17959#0" expanded="true" />
-            <element signature="e#24705#24706#0" expanded="true" />
-            <element signature="e#27389#27390#0" expanded="true" />
-            <element signature="e#27424#27425#0" expanded="true" />
-            <element signature="e#22920#23843#0" expanded="true" />
-            <element signature="e#23842#23843#0" expanded="true" />
+            <element signature="e#125#126#0" expanded="true" />
+            <element signature="e#156#157#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-11.0.2/lib/src.zip!/java.desktop/javax/swing/event/ChangeListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="41" column="9" selection-start-line="41" selection-start-column="9" selection-end-line="41" selection-end-column="9" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/PlaylistDatabase.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="111" column="12" selection-start-line="111" selection-start-column="6" selection-end-line="111" selection-end-column="12" />
+        <state relative-caret-position="488">
+          <caret line="102" column="26" selection-start-line="102" selection-start-column="26" selection-end-line="102" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MusicPlayerGUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="213">
+          <caret line="877" column="42" lean-forward="true" selection-start-line="877" selection-start-column="42" selection-end-line="877" selection-end-column="42" />
+          <folding>
+            <element signature="e#1567#1578#0" expanded="true" />
+            <element signature="e#12213#12214#0" expanded="true" />
+            <element signature="e#12258#12259#0" expanded="true" />
+            <element signature="e#18421#18422#0" expanded="true" />
+            <element signature="e#18467#18468#0" expanded="true" />
+            <element signature="e#27607#27608#0" expanded="true" />
+            <element signature="e#27642#27643#0" expanded="true" />
+            <element signature="e#27995#28006#0" expanded="true" />
+            <element signature="e#34914#36660#0" expanded="true" />
+            <element signature="e#36659#36660#0" expanded="true" />
+            <element signature="e#55914#56297#0" expanded="true" />
+            <element signature="e#56296#56297#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

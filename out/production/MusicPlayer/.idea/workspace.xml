@@ -8,173 +8,7 @@
   <component name="ChangeListManager">
     <list default="true" id="c7cf20bc-a9aa-4f5c-9fca-4256dc55e87f" name="Default Changelist" comment="Refreshing .gitignore">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SongsDB/README_DO_NOT_TOUCH_FILES.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SongsDB/db.lck" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SongsDB/log/README_DO_NOT_TOUCH_FILES.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SongsDB/log/log.ctrl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SongsDB/log/log1.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SongsDB/log/logmirror.ctrl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SongsDB/seg0/README_DO_NOT_TOUCH_FILES.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SongsDB/seg0/c10.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SongsDB/seg0/c101.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SongsDB/seg0/c111.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SongsDB/seg0/c121.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SongsDB/seg0/c130.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SongsDB/seg0/c141.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SongsDB/seg0/c150.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SongsDB/seg0/c161.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SongsDB/seg0/c171.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SongsDB/seg0/c180.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SongsDB/seg0/c191.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SongsDB/seg0/c1a1.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SongsDB/seg0/c1b1.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SongsDB/seg0/c1c0.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SongsDB/seg0/c1d1.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SongsDB/seg0/c1e0.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SongsDB/seg0/c1f1.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SongsDB/seg0/c20.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SongsDB/seg0/c200.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SongsDB/seg0/c211.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SongsDB/seg0/c221.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SongsDB/seg0/c230.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SongsDB/seg0/c241.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SongsDB/seg0/c251.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SongsDB/seg0/c260.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SongsDB/seg0/c271.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SongsDB/seg0/c281.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SongsDB/seg0/c290.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SongsDB/seg0/c2a1.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SongsDB/seg0/c2b1.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SongsDB/seg0/c2c1.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SongsDB/seg0/c2d0.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SongsDB/seg0/c2e1.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SongsDB/seg0/c2f0.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SongsDB/seg0/c300.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SongsDB/seg0/c31.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SongsDB/seg0/c311.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SongsDB/seg0/c321.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SongsDB/seg0/c331.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SongsDB/seg0/c340.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SongsDB/seg0/c351.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SongsDB/seg0/c361.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SongsDB/seg0/c371.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SongsDB/seg0/c380.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SongsDB/seg0/c391.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SongsDB/seg0/c3a1.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SongsDB/seg0/c3b1.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SongsDB/seg0/c3c0.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SongsDB/seg0/c3d1.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SongsDB/seg0/c3e1.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SongsDB/seg0/c3f1.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SongsDB/seg0/c400.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SongsDB/seg0/c41.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SongsDB/seg0/c411.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SongsDB/seg0/c421.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SongsDB/seg0/c430.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SongsDB/seg0/c441.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SongsDB/seg0/c451.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SongsDB/seg0/c461.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SongsDB/seg0/c470.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SongsDB/seg0/c481.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SongsDB/seg0/c490.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SongsDB/seg0/c51.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SongsDB/seg0/c60.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SongsDB/seg0/c71.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SongsDB/seg0/c81.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SongsDB/seg0/c90.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SongsDB/seg0/ca1.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SongsDB/seg0/cb1.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SongsDB/seg0/cc0.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SongsDB/seg0/cd1.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SongsDB/seg0/ce1.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SongsDB/seg0/cf0.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SongsDB/service.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/derby.log" beforeDir="false" afterPath="$PROJECT_DIR$/derby.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MusicPlayer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MusicPlayer/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MusicPlayer/derby.log" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MusicPlayer/derby.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/playlistDB/README_DO_NOT_TOUCH_FILES.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/playlistDB/db.lck" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/playlistDB/log/README_DO_NOT_TOUCH_FILES.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/playlistDB/log/log.ctrl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/playlistDB/log/log1.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/playlistDB/log/logmirror.ctrl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/playlistDB/seg0/README_DO_NOT_TOUCH_FILES.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/playlistDB/seg0/c10.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/playlistDB/seg0/c101.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/playlistDB/seg0/c111.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/playlistDB/seg0/c121.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/playlistDB/seg0/c130.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/playlistDB/seg0/c141.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/playlistDB/seg0/c150.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/playlistDB/seg0/c161.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/playlistDB/seg0/c171.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/playlistDB/seg0/c180.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/playlistDB/seg0/c191.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/playlistDB/seg0/c1a1.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/playlistDB/seg0/c1b1.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/playlistDB/seg0/c1c0.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/playlistDB/seg0/c1d1.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/playlistDB/seg0/c1e0.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/playlistDB/seg0/c1f1.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/playlistDB/seg0/c20.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/playlistDB/seg0/c200.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/playlistDB/seg0/c211.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/playlistDB/seg0/c221.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/playlistDB/seg0/c230.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/playlistDB/seg0/c241.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/playlistDB/seg0/c251.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/playlistDB/seg0/c260.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/playlistDB/seg0/c271.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/playlistDB/seg0/c281.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/playlistDB/seg0/c290.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/playlistDB/seg0/c2a1.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/playlistDB/seg0/c2b1.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/playlistDB/seg0/c2c1.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/playlistDB/seg0/c2d0.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/playlistDB/seg0/c2e1.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/playlistDB/seg0/c2f0.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/playlistDB/seg0/c300.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/playlistDB/seg0/c31.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/playlistDB/seg0/c311.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/playlistDB/seg0/c321.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/playlistDB/seg0/c331.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/playlistDB/seg0/c340.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/playlistDB/seg0/c351.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/playlistDB/seg0/c361.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/playlistDB/seg0/c371.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/playlistDB/seg0/c380.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/playlistDB/seg0/c391.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/playlistDB/seg0/c3a1.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/playlistDB/seg0/c3b1.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/playlistDB/seg0/c3c0.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/playlistDB/seg0/c3d1.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/playlistDB/seg0/c3e1.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/playlistDB/seg0/c3f1.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/playlistDB/seg0/c400.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/playlistDB/seg0/c41.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/playlistDB/seg0/c411.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/playlistDB/seg0/c421.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/playlistDB/seg0/c430.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/playlistDB/seg0/c441.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/playlistDB/seg0/c451.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/playlistDB/seg0/c461.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/playlistDB/seg0/c470.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/playlistDB/seg0/c481.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/playlistDB/seg0/c490.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/playlistDB/seg0/c51.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/playlistDB/seg0/c60.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/playlistDB/seg0/c71.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/playlistDB/seg0/c81.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/playlistDB/seg0/c90.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/playlistDB/seg0/ca1.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/playlistDB/seg0/cb1.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/playlistDB/seg0/cc0.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/playlistDB/seg0/cd1.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/playlistDB/seg0/ce1.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/playlistDB/seg0/cf0.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/playlistDB/service.properties" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MusicPlayerGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MusicPlayerGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PlaylistDatabase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PlaylistDatabase.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/musicPlayer/target/" />
@@ -203,11 +37,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/PlaylistDatabase.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="291">
-              <caret line="166" column="32" selection-start-line="166" selection-start-column="32" selection-end-line="166" selection-end-column="32" />
+            <state relative-caret-position="488">
+              <caret line="102" column="26" selection-start-line="102" selection-start-column="26" selection-end-line="102" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -215,25 +49,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="28" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="28" />
+            <state relative-caret-position="204">
+              <caret line="12" column="37" selection-start-line="12" selection-start-column="37" selection-end-line="12" selection-end-column="37" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/MusicPlayerGUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="114">
-              <caret line="996" selection-start-line="996" selection-end-line="996" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#11704#11705#0" expanded="true" />
-                <element signature="e#11749#11750#0" expanded="true" />
-                <element signature="e#16451#16452#0" expanded="true" />
-                <element signature="e#19796#19797#0" expanded="true" />
-                <element signature="e#19831#19832#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="328">
+              <caret line="236" column="48" lean-forward="true" selection-start-line="236" selection-start-column="48" selection-end-line="236" selection-end-column="48" />
             </state>
           </provider>
         </entry>
@@ -241,7 +67,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Library.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
+            <state relative-caret-position="153">
               <caret line="11" column="5" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
               <folding>
                 <element signature="e#125#126#0" expanded="true" />
@@ -271,16 +97,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>add</find>
-      <find>open</find>
-      <find>actionlis</find>
-      <find>delete</find>
-      <find>data.</find>
-      <find>data</find>
-      <find>.play</find>
-      <find>for</find>
-      <find>DragAndDrop</find>
-      <find>player</find>
       <find>player.set</find>
       <find>jtable</find>
       <find>playListname</find>
@@ -301,6 +117,16 @@
       <find>table.get</find>
       <find>highlighted</find>
       <find>deleteFile</find>
+      <find>popupLibrary</find>
+      <find>mouse</find>
+      <find>origin</find>
+      <find>is a</find>
+      <find>delete</find>
+      <find>mouseListenerTree</find>
+      <find>tree</find>
+      <find>updateplaylist</find>
+      <find>addpl</find>
+      <find>addplaylist</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -323,8 +149,8 @@
         <option value="$PROJECT_DIR$/src/Database.java" />
         <option value="$PROJECT_DIR$/src/Song.java" />
         <option value="$PROJECT_DIR$/src/Main.java" />
-        <option value="$PROJECT_DIR$/src/MusicPlayerGUI.java" />
         <option value="$PROJECT_DIR$/src/PlaylistDatabase.java" />
+        <option value="$PROJECT_DIR$/src/MusicPlayerGUI.java" />
       </list>
     </option>
   </component>
@@ -341,10 +167,11 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="15" />
-    <option name="width" value="1919" />
-    <option name="height" value="1029" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="25" />
+    <option name="y" value="-18" />
+    <option name="width" value="1920" />
+    <option name="height" value="1030" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -352,23 +179,23 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="musicPlayer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="musicPlayer" type="462c0819:PsiDirectoryNode" />
+              <item name="MusicPlayer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MusicPlayer" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="musicPlayer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="musicPlayer" type="462c0819:PsiDirectoryNode" />
+              <item name="MusicPlayer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MusicPlayer" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -504,10 +331,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="12" y="0" width="1535" height="823" extended-state="0" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49919224" visible="true" weight="0.18983051" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49919224" visible="true" weight="0.19060403" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -516,8 +343,8 @@
       <window_info id="Favorites" order="6" sideWeight="0.50080776" side_tool="true" weight="0.18710022" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.4986577" weight="0.3286119" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4717484" visible="true" weight="0.3487699" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39942113" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4717484" weight="0.34135976" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.398017" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.4986577" weight="0.3286119" />
@@ -581,18 +408,6 @@
     <MESSAGE value="Changed the delete method to just delete the current selected file on the table." />
     <MESSAGE value="Refreshing .gitignore" />
     <option name="LAST_COMMIT_MESSAGE" value="Refreshing .gitignore" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/MusicPlayerGUI.java</url>
-          <line>427</line>
-          <properties />
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -674,16 +489,26 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Song.java" />
+    <entry file="file://$PROJECT_DIR$/src/Database.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="152" column="4" selection-start-line="152" selection-start-column="4" selection-end-line="152" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="28" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="28" />
+        <state relative-caret-position="204">
+          <caret line="12" column="37" selection-start-line="12" selection-start-column="37" selection-end-line="12" selection-end-column="37" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Library.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
+        <state relative-caret-position="153">
           <caret line="11" column="5" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
           <folding>
             <element signature="e#125#126#0" expanded="true" />
@@ -699,35 +524,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Database.java">
+    <entry file="file://$PROJECT_DIR$/src/PlaylistDatabase.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="152" column="4" selection-start-line="152" selection-start-column="4" selection-end-line="152" selection-end-column="4" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="488">
+          <caret line="102" column="26" selection-start-line="102" selection-start-column="26" selection-end-line="102" selection-end-column="26" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/MusicPlayerGUI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="996" selection-start-line="996" selection-end-line="996" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#11704#11705#0" expanded="true" />
-            <element signature="e#11749#11750#0" expanded="true" />
-            <element signature="e#16451#16452#0" expanded="true" />
-            <element signature="e#19796#19797#0" expanded="true" />
-            <element signature="e#19831#19832#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/PlaylistDatabase.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="291">
-          <caret line="166" column="32" selection-start-line="166" selection-start-column="32" selection-end-line="166" selection-end-column="32" />
+        <state relative-caret-position="328">
+          <caret line="236" column="48" lean-forward="true" selection-start-line="236" selection-start-column="48" selection-end-line="236" selection-end-column="48" />
         </state>
       </provider>
     </entry>
