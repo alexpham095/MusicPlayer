@@ -35,7 +35,7 @@ public class Database {
         {
             stmt = conn.createStatement();
             stmt.execute("CREATE TABLE " + tableName + " (File CHAR(150), " + "Title CHAR(150), " + "Artist CHAR(150), " + "Album CHAR(150), "
-                    + "\"Year\" CHAR(150), " + "Comment CHAR(150), " + "Genre CHAR(150) " + ")");
+                    + "\"YEAR\" CHAR(150), " + "Comment CHAR(150), " + "Genre CHAR(150) " + ")");
             stmt.close();
         }
         catch (SQLException sqlExcept)
@@ -152,7 +152,6 @@ public class Database {
     //delete a song by removing it from the database
     protected static void deleteSong(String songPath)
     {
-
         try
         {
             PreparedStatement st = conn.prepareStatement("DELETE FROM " + tableName + " WHERE file = ?");
