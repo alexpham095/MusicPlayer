@@ -54,11 +54,13 @@ public class MusicPlayerGUI extends JFrame{
     Mp3File songNotInLibrary;
     boolean isExistingInLibrary = true;
     boolean isPlaylist = false;
+    boolean isWindow = false;
     Library library;
     PlaylistDatabase playDB;
     Song currentSong = new Song();
     String playlistName;
     double volume;
+    int order = 0;
     //Connecting the DragAndDrop class to the main JFrame
     DragAndDrop dndObj = new DragAndDrop();
     DropTarget targetOfDND = new DropTarget(main,dndObj);
@@ -82,6 +84,7 @@ public class MusicPlayerGUI extends JFrame{
         buttonPanel = new JPanel();
         musicPanel = new JPanel();
         isPlaylist = true;
+        isWindow = true;
         this.origin = origin;
         createPlaylistMain(name);
     }
@@ -106,6 +109,7 @@ public class MusicPlayerGUI extends JFrame{
         //stopFileCol(table);
         displayLibraryTable();
         createButtons();
+        //table.setModel(library.sortData());
 
         main.setSize(1500,700);
         main.setJMenuBar(menuBar);
@@ -141,8 +145,8 @@ public class MusicPlayerGUI extends JFrame{
 
     //table creation and mouseListener.
     public void createTable(){
-
-        table = new JTable(library.buildSongsTable());
+        table = new JTable();
+        table.setModel(library.buildSongsTable());
         table.setDefaultEditor(Object.class, null);
         table.setDragEnabled(true);
         DragAndDrop plDnD = new DragAndDrop();
@@ -158,9 +162,12 @@ public class MusicPlayerGUI extends JFrame{
         column = table.getColumnModel().getColumn(1);
         column.setPreferredWidth(200);
 
-        //createHeader();
-        //header = table.getTableHeader();
-        //header.setComponentPopupMenu(popupHeader);
+        if(!isWindow) {
+            header = table.getTableHeader();
+            createHeader();
+            //header.setComponentPopupMenu(popupHeader);
+            table.setTableHeader(header);
+        }
         //hideAllCol(table);
 
         createTree();
@@ -185,6 +192,13 @@ public class MusicPlayerGUI extends JFrame{
         popupLibraryMenu.remove(newFilepop);
         plTable.setComponentPopupMenu(popupLibraryMenu);
         scrollPane = new JScrollPane(plTable);
+
+        header = plTable.getTableHeader();
+        createHeader();
+        //header.setComponentPopupMenu(popupHeader);
+        plTable.setTableHeader(header);
+        //hideAllCol(table);
+
         //stopFileCol(plTable);
 
 
@@ -400,41 +414,42 @@ public class MusicPlayerGUI extends JFrame{
                         JOptionPane.showMessageDialog(musicPanel, "Song already exists", "Error", JOptionPane.ERROR_MESSAGE);
                     }
                     table.setModel(library.buildSongsTable()); //refresh table
+
                     //stopFileCol(table);
                     //hideAllCol(table);
 
                     if(isPlaylist) {
                         String songPath = dialog.getSelectedFile().getAbsolutePath();
-                        String index = "0";
+                        String selectedPath = "0";
 
+                        //retrieve the song to add
                         for (int i = 0; i < table.getRowCount(); i++) {
                             table.setRowSelectionInterval(i, i);
                             String tableValue = table.getModel().getValueAt(i,0).toString().trim();
                             if(songPath.equals(tableValue)){
-                                index = Integer.toString(i);
+                                selectedPath = tableValue;
                             }
-
                         }
-                        //String indexStr = library.searchDB(songPath);
+
+                        //check if the playlist has the song already
                         boolean playlistContains = false;
                         String currentList = playDB.searchDB(playlistName);
-                        ArrayList<Integer> songIndexList = new ArrayList<Integer>();
-
+                        ArrayList<String> songPathList = new ArrayList<String>();
                         if(!currentList.trim().equals("empty")) {
                             String[] tokens = currentList.trim().split("\\s*,\\s*");
                             for (String s : tokens) {
-                                songIndexList.add(Integer.parseInt(s));
+                                songPathList.add(s);
                             }
                         }
 
-                        for(int i = 0; i < songIndexList.size(); i++) {
-                            if(songIndexList.get(i) == Integer.parseInt(index)){
+                        for(int i = 0; i < songPathList.size(); i++) {
+                            if(songPathList.get(i).equals(selectedPath)){
                                 playlistContains = true;
                             }
                         }
-
+                        //add the song to the playlist
                         if(!playlistContains) {
-                            playDB.addSong(playlistName, index);
+                            playDB.addSong(playlistName, selectedPath);
                             populatePlaylist(playlistName);
                         }
                         scrollPane.setViewportView(plTable);
@@ -456,17 +471,19 @@ public class MusicPlayerGUI extends JFrame{
                         MusicPlayerGUI temp = windowList.get(j);
                         String name = temp.playlistName;
                         String songPath = highlightedSongPath.trim();
-                        String index = "";
+                        String selectedPath = "";
+                        //if deleted from library, then must delete from playlist.
                         for (int i = 0; i < table.getRowCount(); i++) {
                             table.setRowSelectionInterval(i, i);
 
                             String tableValue = table.getModel().getValueAt(i,0).toString().trim();
                             if(songPath.equals(tableValue)){
-                                index = Integer.toString(i);
+                                selectedPath = tableValue;
                             }
 
                         }
-                        playDB.deleteSong(name, index);
+                        //delete from the playlist, song does not exist in the library anymore.
+                        playDB.deleteSong(name, selectedPath);
                         temp.populatePlaylist(name);
                         temp.scrollPane.setViewportView(temp.plTable);
                         //stopFileCol(plTable);
@@ -480,16 +497,16 @@ public class MusicPlayerGUI extends JFrame{
                 else
                 {
                     String songPath = highlightedSongPath.trim();
-                    String index = "";
+                    String selectedPath = "";
                     for (int i = 0; i < table.getRowCount(); i++) {
                         table.setRowSelectionInterval(i, i);
                         String tableValue = table.getModel().getValueAt(i,0).toString().trim();
                         if(songPath.equals(tableValue)){
-                            index = Integer.toString(i);
+                            selectedPath = tableValue;
                         }
 
                     }
-                    playDB.deleteSong(playlistName, index);
+                    playDB.deleteSong(playlistName, selectedPath);
                     populatePlaylist(playlistName);
                     scrollPane.setViewportView(plTable);
                     //stopFileCol(plTable);
@@ -575,12 +592,54 @@ public class MusicPlayerGUI extends JFrame{
         popupHeader.add(genrePop);
         popupHeader.add(commentPop);
 
-        table.getTableHeader().addMouseListener(new MouseAdapter() {
-            @Override
-            public void mouseClicked(MouseEvent e) {
+        if(!isPlaylist) {
+            //if playlist is in a window
+            //if its a main window
+            table.getTableHeader().addMouseListener(new MouseAdapter() {
+                @Override
+                public void mouseClicked(MouseEvent e) {
+                    int column = table.columnAtPoint(e.getPoint());
+                    if (order == 0) {
+                        order = 1;
+                    } else {
+                        order = 0;
+                    }
+                    if (column == 1) {
+                        table.setModel(library.sortData(order));
+                    }
+                }
+            });
+            //if it is a playlist
+        } else {
 
-            }
-        });
+            plTable.getTableHeader().addMouseListener(new MouseAdapter() {
+                @Override
+                public void mouseClicked(MouseEvent e) {
+                    int column = plTable.columnAtPoint(e.getPoint());
+                    if (order == 0) {
+                        order = 1;
+                    } else {
+                        order = 0;
+                    }
+                    if (column == 1) {
+                        plTable.setAutoCreateRowSorter(true);
+                        TableRowSorter<TableModel> sorter = new TableRowSorter<>(plTable.getModel());
+                        plTable.setRowSorter(sorter);
+                        List<RowSorter.SortKey> sortKeys = new ArrayList<>();
+
+                        int columnIndexToSort = 1;
+                        if (order == 0) {
+                            sortKeys.add(new RowSorter.SortKey(columnIndexToSort, SortOrder.DESCENDING));
+                        } else {
+                            sortKeys.add(new RowSorter.SortKey(columnIndexToSort, SortOrder.ASCENDING));
+                        }
+
+                        sorter.setSortKeys(sortKeys);
+                        sorter.sort();
+                    }
+                }
+            });
+        }
     }
 
     public void toggleColumn(JTable table, String column, boolean check){
@@ -635,44 +694,48 @@ public class MusicPlayerGUI extends JFrame{
             @Override
             public void actionPerformed(ActionEvent e) {
                 if (!isPlaylist) {
+                    //if there are no playlist windows open, should delete the song from the library and the playlist
                     if(windowList.size() == 0){
                         Vector<String> playlistList = playDB.buildPlaylistTree();
                         for (int j = 0; j < playlistList.size(); j++) {
                             String name = playlistList.get(j);
                             String songPath = highlightedSongPath.trim();
-                            String index = "";
+                            //duplicate, can combine with other delete method
+                            String selectedPath = "";
                             for (int i = 0; i < table.getRowCount(); i++) {
                                 table.setRowSelectionInterval(i, i);
 
                                 String tableValue = table.getModel().getValueAt(i, 0).toString().trim();
                                 if (songPath.equals(tableValue)) {
-                                    index = Integer.toString(i);
+                                    selectedPath = tableValue;
                                 }
 
                             }
 
                             if(name != null) {
-                                playDB.deleteSong(name, index);
+                                playDB.deleteSong(name, selectedPath);
                                 populatePlaylist(name);
                             }
 
                         }
                     }
+                    //if there are windows open, update those windows.
                     else {
                         for (int j = 0; j < windowList.size(); j++) {
                             MusicPlayerGUI temp = windowList.get(j);
                             String name = temp.playlistName;
                             String songPath = highlightedSongPath.trim();
-                            String index = "";
+                            //duplicate can combine
+                            String selectedPath = "";
                             for (int i = 0; i < table.getRowCount(); i++) {
                                 table.setRowSelectionInterval(i, i);
                                 String tableValue = table.getModel().getValueAt(i, 0).toString().trim();
                                 if (songPath.equals(tableValue)) {
-                                    index = Integer.toString(i);
+                                    selectedPath = tableValue;
                                 }
 
                             }
-                            playDB.deleteSong(name, index);
+                            playDB.deleteSong(name, selectedPath);
                             temp.populatePlaylist(name);
                             temp.scrollPane.setViewportView(temp.plTable);
                             //stopFileCol(temp.plTable);
@@ -685,20 +748,21 @@ public class MusicPlayerGUI extends JFrame{
                     //hideAllCol(table);
 
                 }
+                //if it is a playlist
                 else
                 {
                         String songPath = highlightedSongPath.trim();
-                        String index = "";
+                        String selectedPath = "";
                         for (int i = 0; i < table.getRowCount(); i++) {
                             table.setRowSelectionInterval(i, i);
                             String tableValue = table.getModel().getValueAt(i, 0).toString().trim();
                             if (songPath.equals(tableValue)) {
-                                index = Integer.toString(i);
+                                selectedPath = tableValue;
                             }
 
                         }
 
-                        playDB.deleteSong(playlistName, index);
+                        playDB.deleteSong(playlistName, selectedPath);
                         populatePlaylist(playlistName);
                         scrollPane.setViewportView(plTable);
                        // stopFileCol(plTable);
@@ -747,26 +811,26 @@ public class MusicPlayerGUI extends JFrame{
                 @Override
                 public void actionPerformed(ActionEvent e) {
                     //add song to the playlist
-                    String songIndex = Integer.toString(CurrentSelectedRow);
+                    String selectedPath = table.getModel().getValueAt(CurrentSelectedRow, 0).toString().trim();
                     boolean playlistContains = false;
                     String currentList = playDB.searchDB(playName);
-                    ArrayList<Integer> songIndexList = new ArrayList<Integer>();
+                    ArrayList<String> songPathList = new ArrayList<String>();
 
                     if(!currentList.trim().equals("empty")) {
                         String[] tokens = currentList.trim().split("\\s*,\\s*");
                         for (String s : tokens) {
-                            songIndexList.add(Integer.parseInt(s));
+                            songPathList.add(s);
                         }
                     }
 
-                    for(int i = 0; i < songIndexList.size(); i++) {
-                        if(songIndexList.get(i) == CurrentSelectedRow){
+                    for(int i = 0; i < songPathList.size(); i++) {
+                        if(songPathList.get(i).equals(selectedPath)){
                             playlistContains = true;
                         }
                     }
 
                     if(!playlistContains) {
-                        playDB.addSong(playName, songIndex);
+                        playDB.addSong(playName, selectedPath);
                         if (windowList.size() > 0) {
                             for (int i = 0; i < windowList.size(); i++) {
                                 windowList.get(i).populatePlaylist(windowList.get(i).getName());
@@ -815,25 +879,26 @@ public class MusicPlayerGUI extends JFrame{
             @Override
             public void actionPerformed(ActionEvent e) {
                 //add song to the playlist
-                String songIndex = Integer.toString(CurrentSelectedRow);
+                //duplicate code
+                String selectedPath = table.getModel().getValueAt(CurrentSelectedRow, 0).toString().trim();
                 boolean playlistContains = false;
                 String currentList = playDB.searchDB(playName);
-                ArrayList<Integer> songIndexList = new ArrayList<Integer>();
+                ArrayList<String> songPathList = new ArrayList<String>();
 
                 if(!currentList.trim().equals("empty")) {
                     String[] tokens = currentList.trim().split("\\s*,\\s*");
                     for (String s : tokens) {
-                        songIndexList.add(Integer.parseInt(s));
+                        songPathList.add(s);
                     }
                 }
 
-                for(int i = 0; i < songIndexList.size(); i++) {
-                    if(songIndexList.get(i) == CurrentSelectedRow){
+                for(int i = 0; i < songPathList.size(); i++) {
+                    if(songPathList.get(i).equals(selectedPath)){
                         playlistContains = true;
                     }
                 }
                 if(!playlistContains) {
-                    playDB.addSong(playName, songIndex);
+                    playDB.addSong(playName, selectedPath);
                     if (windowList.size() > 0) {
                         for (int i = 0; i < windowList.size(); i++) {
                             windowList.get(i).populatePlaylist(windowList.get(i).getName());
@@ -913,26 +978,26 @@ public class MusicPlayerGUI extends JFrame{
                         @Override
                         public void actionPerformed(ActionEvent e) {
                             //add song to the playlist
-                            String songIndex = Integer.toString(CurrentSelectedRow);
+                            String selectedPath = table.getModel().getValueAt(CurrentSelectedRow, 0).toString().trim();
                             boolean playlistContains = false;
                             String currentList = playDB.searchDB(playName);
-                            ArrayList<Integer> songIndexList = new ArrayList<Integer>();
+                            ArrayList<String> songPathList = new ArrayList<String>();
 
                             if(!currentList.trim().equals("empty")) {
                                 String[] tokens = currentList.trim().split("\\s*,\\s*");
                                 for (String s : tokens) {
-                                    songIndexList.add(Integer.parseInt(s));
+                                    songPathList.add(s);
                                 }
                             }
 
-                            for(int i = 0; i < songIndexList.size(); i++) {
-                                if(songIndexList.get(i) == CurrentSelectedRow){
+                            for(int i = 0; i < songPathList.size(); i++) {
+                                if(songPathList.get(i).equals(selectedPath)){
                                     playlistContains = true;
                                 }
                             }
 
                             if(!playlistContains) {
-                                playDB.addSong(playName, songIndex);
+                                playDB.addSong(playName, selectedPath);
                                 if (windowList.size() > 0) {
                                     for (int i = 0; i < windowList.size(); i++) {
                                         windowList.get(i).populatePlaylist(windowList.get(i).getName());
@@ -986,6 +1051,7 @@ public class MusicPlayerGUI extends JFrame{
                         plTable.setComponentPopupMenu(popupLibraryMenu);
                         //stopFileCol(plTable);
                         scrollPane.setViewportView(plTable);
+                        createHeader();
                         scrollPane.revalidate();
                         scrollPane.repaint();
                     }
@@ -1007,12 +1073,14 @@ public class MusicPlayerGUI extends JFrame{
                                 CurrentSelectedRow, 0);
                         player.open(new File(currentSong.getPath()));
                         player.play();
+
                     } else {
                         currentSong.setContents((plTable.getValueAt(CurrentSelectedRow, 0)).toString(),
                                 CurrentSelectedRow, 0);
                         player.open(new File(currentSong.getPath()));
                         player.play();
                     }
+                    player.setGain(volume);
                 } catch (BasicPlayerException ex) {
                     Logger.getLogger(MusicPlayerGUI.class.getName()).log(Level.SEVERE, null, ex);
                 }
@@ -1020,6 +1088,7 @@ public class MusicPlayerGUI extends JFrame{
                 try {
                     if(player.getStatus() == 1){
                         player.resume();
+                        player.setGain(volume);
                     } else if(player.getStatus() == 0){
                         player.pause();
                     }
@@ -1064,6 +1133,7 @@ public class MusicPlayerGUI extends JFrame{
                             player.play();
                         }
                     }
+                    player.setGain(volume);
                 } catch (BasicPlayerException ex) {
                     System.out.println("BasicPlayer exception");
                     Logger.getLogger(MusicPlayerGUI.class.getName()).log(Level.SEVERE, null, ex);
@@ -1099,6 +1169,7 @@ public class MusicPlayerGUI extends JFrame{
                             player.play();
                         }
                     }
+                    player.setGain(volume);
                 } catch (BasicPlayerException ex) {
 
                     Logger.getLogger(MusicPlayerGUI.class.getName()).log(Level.SEVERE, null, ex);
@@ -1169,13 +1240,13 @@ public class MusicPlayerGUI extends JFrame{
                             //Enter into playlist
                             if(isPlaylist) {
                                 String songPath = file.getAbsolutePath();
-                                String index = "0";
+                                String songName = "0";
                                 for (int i = 0; i < table.getRowCount(); i++) {
                                     table.setRowSelectionInterval(i, i);
                                     String tableValue = table.getModel().getValueAt(i,0).toString().trim();
                                     if(songPath.equals(tableValue)){
-                                        index = Integer.toString(i);
-                                        dragAndDropPlaylist(index);
+                                        songName = table.getModel().getValueAt(i,1).toString().trim();
+                                        dragAndDropPlaylist(songName);
                                     }
 
                                 }
@@ -1217,13 +1288,13 @@ public class MusicPlayerGUI extends JFrame{
                             if(isPlaylist) {
                                 //String songPath = dialog.getSelectedFile().getAbsolutePath();
                                 String songPath = tempFile.getAbsolutePath();
-                                String index = "0";
+                                String selectedPath = "0";
                                 for (int i = 0; i < table.getRowCount(); i++) {
                                     table.setRowSelectionInterval(i, i);
                                     String tableValue = table.getModel().getValueAt(i,0).toString().trim();
                                     if(songPath.equals(tableValue)){
-                                        index = Integer.toString(i);
-                                        dragAndDropPlaylist(index);
+                                        selectedPath = tableValue;
+                                        dragAndDropPlaylist(selectedPath);
                                     }
 
                                 }
@@ -1253,27 +1324,27 @@ public class MusicPlayerGUI extends JFrame{
         }
     }
 
-    public void dragAndDropPlaylist(String index){
+    public void dragAndDropPlaylist(String selectedPath){
         //String indexStr = library.searchDB(songPath);
         boolean playlistContains = false;
         String currentList = playDB.searchDB(playlistName);
-        ArrayList<Integer> songIndexList = new ArrayList<Integer>();
+        ArrayList<String> songPathList = new ArrayList<String>();
         String temp = currentList.trim();
         if(!temp.equals("empty")) {
             String[] tokens = currentList.trim().split("\\s*,\\s*");
             for (String s : tokens) {
-                songIndexList.add(Integer.parseInt(s));
+                songPathList.add(s);
             }
         }
 
-        for(int i = 0; i < songIndexList.size(); i++) {
-            if(songIndexList.get(i) == Integer.parseInt(index)){
+        for(int i = 0; i < songPathList.size(); i++) {
+            if(songPathList.get(i).equals(selectedPath)){
                 playlistContains = true;
             }
         }
 
         if(!playlistContains) {
-            playDB.addSong(playlistName, index);
+            playDB.addSong(playlistName, selectedPath);
             populatePlaylist(playlistName);
         }
         scrollPane.setViewportView(plTable);
@@ -1291,16 +1362,16 @@ public class MusicPlayerGUI extends JFrame{
     }
 
     public void populatePlaylist(String playlistName){
-        ArrayList<Integer> songIndexes = new ArrayList<Integer>();
-        String indexes = playDB.searchDB(playlistName);
-        if(!indexes.trim().equals("empty")) {
-            String[] tokens = indexes.trim().split("\\s*,\\s*");
+        ArrayList<String> songPathList = new ArrayList<String>();
+        String currentList = playDB.searchDB(playlistName);
+        if(!currentList.trim().equals("empty")) {
+            String[] tokens = currentList.trim().split("\\s*,\\s*");
             for (String s : tokens) {
-                songIndexes.add(Integer.parseInt(s));
+                songPathList.add(s);
             }
-            if (songIndexes.size() > 0) {
+            if (songPathList.size() > 0) {
                 TableModel original = table.getModel();
-                DefaultTableModel playlistModel = new DefaultTableModel(songIndexes.size(), original.getColumnCount());
+                DefaultTableModel playlistModel = new DefaultTableModel(songPathList.size(), original.getColumnCount());
                 plTable = new JTable(playlistModel);
                 plTable.setDragEnabled(true);
 
@@ -1310,14 +1381,24 @@ public class MusicPlayerGUI extends JFrame{
                     //playlistModel.addColumn(original.getColumnName(i));
                 }
 
-                for (int i = 0; i < songIndexes.size(); i++) {
-                    table.setRowSelectionInterval(songIndexes.get(i), songIndexes.get(i));
+
+                for (int i = 0; i < songPathList.size(); i++) {
+                    int index = 0;
+                    for (int j = 0; j < table.getRowCount(); j++) {
+                        table.setRowSelectionInterval(j, j);
+                        String tableValue = table.getModel().getValueAt(j, 0).toString().trim();
+                        if ((songPathList.get(i)).equals(tableValue)) {
+                            index = j;
+                        }
+                    }
+                    table.setRowSelectionInterval(index, index);
                     int row = table.getSelectedRow();
                     int modelRow = table.convertRowIndexToModel(row);
-                    //playlistModel.setRowCount(songIndexes.size());
+                    //playlistModel.setRowCount(songNameList.size());
                     for (int col = 0; col < original.getColumnCount(); col++) {
                         playlistModel.setValueAt(original.getValueAt(modelRow, col), i, col);
                     }
+
                 }
                 mouseListenerpop = new MouseAdapter() {
                     //this will print the selected row index when a user clicks the table

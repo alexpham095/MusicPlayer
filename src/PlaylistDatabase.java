@@ -28,7 +28,7 @@ public class PlaylistDatabase {
             except.printStackTrace();
         }
     }
-
+    /***
     protected static void buildTable()
     {
         try
@@ -42,7 +42,23 @@ public class PlaylistDatabase {
             sqlExcept.printStackTrace();
         }
     }
+     ***/
 
+    protected static void buildTable()
+    {
+        try
+        {
+            stmt = conn.createStatement();
+            stmt.execute("CREATE TABLE " + tableName + " (Playlist CHAR(150), " + "SongPaths CLOB(1999999999)" + ")");
+            stmt.close();
+        }
+        catch (SQLException sqlExcept)
+        {
+            sqlExcept.printStackTrace();
+        }
+    }
+
+    //return name of playlists
     protected static Vector<String> buildPlaylistTree()
     {
         Vector<String> output = new Vector<String>();
@@ -81,7 +97,8 @@ public class PlaylistDatabase {
         return 0;
     }
 
-    protected static boolean insertPlaylist(String name, String indexes){
+    //create a playlist
+    protected static boolean insertPlaylist(String name, String songPaths){
         try {
             String queryCheck = "SELECT count(*) from PLAYLISTS WHERE Playlist = ?";
             PreparedStatement statement = conn.prepareStatement(queryCheck);
@@ -92,11 +109,11 @@ public class PlaylistDatabase {
                 count = resultSet.getInt(1);
             }
 
-            //insert the song
+            //insert the playlist
             if (count == 0) {
                 statement = conn.prepareStatement("INSERT INTO " + tableName + " values (?,?)");
                 statement.setString(1, name);
-                statement.setString(2, indexes);
+                statement.setString(2, songPaths);
                 statement.executeUpdate();
                 return true;
             } else {
@@ -109,13 +126,13 @@ public class PlaylistDatabase {
         }
         return false;
     }
-    //create method to change value for the playlist. Adding the index of the songs.
 
-    protected static String addSong(String name, String songNum){
-        String index = "";
+    //add a song to the playlist
+    protected static String addSong(String name, String songPathToAdd){
+        String songPath = "";
         try {
 
-            String query = "SELECT SongIndexes from PLAYLISTS WHERE Playlist = ?";
+            String query = "SELECT SongPaths from PLAYLISTS WHERE Playlist = ?";
             PreparedStatement statement = conn.prepareStatement(query);
             statement.setString(1, name);
             ResultSet rs = statement.executeQuery();
@@ -123,16 +140,15 @@ public class PlaylistDatabase {
             if (rs.next()) {
                 System.out.println(rs.getString(1));
                 if(!rs.getString(1).trim().equals("empty")) {
-                    index = rs.getString(1).trim();
-                    System.out.println("in database" + index);
-                    index = index + ", " + songNum;
+                    songPath = rs.getString(1).trim();
+                    songPath = songPath + ", " + songPathToAdd;
                 }
                 else{
-                    index = songNum;
+                    songPath = songPathToAdd;
                 }
 
-                statement = conn.prepareStatement("UPDATE PLAYLISTS set SongIndexes = ? WHERE Playlist = ?");
-                statement.setString(1, index);
+                statement = conn.prepareStatement("UPDATE PLAYLISTS set SongPaths = ? WHERE Playlist = ?");
+                statement.setString(1, songPath);
                 statement.setString(2, name);
                 statement.executeUpdate();
             }
@@ -140,15 +156,15 @@ public class PlaylistDatabase {
         } catch (SQLException sqlExcept) {
             sqlExcept.printStackTrace();
         }
-        return index;
+        return songPath;
     }
 
-    protected void deleteSong(String name, String songNum){
+    protected void deleteSong(String name, String songPath){
         String index = "";
         String indexVal ="";
         try {
 
-            String query = "SELECT SongIndexes from PLAYLISTS WHERE Playlist = ?";
+            String query = "SELECT SongPaths from PLAYLISTS WHERE Playlist = ?";
             PreparedStatement statement = conn.prepareStatement(query);
             statement.setString(1, name);
             ResultSet rs = statement.executeQuery();
@@ -157,13 +173,11 @@ public class PlaylistDatabase {
                 System.out.println(rs.getString(1));
                 if(!rs.getString(1).trim().equals("empty")) {
                     index = rs.getString(1).trim();
-                    System.out.println("Song Num " + songNum);
-                    System.out.println("in database" + index);
                     String[] indexes = index.split("\\s*,\\s");
 
                     for(int i = 0; i < indexes.length; i++){
                         System.out.println(indexes[i]);
-                        if(!indexes[i].equals(songNum)){
+                        if(!indexes[i].equals(songPath)){
                             if(!indexVal.equals("")) {
                                 indexVal = indexVal + ", " + indexes[i];
                             } else {
@@ -172,14 +186,13 @@ public class PlaylistDatabase {
                         }
 
                     }
-                    System.out.println(indexVal);
                 }
 
                 if (indexVal==""){
                     indexVal = "empty";
                 }
 
-                statement = conn.prepareStatement("UPDATE PLAYLISTS set SongIndexes = ? WHERE Playlist = ?");
+                statement = conn.prepareStatement("UPDATE PLAYLISTS set SongPaths = ? WHERE Playlist = ?");
                 statement.setString(1, indexVal);
                 statement.setString(2, name);
                 statement.executeUpdate();
@@ -204,25 +217,25 @@ public class PlaylistDatabase {
         }
     }
 
-    //return index of the playlist
+    //return songPaths of songs in the playlist
     protected static String searchDB(String name){
-        String index = "";
+        String songPaths = "";
         try {
-            String queryCheck = "SELECT SongIndexes from PLAYLISTS WHERE Playlist = ?";
+            String queryCheck = "SELECT SongPaths from PLAYLISTS WHERE Playlist = ?";
             PreparedStatement statement = conn.prepareStatement(queryCheck);
             statement.setString(1, name);
             ResultSet rs = statement.executeQuery();
 
             if(rs.next()){
-                index = rs.getString(1);
+                songPaths = rs.getString(1);
             }
-            return index;
+            return songPaths;
         }
         catch (SQLException sqlExcept)
         {
             sqlExcept.printStackTrace();
         }
-        return index;
+        return songPaths;
     }
 
     protected static void shutdown()

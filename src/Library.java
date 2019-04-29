@@ -23,4 +23,7 @@ public class Library {
         data.deleteSong(songPath);
     }
 
+    protected DefaultTableModel sortData(int order) {
+        return data.sortData(order);
+    }
 }

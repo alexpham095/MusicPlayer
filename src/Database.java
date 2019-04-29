@@ -44,6 +44,46 @@ public class Database {
         }
     }
 
+    protected static DefaultTableModel sortData(int order){
+
+        Vector<Vector<Object>> output = new Vector<Vector<Object>>();
+        Vector<String> columnNames = new Vector<String>();
+        try
+        {
+            ResultSet results;
+            stmt = conn.createStatement();
+            if(order == 0) {
+                results = stmt.executeQuery("select * from " + tableName + " Order by Title desc");
+            } else {
+                results = stmt.executeQuery("select * from " + tableName + " Order by Title asc");
+            }
+            ResultSetMetaData rsmd = results.getMetaData();
+            int numberCols = rsmd.getColumnCount();
+            for (int i=1; i<=numberCols; i++)
+            {
+                //print Column Names
+                columnNames.add(rsmd.getColumnLabel(i));
+            }
+
+            while(results.next())
+            {
+                Vector<Object> vector = new Vector<Object>();
+                for (int columnIndex = 1; columnIndex <= numberCols; columnIndex++) {
+                    vector.add(results.getObject(columnIndex));
+                }
+                output.add(vector);
+            }
+            results.close();
+            stmt.close();
+        }
+        catch (SQLException sqlExcept)
+        {
+            sqlExcept.printStackTrace();
+        }
+        return new DefaultTableModel(output, columnNames);
+    }
+
+
     protected static boolean insertSong(String songPath)
     {
         try
@@ -161,6 +201,10 @@ public class Database {
         catch (SQLException sqlExcept) {
             sqlExcept.printStackTrace();
         }
+    }
+
+    protected static void sortSongs(){
+
     }
 
     protected static void shutdown()
