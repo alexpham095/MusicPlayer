@@ -1,3 +1,8 @@
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+
 import java.awt.*;
 import java.awt.datatransfer.DataFlavor;
 import java.awt.datatransfer.Transferable;
@@ -23,6 +28,8 @@ import javax.swing.tree.*;
 
 import com.mpatric.mp3agic.*;
 import javazoom.jlgui.basicplayer.*;
+
+
 
 public class MusicPlayerGUI {
 
@@ -138,6 +145,7 @@ public class MusicPlayerGUI {
                 progressBar.setMaximum((int)songLength);
                 remainTimeText.setText(duration);
                 //progressBar.setValue(55);
+                //progressBar.repaint();
             }
 
             @Override
@@ -324,7 +332,7 @@ public class MusicPlayerGUI {
         if(!isWindow) {
             header = table.getTableHeader();
             createHeader();
-            //header.setComponentPopupMenu(popupHeader);
+            header.setComponentPopupMenu(popupHeader);
             table.setTableHeader(header);
         }
         //hideAllCol(table);
@@ -335,6 +343,16 @@ public class MusicPlayerGUI {
         table.getInputMap(JTable.WHEN_ANCESTOR_OF_FOCUSED_COMPONENT).put(rightKey, "ArrowKeys");
 
         createTree();
+
+        //Get the current toggle state of the columns and draw it
+        toggleColumn(table, "ALBUM", albumPop.getState());
+        toggleColumn(table, "ARTIST", artistPop.getState());
+        toggleColumn(table, "YEAR", yearPop.getState());
+        toggleColumn(table, "GENRE", genrePop.getState());
+        toggleColumn(table, "COMMENT", commentPop.getState());
+
+        //FILE column must be hidden
+        toggleColumn(table, "FILE", false);
     }
 
     public void displayLibraryTable(){
@@ -839,13 +857,89 @@ public class MusicPlayerGUI {
         yearPop = new JCheckBoxMenuItem("YEAR");
         genrePop = new JCheckBoxMenuItem("GENRE");
         commentPop = new JCheckBoxMenuItem("COMMENT");
+        BufferedReader br = null;
+        char textReader;
+
+        popupHeader.add(albumPop);
+        popupHeader.add(artistPop);
+        popupHeader.add(yearPop);
+        popupHeader.add(genrePop);
+        popupHeader.add(commentPop);
+
+        //Get the boolean states of each column from a text file called headerToggle.txt
+        try {
+            br = new BufferedReader(new FileReader("headerToggle.txt"));
+
+            for(int i = 0; i < 5; ++i)
+            {
+                textReader = (char)br.read();
+
+                //The following if...else statements reads 1 or 0 from the text file
+                //and sets the appropriate state for the check boxes for each column
+                if (i == 0) {
+                    if (textReader == '1') {
+                        albumPop.setState(true);
+                    }
+                    else {
+                        albumPop.setState(false);
+                    }
+                }
+
+                else if (i == 1) {
+                    if (textReader == '1') {
+                        artistPop.setState(true);
+                    }
+                    else {
+                        artistPop.setState(false);
+                    }
+                }
+
+                else if (i == 2) {
+                    if (textReader == '1') {
+                        yearPop.setState(true);
+                    }
+                    else {
+                        yearPop.setState(false);
+                    }
+                }
+
+                else if (i == 3) {
+                    if (textReader == '1') {
+                        genrePop.setState(true);
+                    }
+                    else {
+                        genrePop.setState(false);
+                    }
+                }
+
+                else if (i == 4) {
+                    if (textReader == '1') {
+                        commentPop.setState(true);
+                    }
+                    else {
+                        commentPop.setState(false);
+                    }
+                }
+            }
+        } catch(IOException e) {
+
+        } finally {
+            try {
+                br.close();
+            } catch (IOException e) {
+
+            }
+        }
 
 
         albumPop.addActionListener(new ActionListener(){
 
             @Override
             public void actionPerformed(ActionEvent e) {
-                //toggleColumn(table, "ALBUM", albumPop.getState());
+                toggleColumn(table, "ALBUM", albumPop.getState());
+
+                //Update the columns base on the boolean of each column
+                writeToHeaderToggle (albumPop.getState(), artistPop.getState(), yearPop.getState(), genrePop.getState(), commentPop.getState());
 
             }
         });
@@ -854,7 +948,9 @@ public class MusicPlayerGUI {
 
             @Override
             public void actionPerformed(ActionEvent e) {
-                //toggleColumn(table, "ARTIST", artistPop.getState());
+                toggleColumn(table, "ARTIST", artistPop.getState());
+
+                writeToHeaderToggle (albumPop.getState(), artistPop.getState(), yearPop.getState(), genrePop.getState(), commentPop.getState());
 
             }
         });
@@ -863,7 +959,9 @@ public class MusicPlayerGUI {
 
             @Override
             public void actionPerformed(ActionEvent e) {
-                //toggleColumn(table, "YEAR", yearPop.getState());
+                toggleColumn(table, "YEAR", yearPop.getState());
+
+                writeToHeaderToggle (albumPop.getState(), artistPop.getState(), yearPop.getState(), genrePop.getState(), commentPop.getState());
 
             }
         });
@@ -872,7 +970,9 @@ public class MusicPlayerGUI {
 
             @Override
             public void actionPerformed(ActionEvent e) {
-                //toggleColumn(table, "GENRE", genrePop.getState());
+                toggleColumn(table, "GENRE", genrePop.getState());
+
+                writeToHeaderToggle (albumPop.getState(), artistPop.getState(), yearPop.getState(), genrePop.getState(), commentPop.getState());
 
             }
         });
@@ -881,16 +981,12 @@ public class MusicPlayerGUI {
 
             @Override
             public void actionPerformed(ActionEvent e) {
-               // toggleColumn(table, "COMMENT", commentPop.getState());
+                toggleColumn(table, "COMMENT", commentPop.getState());
+
+                writeToHeaderToggle (albumPop.getState(), artistPop.getState(), yearPop.getState(), genrePop.getState(), commentPop.getState());
 
             }
         });
-
-        popupHeader.add(albumPop);
-        popupHeader.add(artistPop);
-        popupHeader.add(yearPop);
-        popupHeader.add(genrePop);
-        popupHeader.add(commentPop);
 
         if(!isPlaylist) {
             //if playlist is in a window
@@ -939,6 +1035,37 @@ public class MusicPlayerGUI {
                     }
                 }
             });
+        }
+    }
+
+    //This function takes the boolean of each column and writes it to headerToggle.txt to save the state of each boolean
+    public void writeToHeaderToggle (boolean album, boolean  artist, boolean year, boolean genre, boolean comment) {
+        char boolTranslate;
+        boolean boolArray[] = {album, artist, year, genre, comment};
+        BufferedWriter bw = null;
+
+        try {
+            bw = new BufferedWriter(new FileWriter("headerToggle.txt"));
+
+            for (int i = 0; i < 5; ++i) {
+                if (boolArray[i]) {
+                    boolTranslate = '1';
+                }
+                else {
+                    boolTranslate = '0';
+                }
+
+                bw.write((int)boolTranslate);
+            }
+
+        } catch(IOException e) {
+
+        } finally {
+            try {
+                bw.close();
+            } catch (IOException e) {
+
+            }
         }
     }
 
