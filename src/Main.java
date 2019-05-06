@@ -16,8 +16,14 @@ public class Main {
             playData.buildTable();
         }
 
+        RecentSongDatabase recentData = new RecentSongDatabase();
+        recentData.createConnection();
+        if(!recentData.hasTable()){
+            recentData.buildTable();
+        }
+
         Library lib = new Library(data);
-        MusicPlayerGUI music = new MusicPlayerGUI(lib,playData);
+        MusicPlayerGUI music = new MusicPlayerGUI(lib,playData, recentData);
         music.go();
     }
 }
