@@ -1056,36 +1056,55 @@ public class MusicPlayerGUI {
             });
             //if it is a playlist
         } else {
-
-            plTable.getTableHeader().addMouseListener(new MouseAdapter() {
-                @Override
-                public void mouseClicked(MouseEvent e) {
-                    int column = plTable.columnAtPoint(e.getPoint());
-                    if (order == 0) {
-                        order = 1;
-                    } else {
-                        order = 0;
-                    }
-                    if (column == 1) {
-                        plTable.setAutoCreateRowSorter(true);
-                        TableRowSorter<TableModel> sorter = new TableRowSorter<>(plTable.getModel());
-                        plTable.setRowSorter(sorter);
-                        List<RowSorter.SortKey> sortKeys = new ArrayList<>();
-
-                        int columnIndexToSort = 1;
+            if(!isWindow) {
+                plTable.getTableHeader().addMouseListener(new MouseAdapter() {
+                    @Override
+                    public void mouseClicked(MouseEvent e) {
+                        int column = plTable.columnAtPoint(e.getPoint());
                         if (order == 0) {
-                            sortKeys.add(new RowSorter.SortKey(columnIndexToSort, SortOrder.DESCENDING));
+                            order = 1;
                         } else {
-                            sortKeys.add(new RowSorter.SortKey(columnIndexToSort, SortOrder.ASCENDING));
+                            order = 0;
                         }
+                        if (column == 1) {
+                            plTable.setAutoCreateRowSorter(true);
+                            TableRowSorter<TableModel> sorter = new TableRowSorter<>(plTable.getModel());
+                            plTable.setRowSorter(sorter);
+                            List<RowSorter.SortKey> sortKeys = new ArrayList<>();
 
-                        sorter.setSortKeys(sortKeys);
-                        sorter.sort();
+                            int columnIndexToSort = 1;
+                            if (order == 0) {
+                                sortKeys.add(new RowSorter.SortKey(columnIndexToSort, SortOrder.DESCENDING));
+                            } else {
+                                sortKeys.add(new RowSorter.SortKey(columnIndexToSort, SortOrder.ASCENDING));
+                            }
 
-                        redrawColumns(plTable);
+                            sorter.setSortKeys(sortKeys);
+                            sorter.sort();
+
+                            redrawColumns(plTable);
+                        }
                     }
-                }
-            });
+                });
+            } else {
+                table.getTableHeader().addMouseListener(new MouseAdapter() {
+                    @Override
+                    public void mouseClicked(MouseEvent e) {
+                        int column = table.columnAtPoint(e.getPoint());
+                        if (order == 0) {
+                            order = 1;
+                        } else {
+                            order = 0;
+                        }
+                        if (column == 1) {
+                            table.setModel(library.sortData(order));
+
+                            //Get the current toggle state of the columns and draw it
+                            redrawColumns(table);
+                        }
+                    }
+                });
+            }
         }
 
     }
