@@ -13,7 +13,10 @@
       <change beforePath="$PROJECT_DIR$/SongsDB/log/logmirror.ctrl" beforeDir="false" afterPath="$PROJECT_DIR$/SongsDB/log/logmirror.ctrl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SongsDB/seg0/c490.dat" beforeDir="false" afterPath="$PROJECT_DIR$/SongsDB/seg0/c490.dat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/derby.log" beforeDir="false" afterPath="$PROJECT_DIR$/derby.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javaMP/KDA_POPSTARS_INSTRUMENTAL_320kbps.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/javaMP/KDA_POPSTARS_INSTRUMENTAL_320kbps.mp3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MusicPlayer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MusicPlayer/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/MusicPlayer/derby.log" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MusicPlayer/derby.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MusicPlayer/javaMP/KDA_POPSTARS_INSTRUMENTAL_320kbps.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MusicPlayer/javaMP/KDA_POPSTARS_INSTRUMENTAL_320kbps.mp3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/playlistDB/db.lck" beforeDir="false" afterPath="$PROJECT_DIR$/playlistDB/db.lck" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/playlistDB/log/log.ctrl" beforeDir="false" afterPath="$PROJECT_DIR$/playlistDB/log/log.ctrl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/playlistDB/log/log1.dat" beforeDir="false" afterPath="$PROJECT_DIR$/playlistDB/log/log1.dat" afterDir="false" />
@@ -23,6 +26,7 @@
       <change beforePath="$PROJECT_DIR$/recentSongDB/log/log.ctrl" beforeDir="false" afterPath="$PROJECT_DIR$/recentSongDB/log/log.ctrl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/recentSongDB/log/log1.dat" beforeDir="false" afterPath="$PROJECT_DIR$/recentSongDB/log/log1.dat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/recentSongDB/log/logmirror.ctrl" beforeDir="false" afterPath="$PROJECT_DIR$/recentSongDB/log/logmirror.ctrl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recentSongDB/seg0/c490.dat" beforeDir="false" afterPath="$PROJECT_DIR$/recentSongDB/seg0/c490.dat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MusicPlayerGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MusicPlayerGUI.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -52,50 +56,10 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/MusicPlayerGUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="159">
-              <caret line="2007" selection-start-line="2007" selection-end-line="2007" />
+            <state relative-caret-position="352">
+              <caret line="1530" column="47" lean-forward="true" selection-start-line="1530" selection-start-column="47" selection-end-line="1530" selection-end-column="47" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#2136#2152#0" expanded="true" />
-                <element signature="e#2206#2217#0" expanded="true" />
-                <element signature="e#2275#2286#0" expanded="true" />
-                <element signature="e#9890#10099#0" expanded="true" />
-                <element signature="e#10098#10099#0" expanded="true" />
-                <element signature="e#22136#22137#0" expanded="true" />
-                <element signature="e#22181#22182#0" expanded="true" />
-                <element signature="e#23943#23951#0" expanded="true" />
-                <element signature="e#27401#27402#0" expanded="true" />
-                <element signature="e#27447#27448#0" expanded="true" />
-                <element signature="e#29197#29198#0" expanded="true" />
-                <element signature="e#29242#29243#0" expanded="true" />
-                <element signature="e#29400#29401#0" expanded="true" />
-                <element signature="e#29450#29451#0" expanded="true" />
-                <element signature="e#30003#30004#0" expanded="true" />
-                <element signature="e#30055#30056#0" expanded="true" />
-                <element signature="e#31589#31590#0" expanded="true" />
-                <element signature="e#31645#31646#0" expanded="true" />
-                <element signature="e#31801#31802#0" expanded="true" />
-                <element signature="e#31859#31860#0" expanded="true" />
-                <element signature="e#38933#39550#0" expanded="true" />
-                <element signature="e#39549#39550#0" expanded="true" />
-                <element signature="e#39659#40887#0" expanded="true" />
-                <element signature="e#40886#40887#0" expanded="true" />
-                <element signature="e#48035#48036#0" expanded="true" />
-                <element signature="e#48090#48091#0" expanded="true" />
-                <element signature="e#48954#48962#0" expanded="true" />
-                <element signature="e#50244#50575#0" expanded="true" />
-                <element signature="e#50574#50575#0" expanded="true" />
-                <element signature="e#50982#50983#0" expanded="true" />
-                <element signature="e#51017#51018#0" expanded="true" />
-                <element signature="e#50886#50897#0" expanded="true" />
-                <element signature="e#51591#51599#0" expanded="true" />
-                <element signature="e#55982#55990#0" expanded="true" />
-                <element signature="e#57537#59957#0" expanded="true" />
-                <element signature="e#59956#59957#0" expanded="true" />
-                <element signature="e#76380#76388#0" expanded="true" />
-                <element signature="e#78375#78383#0" expanded="true" />
-                <element signature="e#80789#81172#0" expanded="true" />
-                <element signature="e#81171#81172#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -104,8 +68,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Database.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2720">
-              <caret line="166" column="51" selection-start-line="166" selection-start-column="51" selection-end-line="166" selection-end-column="51" />
+            <state relative-caret-position="352">
+              <caret line="177" column="40" selection-start-line="177" selection-start-column="40" selection-end-line="177" selection-end-column="40" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -116,10 +80,9 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Library.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="29" selection-start-line="29" selection-end-line="29" />
+            <state relative-caret-position="85">
+              <caret line="5" column="38" selection-start-line="5" selection-start-column="38" selection-end-line="5" selection-end-column="38" />
               <folding>
-                <element signature="e#125#126#0" expanded="true" />
                 <element signature="e#156#157#0" expanded="true" />
               </folding>
             </state>
@@ -129,8 +92,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Song.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="21" column="20" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="20" />
+            <state relative-caret-position="136">
+              <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -146,12 +109,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>playDB</find>
-      <find>mainGUI</find>
-      <find>progressBar</find>
-      <find>progressBar.setValue</find>
-      <find>createBPlist</find>
-      <find>column</find>
       <find>popup</find>
       <find>headerToggle</find>
       <find>bufferedReader</find>
@@ -174,8 +131,14 @@
       <find>getColumnModel</find>
       <find>createTable</find>
       <find>redrawcolumns</find>
-      <find>toggleColumn</find>
       <find>treePopup</find>
+      <find>add</find>
+      <find>insertSong</find>
+      <find>deleteFile</find>
+      <find>deleteFilepop</find>
+      <find>buildSongsTable</find>
+      <find>redrawColumns</find>
+      <find>toggleColumn</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -197,7 +160,6 @@
         <option value="$PROJECT_DIR$/src/TableColumnHider.java" />
         <option value="$PROJECT_DIR$/src/TableColumnManager.java" />
         <option value="$PROJECT_DIR$/src/PlaylistDatabase.java" />
-        <option value="$PROJECT_DIR$/src/Database.java" />
         <option value="$PROJECT_DIR$/src/Library.java" />
         <option value="$PROJECT_DIR$/src/ArrowKeyAction.java" />
         <option value="$PROJECT_DIR$/src/Song.java" />
@@ -209,6 +171,7 @@
         <option value="$PROJECT_DIR$/src/BackgroundExecutor.java" />
         <option value="$PROJECT_DIR$/src/SeekBar.java" />
         <option value="$PROJECT_DIR$/src/Task.java" />
+        <option value="$PROJECT_DIR$/src/Database.java" />
         <option value="$PROJECT_DIR$/src/MusicPlayerGUI.java" />
       </list>
     </option>
@@ -238,22 +201,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="MusicPlayer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MusicPlayer" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MusicPlayer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MusicPlayer" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
       <pane id="Scope">
         <subPane subId="Scope 'Production'; set:Production; class com.intellij.psi.search.scope.ProjectProductionScope">
           <expand>
@@ -276,11 +223,12 @@
           <select />
         </subPane>
       </pane>
+      <pane id="ProjectPane" />
       <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1557192249525" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1557203827140" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/jar files/vorbisspi1.0.2.jar!/" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
@@ -414,9 +362,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49919224" visible="true" weight="0.22867803" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49919224" visible="true" weight="0.23154363" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -425,8 +373,8 @@
       <window_info id="Favorites" order="6" sideWeight="0.50080776" side_tool="true" weight="0.18710022" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.4986577" weight="0.32719547" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4717484" weight="0.30444205" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.39761648" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4717484" weight="0.30311614" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39761648" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.4986577" weight="0.32827735" />
@@ -462,18 +410,6 @@
     <MESSAGE value="Changed the delete method to just delete the current selected file on the table." />
     <MESSAGE value="Refreshing .gitignore" />
     <option name="LAST_COMMIT_MESSAGE" value="Refreshing .gitignore" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/MusicPlayerGUI.java</url>
-          <line>2007</line>
-          <properties />
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -551,16 +487,6 @@
     <entry file="file://$PROJECT_DIR$/src/TableColumnHider.java" />
     <entry file="file://$PROJECT_DIR$/src/TableColumnManager.java" />
     <entry file="file://$PROJECT_DIR$/src/ArrowKeyAction.java" />
-    <entry file="file://$PROJECT_DIR$/src/Database.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2720">
-          <caret line="166" column="51" selection-start-line="166" selection-start-column="51" selection-end-line="166" selection-end-column="51" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/PlaylistDatabase.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2465">
@@ -597,70 +523,39 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Song.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Library.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="29" selection-start-line="29" selection-end-line="29" />
+        <state relative-caret-position="85">
+          <caret line="5" column="38" selection-start-line="5" selection-start-column="38" selection-end-line="5" selection-end-column="38" />
           <folding>
-            <element signature="e#125#126#0" expanded="true" />
             <element signature="e#156#157#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Song.java">
+    <entry file="file://$PROJECT_DIR$/src/Database.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="21" column="20" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="20" />
+        <state relative-caret-position="352">
+          <caret line="177" column="40" selection-start-line="177" selection-start-column="40" selection-end-line="177" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/MusicPlayerGUI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
-          <caret line="2007" selection-start-line="2007" selection-end-line="2007" />
+        <state relative-caret-position="352">
+          <caret line="1530" column="47" lean-forward="true" selection-start-line="1530" selection-start-column="47" selection-end-line="1530" selection-end-column="47" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2136#2152#0" expanded="true" />
-            <element signature="e#2206#2217#0" expanded="true" />
-            <element signature="e#2275#2286#0" expanded="true" />
-            <element signature="e#9890#10099#0" expanded="true" />
-            <element signature="e#10098#10099#0" expanded="true" />
-            <element signature="e#22136#22137#0" expanded="true" />
-            <element signature="e#22181#22182#0" expanded="true" />
-            <element signature="e#23943#23951#0" expanded="true" />
-            <element signature="e#27401#27402#0" expanded="true" />
-            <element signature="e#27447#27448#0" expanded="true" />
-            <element signature="e#29197#29198#0" expanded="true" />
-            <element signature="e#29242#29243#0" expanded="true" />
-            <element signature="e#29400#29401#0" expanded="true" />
-            <element signature="e#29450#29451#0" expanded="true" />
-            <element signature="e#30003#30004#0" expanded="true" />
-            <element signature="e#30055#30056#0" expanded="true" />
-            <element signature="e#31589#31590#0" expanded="true" />
-            <element signature="e#31645#31646#0" expanded="true" />
-            <element signature="e#31801#31802#0" expanded="true" />
-            <element signature="e#31859#31860#0" expanded="true" />
-            <element signature="e#38933#39550#0" expanded="true" />
-            <element signature="e#39549#39550#0" expanded="true" />
-            <element signature="e#39659#40887#0" expanded="true" />
-            <element signature="e#40886#40887#0" expanded="true" />
-            <element signature="e#48035#48036#0" expanded="true" />
-            <element signature="e#48090#48091#0" expanded="true" />
-            <element signature="e#48954#48962#0" expanded="true" />
-            <element signature="e#50244#50575#0" expanded="true" />
-            <element signature="e#50574#50575#0" expanded="true" />
-            <element signature="e#50982#50983#0" expanded="true" />
-            <element signature="e#51017#51018#0" expanded="true" />
-            <element signature="e#50886#50897#0" expanded="true" />
-            <element signature="e#51591#51599#0" expanded="true" />
-            <element signature="e#55982#55990#0" expanded="true" />
-            <element signature="e#57537#59957#0" expanded="true" />
-            <element signature="e#59956#59957#0" expanded="true" />
-            <element signature="e#76380#76388#0" expanded="true" />
-            <element signature="e#78375#78383#0" expanded="true" />
-            <element signature="e#80789#81172#0" expanded="true" />
-            <element signature="e#81171#81172#0" expanded="true" />
           </folding>
         </state>
       </provider>

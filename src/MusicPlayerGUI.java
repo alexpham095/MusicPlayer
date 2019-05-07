@@ -348,6 +348,7 @@ public class MusicPlayerGUI {
         table.getInputMap(JTable.WHEN_ANCESTOR_OF_FOCUSED_COMPONENT).put(rightKey, "ArrowKeys");
 
         createTree();
+        redrawColumns(table);
     }
 
     public void displayLibraryTable(){
@@ -595,7 +596,7 @@ public class MusicPlayerGUI {
                         JOptionPane.showMessageDialog(musicPanel, "Song already exists", "Error", JOptionPane.ERROR_MESSAGE);
                     }
                     table.setModel(library.buildSongsTable()); //refresh table
-
+                    redrawColumns(table);
                     //stopFileCol(table);
                     //hideAllCol(table);
 
@@ -637,6 +638,8 @@ public class MusicPlayerGUI {
                         //stopFileCol(plTable);
 
                     }
+
+                    redrawColumns(table);
                 }
             }
 
@@ -672,6 +675,7 @@ public class MusicPlayerGUI {
                     }
                     library.deleteSong(highlightedSongPath);
                     table.setModel(library.buildSongsTable()); //refresh table
+                    redrawColumns(table);
                     //stopFileCol(table);
                    // hideAllCol(table);
                 }
@@ -692,6 +696,8 @@ public class MusicPlayerGUI {
                     scrollPane.setViewportView(plTable);
                     //stopFileCol(plTable);
                 }
+
+                redrawColumns(table);
             }
 
         });
@@ -1134,7 +1140,6 @@ public class MusicPlayerGUI {
             System.out.println();
             table.getTableHeader().repaint();
             table.repaint();
-
         }
     }
 
@@ -1155,6 +1160,7 @@ public class MusicPlayerGUI {
                         JOptionPane.showMessageDialog(musicPanel, "Song already exists", "Error", JOptionPane.ERROR_MESSAGE);
                     }
                     table.setModel(library.buildSongsTable()); //refresh table
+                    redrawColumns(table);
                     //stopFileCol(table);
                     //hideAllCol(table);
                 }
@@ -1189,7 +1195,7 @@ public class MusicPlayerGUI {
                                 playDB.deleteSong(name, selectedPath);
                                 populatePlaylist(name);
                             }
-
+                            redrawColumns(table);
                         }
                     }
                     //if there are windows open, update those windows.
@@ -1217,6 +1223,7 @@ public class MusicPlayerGUI {
                     }
                     library.deleteSong(highlightedSongPath.trim());
                     table.setModel(library.buildSongsTable()); //refresh table
+                    redrawColumns(table);
                     //stopFileCol(table);
                     //hideAllCol(table);
 
@@ -1784,8 +1791,8 @@ public class MusicPlayerGUI {
                                 JOptionPane.showMessageDialog(musicPanel, "Song already exists", "Error", JOptionPane.ERROR_MESSAGE);
                             }
 
-
                             table.setModel(library.buildSongsTable()); //refresh table
+                            redrawColumns(table);
                             //stopFileCol(table);
                             //hideAllCol(table);
 
@@ -1807,6 +1814,7 @@ public class MusicPlayerGUI {
                             }
 
                             table.setModel(library.buildSongsTable()); //refresh table
+                            redrawColumns(table);
                             //stopFileCol(table);
                             //hideAllCol(table);
 
@@ -1834,6 +1842,7 @@ public class MusicPlayerGUI {
                             String currentList = playDB.searchDB(playlistName);
 
                             table.setModel(library.buildSongsTable()); //refresh table
+                            redrawColumns(table);
                            // stopFileCol(table);
                            // hideAllCol(table);
 
@@ -1855,9 +1864,11 @@ public class MusicPlayerGUI {
                                 //stopFileCol(plTable);
 
                                 table.setModel(library.buildSongsTable()); //refresh table
+                                redrawColumns(table);
                                 //stopFileCol(table);
                                 if(origin != null){
                                     origin.table.setModel(library.buildSongsTable());
+                                    redrawColumns(origin.table);
                                     //stopFileCol(origin.table);
                                     //hideAllCol(origin.table);
                                 }
@@ -1866,6 +1877,8 @@ public class MusicPlayerGUI {
                             }
                         }
                     }
+
+                    redrawColumns(table);
                 }catch(Exception problem)
                 {
                     JOptionPane.showMessageDialog(null, problem);
@@ -1904,10 +1917,12 @@ public class MusicPlayerGUI {
         //stopFileCol(plTable);
 
         table.setModel(library.buildSongsTable()); //refresh table
+        redrawColumns(table);
         //stopFileCol(table);
         //hideAllCol(table);
         if(origin != null){
             origin.table.setModel(library.buildSongsTable());
+            redrawColumns(origin.table);
             //stopFileCol(origin.table);
             //hideAllCol(origin.table);
         }
