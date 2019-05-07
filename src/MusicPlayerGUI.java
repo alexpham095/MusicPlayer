@@ -50,7 +50,7 @@ public class MusicPlayerGUI {
     JMenuItem newFilepop, deleteFilepop, newWindowPop, deleteplayPop;
     JMenuItem playMenuItem, nextMenuItem, previousMenuItem, currentSongMenuItem,
                 incVolMenuItem, decVolMenuItem;
-    JCheckBoxMenuItem albumPop, artistPop, yearPop, genrePop, commentPop, shuffleMenuItem, repeatMenuItem;
+    JCheckBoxMenuItem filePop, titlePop, albumPop, artistPop, yearPop, genrePop, commentPop, shuffleMenuItem, repeatMenuItem;
     JTableHeader header;
     JProgressBar progressBar;
     JTextField passedTimeText, remainTimeText;
@@ -91,6 +91,7 @@ public class MusicPlayerGUI {
     DragAndDrop dndObj = new DragAndDrop();
     DropTarget targetOfDND = new DropTarget(main,dndObj);
     MusicPlayerGUI origin;
+    int numColumns = 7;
 
     public MusicPlayerGUI(Library lib, PlaylistDatabase playDataB, RecentSongDatabase recentData) {
         library = lib;
@@ -322,12 +323,12 @@ public class MusicPlayerGUI {
         // sets the popup menu for the table
         table.setComponentPopupMenu(popupLibraryMenu);
         table.addMouseListener(mouseListenerpop);
-        TableColumn column = table.getColumnModel().getColumn(0);
+        //TableColumn column = table.getColumnModel().getColumn(0);
         //column.setMinWidth(0);
         //column.setMaxWidth(0);
         //column.setPreferredWidth(0);
-        column = table.getColumnModel().getColumn(1);
-        column.setPreferredWidth(200);
+        //column = table.getColumnModel().getColumn(1);
+        //column.setPreferredWidth(200);
 
         if(!isWindow) {
             header = table.getTableHeader();
@@ -335,6 +336,13 @@ public class MusicPlayerGUI {
             header.setComponentPopupMenu(popupHeader);
             table.setTableHeader(header);
         }
+        else {
+            header = plTable.getTableHeader();
+            createHeader();
+            header.setComponentPopupMenu(popupHeader);
+            plTable.setTableHeader(header);
+        }
+
         //hideAllCol(table);
         currentTable = table;
         KeyStroke leftKey = KeyStroke.getKeyStroke(KeyEvent.VK_LEFT, KeyEvent.CTRL_DOWN_MASK);
@@ -345,14 +353,7 @@ public class MusicPlayerGUI {
         createTree();
 
         //Get the current toggle state of the columns and draw it
-        toggleColumn(table, "ALBUM", albumPop.getState());
-        toggleColumn(table, "ARTIST", artistPop.getState());
-        toggleColumn(table, "YEAR", yearPop.getState());
-        toggleColumn(table, "GENRE", genrePop.getState());
-        toggleColumn(table, "COMMENT", commentPop.getState());
-
-        //FILE column must be hidden
-        toggleColumn(table, "FILE", false);
+        redrawColumns();
     }
 
     public void displayLibraryTable(){
@@ -400,7 +401,7 @@ public class MusicPlayerGUI {
     }
 
     public void hideAllCol(JTable table){
-        JCheckBoxMenuItem[] activeCol = {albumPop, artistPop, yearPop, genrePop, commentPop};
+        JCheckBoxMenuItem[] activeCol = {filePop, titlePop, albumPop, artistPop, yearPop, genrePop, commentPop};
         if(table.getRowCount() == 0){
             {
                 for (int i = 2; i < table.getColumnCount(); i++) {
@@ -852,6 +853,8 @@ public class MusicPlayerGUI {
 
     public void createHeader(){
         popupHeader = new JPopupMenu();
+        filePop = new JCheckBoxMenuItem("FILE");
+        titlePop = new JCheckBoxMenuItem("TITLE");
         albumPop = new JCheckBoxMenuItem("ALBUM");
         artistPop = new JCheckBoxMenuItem("ARTIST");
         yearPop = new JCheckBoxMenuItem("YEAR");
@@ -860,6 +863,8 @@ public class MusicPlayerGUI {
         BufferedReader br = null;
         char textReader;
 
+        //popupHeader.add(filePop); HIDE SO THAT USER CANNOT CHANGE THE TOGGLE
+        //popupHeader.add(titlePop; HIDE SO THAT USER CANNOT CHANGE THE TOGGLE
         popupHeader.add(albumPop);
         popupHeader.add(artistPop);
         popupHeader.add(yearPop);
@@ -870,13 +875,31 @@ public class MusicPlayerGUI {
         try {
             br = new BufferedReader(new FileReader("headerToggle.txt"));
 
-            for(int i = 0; i < 5; ++i)
+            for(int i = 0; i < numColumns; ++i)
             {
                 textReader = (char)br.read();
 
                 //The following if...else statements reads 1 or 0 from the text file
                 //and sets the appropriate state for the check boxes for each column
-                if (i == 0) {
+                if  (i == 0) {
+                    if (textReader == '1') {
+                        filePop.setState(true);
+                    }
+                    else {
+                        filePop.setState(false);
+                    }
+                }
+
+                else if (i == 1) {
+                    if (textReader == '1') {
+                        titlePop.setState(true);
+                    }
+                    else {
+                        titlePop.setState(false);
+                    }
+                }
+
+                else if (i == 2) {
                     if (textReader == '1') {
                         albumPop.setState(true);
                     }
@@ -885,7 +908,7 @@ public class MusicPlayerGUI {
                     }
                 }
 
-                else if (i == 1) {
+                else if (i == 3) {
                     if (textReader == '1') {
                         artistPop.setState(true);
                     }
@@ -894,7 +917,7 @@ public class MusicPlayerGUI {
                     }
                 }
 
-                else if (i == 2) {
+                else if (i == 4) {
                     if (textReader == '1') {
                         yearPop.setState(true);
                     }
@@ -903,7 +926,7 @@ public class MusicPlayerGUI {
                     }
                 }
 
-                else if (i == 3) {
+                else if (i == 5) {
                     if (textReader == '1') {
                         genrePop.setState(true);
                     }
@@ -912,7 +935,7 @@ public class MusicPlayerGUI {
                     }
                 }
 
-                else if (i == 4) {
+                else if (i == 6) {
                     if (textReader == '1') {
                         commentPop.setState(true);
                     }
@@ -931,7 +954,29 @@ public class MusicPlayerGUI {
             }
         }
 
+        filePop.addActionListener(new ActionListener(){
 
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                toggleColumn(table, "FILE", filePop.getState());
+
+                //Update the columns base on the boolean of each column
+                writeToHeaderToggle (filePop.getState(), titlePop.getState(), albumPop.getState(), artistPop.getState(), yearPop.getState(), genrePop.getState(), commentPop.getState());
+
+            }
+        });
+
+        titlePop.addActionListener(new ActionListener(){
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                toggleColumn(table, "TITLE", titlePop.getState());
+
+                //Update the columns base on the boolean of each column
+                writeToHeaderToggle (filePop.getState(), titlePop.getState(), albumPop.getState(), artistPop.getState(), yearPop.getState(), genrePop.getState(), commentPop.getState());
+
+            }
+        });
         albumPop.addActionListener(new ActionListener(){
 
             @Override
@@ -939,7 +984,7 @@ public class MusicPlayerGUI {
                 toggleColumn(table, "ALBUM", albumPop.getState());
 
                 //Update the columns base on the boolean of each column
-                writeToHeaderToggle (albumPop.getState(), artistPop.getState(), yearPop.getState(), genrePop.getState(), commentPop.getState());
+                writeToHeaderToggle (filePop.getState(), titlePop.getState(), albumPop.getState(), artistPop.getState(), yearPop.getState(), genrePop.getState(), commentPop.getState());
 
             }
         });
@@ -950,7 +995,7 @@ public class MusicPlayerGUI {
             public void actionPerformed(ActionEvent e) {
                 toggleColumn(table, "ARTIST", artistPop.getState());
 
-                writeToHeaderToggle (albumPop.getState(), artistPop.getState(), yearPop.getState(), genrePop.getState(), commentPop.getState());
+                writeToHeaderToggle (filePop.getState(), titlePop.getState(), albumPop.getState(), artistPop.getState(), yearPop.getState(), genrePop.getState(), commentPop.getState());
 
             }
         });
@@ -961,7 +1006,7 @@ public class MusicPlayerGUI {
             public void actionPerformed(ActionEvent e) {
                 toggleColumn(table, "YEAR", yearPop.getState());
 
-                writeToHeaderToggle (albumPop.getState(), artistPop.getState(), yearPop.getState(), genrePop.getState(), commentPop.getState());
+                writeToHeaderToggle (filePop.getState(), titlePop.getState(), albumPop.getState(), artistPop.getState(), yearPop.getState(), genrePop.getState(), commentPop.getState());
 
             }
         });
@@ -972,7 +1017,7 @@ public class MusicPlayerGUI {
             public void actionPerformed(ActionEvent e) {
                 toggleColumn(table, "GENRE", genrePop.getState());
 
-                writeToHeaderToggle (albumPop.getState(), artistPop.getState(), yearPop.getState(), genrePop.getState(), commentPop.getState());
+                writeToHeaderToggle (filePop.getState(), titlePop.getState(), albumPop.getState(), artistPop.getState(), yearPop.getState(), genrePop.getState(), commentPop.getState());
 
             }
         });
@@ -983,7 +1028,7 @@ public class MusicPlayerGUI {
             public void actionPerformed(ActionEvent e) {
                 toggleColumn(table, "COMMENT", commentPop.getState());
 
-                writeToHeaderToggle (albumPop.getState(), artistPop.getState(), yearPop.getState(), genrePop.getState(), commentPop.getState());
+                writeToHeaderToggle (filePop.getState(), titlePop.getState(), albumPop.getState(), artistPop.getState(), yearPop.getState(), genrePop.getState(), commentPop.getState());
 
             }
         });
@@ -1002,6 +1047,9 @@ public class MusicPlayerGUI {
                     }
                     if (column == 1) {
                         table.setModel(library.sortData(order));
+
+                        //Get the current toggle state of the columns and draw it
+                        redrawColumns();
                     }
                 }
             });
@@ -1036,18 +1084,19 @@ public class MusicPlayerGUI {
                 }
             });
         }
+
     }
 
     //This function takes the boolean of each column and writes it to headerToggle.txt to save the state of each boolean
-    public void writeToHeaderToggle (boolean album, boolean  artist, boolean year, boolean genre, boolean comment) {
+    public void writeToHeaderToggle (boolean file, boolean title, boolean album, boolean  artist, boolean year, boolean genre, boolean comment) {
         char boolTranslate;
-        boolean boolArray[] = {album, artist, year, genre, comment};
+        boolean boolArray[] = {file, title, album, artist, year, genre, comment};
         BufferedWriter bw = null;
 
         try {
             bw = new BufferedWriter(new FileWriter("headerToggle.txt"));
 
-            for (int i = 0; i < 5; ++i) {
+            for (int i = 0; i < numColumns; ++i) {
                 if (boolArray[i]) {
                     boolTranslate = '1';
                 }
@@ -1074,10 +1123,10 @@ public class MusicPlayerGUI {
         if(table.getRowCount() != 0) {
             int toggle = 0;
             if(check){
-                toggle = 250;
+                toggle = 220;
             }
 
-            for(int i = 2; i < table.getColumnCount(); i++){
+            for(int i = 0; i < table.getColumnCount(); i++){
                 if(column.equals(table.getColumnName(i))){
                     System.out.println(table.getValueAt(0,4));
                     table.getColumnModel().getColumn(i).setMinWidth(toggle);
@@ -1943,6 +1992,16 @@ public class MusicPlayerGUI {
             main.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         }
         main.setVisible(true);
+    }
+
+    public void redrawColumns() {
+        toggleColumn(table, "FILE", filePop.getState());
+        toggleColumn(table, "TITLE", titlePop.getState());
+        toggleColumn(table, "ALBUM", albumPop.getState());
+        toggleColumn(table, "ARTIST", artistPop.getState());
+        toggleColumn(table, "YEAR", yearPop.getState());
+        toggleColumn(table, "GENRE", genrePop.getState());
+        toggleColumn(table, "COMMENT", commentPop.getState());
     }
 
 
