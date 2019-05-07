@@ -330,7 +330,7 @@ public class MusicPlayerGUI {
         //column = table.getColumnModel().getColumn(1);
         //column.setPreferredWidth(200);
 
-        if(!isWindow) {
+
             header = table.getTableHeader();
             createHeader();
             header.setComponentPopupMenu(popupHeader);
@@ -338,7 +338,7 @@ public class MusicPlayerGUI {
 
             //Get the current toggle state of the columns and draw it
             redrawColumns(table);
-        }
+
 
         //hideAllCol(table);
         currentTable = table;

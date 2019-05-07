@@ -8,25 +8,14 @@
   <component name="ChangeListManager">
     <list default="true" id="c7cf20bc-a9aa-4f5c-9fca-4256dc55e87f" name="Default Changelist" comment="Refreshing .gitignore">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SongsDB/log/log.ctrl" beforeDir="false" afterPath="$PROJECT_DIR$/SongsDB/log/log.ctrl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SongsDB/log/log1.dat" beforeDir="false" afterPath="$PROJECT_DIR$/SongsDB/log/log1.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SongsDB/log/logmirror.ctrl" beforeDir="false" afterPath="$PROJECT_DIR$/SongsDB/log/logmirror.ctrl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SongsDB/seg0/c490.dat" beforeDir="false" afterPath="$PROJECT_DIR$/SongsDB/seg0/c490.dat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/derby.log" beforeDir="false" afterPath="$PROJECT_DIR$/derby.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javaMP/KDA_POPSTARS_INSTRUMENTAL_320kbps.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/javaMP/KDA_POPSTARS_INSTRUMENTAL_320kbps.mp3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/MusicPlayer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MusicPlayer/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/MusicPlayer/derby.log" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MusicPlayer/derby.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MusicPlayer/javaMP/KDA_POPSTARS_INSTRUMENTAL_320kbps.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MusicPlayer/javaMP/KDA_POPSTARS_INSTRUMENTAL_320kbps.mp3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/playlistDB/db.lck" beforeDir="false" afterPath="$PROJECT_DIR$/playlistDB/db.lck" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/playlistDB/log/log.ctrl" beforeDir="false" afterPath="$PROJECT_DIR$/playlistDB/log/log.ctrl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/playlistDB/log/log1.dat" beforeDir="false" afterPath="$PROJECT_DIR$/playlistDB/log/log1.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/playlistDB/log/logmirror.ctrl" beforeDir="false" afterPath="$PROJECT_DIR$/playlistDB/log/logmirror.ctrl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/playlistDB/seg0/c490.dat" beforeDir="false" afterPath="$PROJECT_DIR$/playlistDB/seg0/c490.dat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/recentSongDB/db.lck" beforeDir="false" afterPath="$PROJECT_DIR$/recentSongDB/db.lck" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/recentSongDB/log/log.ctrl" beforeDir="false" afterPath="$PROJECT_DIR$/recentSongDB/log/log.ctrl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/recentSongDB/log/log1.dat" beforeDir="false" afterPath="$PROJECT_DIR$/recentSongDB/log/log1.dat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/recentSongDB/log/logmirror.ctrl" beforeDir="false" afterPath="$PROJECT_DIR$/recentSongDB/log/logmirror.ctrl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recentSongDB/seg0/c490.dat" beforeDir="false" afterPath="$PROJECT_DIR$/recentSongDB/seg0/c490.dat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MusicPlayerGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MusicPlayerGUI.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -56,8 +45,24 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/MusicPlayerGUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="352">
-              <caret line="1530" column="47" lean-forward="true" selection-start-line="1530" selection-start-column="47" selection-end-line="1530" selection-end-column="47" />
+            <state relative-caret-position="11">
+              <caret line="1058" selection-start-line="1058" selection-end-line="1058" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#39854#41082#0" expanded="true" />
+                <element signature="e#41081#41082#0" expanded="true" />
+                <element signature="e#50975#50976#0" expanded="true" />
+                <element signature="e#51010#51011#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/AppData/Local/Temp/tmpC5EA.tmp.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="522">
+              <caret line="92" column="26" selection-start-line="92" selection-start-column="26" selection-end-line="92" selection-end-column="26" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -68,7 +73,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Database.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="352">
+            <state relative-caret-position="2907">
               <caret line="177" column="40" selection-start-line="177" selection-start-column="40" selection-end-line="177" selection-end-column="40" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -190,8 +195,7 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="390" />
-    <option name="y" value="-20" />
+    <option name="x" value="10" />
     <option name="width" value="1370" />
     <option name="height" value="1030" />
   </component>
@@ -364,7 +368,7 @@
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49919224" visible="true" weight="0.23154363" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49919224" weight="0.23489933" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -373,8 +377,8 @@
       <window_info id="Favorites" order="6" sideWeight="0.50080776" side_tool="true" weight="0.18710022" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.4986577" weight="0.32719547" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4717484" weight="0.30311614" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39761648" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4717484" weight="0.30878186" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3895184" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.4986577" weight="0.32827735" />
@@ -391,6 +395,34 @@
       <window_info anchor="right" id="Palette&#9;" order="6" />
       <window_info anchor="right" id="Ant Build" order="7" weight="0.24946696" />
     </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49919224" visible="true" weight="0.23489933" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" sideWeight="0.50080776" side_tool="true" weight="0.18710022" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.4986577" weight="0.32719547" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4717484" weight="0.30924857" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.3895184" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.4986577" weight="0.32827735" />
+      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49731544" weight="0.32827735" />
+      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5282516" side_tool="true" weight="0.34127843" />
+      <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.4966443" weight="0.32827735" />
+      <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.4818792" weight="0.32936078" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Maven" order="1" weight="0.3295302" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Theme Preview" order="4" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="right" id="Palette&#9;" order="6" />
+      <window_info anchor="right" id="Ant Build" order="7" weight="0.24946696" />
+    </layout-to-restore>
   </component>
   <component name="Vcs.Log.History.Properties">
     <option name="COLUMN_ORDER">
@@ -410,6 +442,18 @@
     <MESSAGE value="Changed the delete method to just delete the current selected file on the table." />
     <MESSAGE value="Refreshing .gitignore" />
     <option name="LAST_COMMIT_MESSAGE" value="Refreshing .gitignore" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/MusicPlayerGUI.java</url>
+          <line>2022</line>
+          <properties />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -523,10 +567,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Song.java">
+    <entry file="file://$PROJECT_DIR$/src/Database.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
+        <state relative-caret-position="2907">
+          <caret line="177" column="40" selection-start-line="177" selection-start-column="40" selection-end-line="177" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -540,10 +587,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Database.java">
+    <entry file="file://$PROJECT_DIR$/src/Song.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="177" column="40" selection-start-line="177" selection-start-column="40" selection-end-line="177" selection-end-column="40" />
+        <state relative-caret-position="136">
+          <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/tmpC5EA.tmp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="522">
+          <caret line="92" column="26" selection-start-line="92" selection-start-column="26" selection-end-line="92" selection-end-column="26" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -552,10 +606,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/MusicPlayerGUI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="1530" column="47" lean-forward="true" selection-start-line="1530" selection-start-column="47" selection-end-line="1530" selection-end-column="47" />
+        <state relative-caret-position="11">
+          <caret line="1058" selection-start-line="1058" selection-end-line="1058" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#39854#41082#0" expanded="true" />
+            <element signature="e#41081#41082#0" expanded="true" />
+            <element signature="e#50975#50976#0" expanded="true" />
+            <element signature="e#51010#51011#0" expanded="true" />
           </folding>
         </state>
       </provider>

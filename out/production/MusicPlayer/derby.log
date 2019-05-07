@@ -1,6 +1,6 @@
 ----------------------------------------------------------------
-Mon May 06 21:36:26 PDT 2019:
-Booting Derby version The Apache Software Foundation - Apache Derby - 10.15.1.3 - (1853019): instance a816c00e-016a-9094-1b43-00000f47ba98 
+Tue May 07 14:00:33 PDT 2019:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.15.1.3 - (1853019): instance a816c00e-016a-9419-17e4-00000f184090 
 on database directory C:\Users\Marcus Chiu\Documents\CSULB\Spring 2019\CECS 543\MyTunes Project\musicPlayer\SongsDB with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@77556fd 
 Loaded from file:/C:/Users/Marcus%20Chiu/Documents/CSULB/Spring%202019/CECS%20543/MyTunes%20Project/musicPlayer/jar%20files/derby.jar
 java.vendor=Oracle Corporation
@@ -12,8 +12,8 @@ os.version=10.0
 derby.system.home=null
 Database Class Loader started - derby.database.classpath=''
 ----------------------------------------------------------------
-Mon May 06 21:36:27 PDT 2019:
-Booting Derby version The Apache Software Foundation - Apache Derby - 10.15.1.3 - (1853019): instance a02ac013-016a-9094-1b43-00000f47ba98 
+Tue May 07 14:00:34 PDT 2019:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.15.1.3 - (1853019): instance a02ac013-016a-9419-17e4-00000f184090 
 on database directory C:\Users\Marcus Chiu\Documents\CSULB\Spring 2019\CECS 543\MyTunes Project\musicPlayer\playlistDB with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@77556fd 
 Loaded from file:/C:/Users/Marcus%20Chiu/Documents/CSULB/Spring%202019/CECS%20543/MyTunes%20Project/musicPlayer/jar%20files/derby.jar
 java.vendor=Oracle Corporation
@@ -25,8 +25,8 @@ os.version=10.0
 derby.system.home=null
 Database Class Loader started - derby.database.classpath=''
 ----------------------------------------------------------------
-Mon May 06 21:36:27 PDT 2019:
-Booting Derby version The Apache Software Foundation - Apache Derby - 10.15.1.3 - (1853019): instance b8450018-016a-9094-1b43-00000f47ba98 
+Tue May 07 14:00:34 PDT 2019:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.15.1.3 - (1853019): instance b8450018-016a-9419-17e4-00000f184090 
 on database directory C:\Users\Marcus Chiu\Documents\CSULB\Spring 2019\CECS 543\MyTunes Project\musicPlayer\recentSongDB with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@77556fd 
 Loaded from file:/C:/Users/Marcus%20Chiu/Documents/CSULB/Spring%202019/CECS%20543/MyTunes%20Project/musicPlayer/jar%20files/derby.jar
 java.vendor=Oracle Corporation
@@ -37,6 +37,3 @@ os.arch=amd64
 os.version=10.0
 derby.system.home=null
 Database Class Loader started - derby.database.classpath=''
-----------------------------------------------------------------
-Mon May 06 21:37:00 PDT 2019:
-Shutting down instance a816c00e-016a-9094-1b43-00000f47ba98 on database directory C:\Users\Marcus Chiu\Documents\CSULB\Spring 2019\CECS 543\MyTunes Project\musicPlayer\SongsDB with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@77556fd 
