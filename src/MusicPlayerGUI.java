@@ -335,12 +335,9 @@ public class MusicPlayerGUI {
             createHeader();
             header.setComponentPopupMenu(popupHeader);
             table.setTableHeader(header);
-        }
-        else {
-            header = plTable.getTableHeader();
-            createHeader();
-            header.setComponentPopupMenu(popupHeader);
-            plTable.setTableHeader(header);
+
+            //Get the current toggle state of the columns and draw it
+            redrawColumns(table);
         }
 
         //hideAllCol(table);
@@ -351,9 +348,6 @@ public class MusicPlayerGUI {
         table.getInputMap(JTable.WHEN_ANCESTOR_OF_FOCUSED_COMPONENT).put(rightKey, "ArrowKeys");
 
         createTree();
-
-        //Get the current toggle state of the columns and draw it
-        redrawColumns();
     }
 
     public void displayLibraryTable(){
@@ -382,11 +376,12 @@ public class MusicPlayerGUI {
         plTable.getInputMap(JTable.WHEN_ANCESTOR_OF_FOCUSED_COMPONENT).put(rightKey, "ArrowKeys");
         header = plTable.getTableHeader();
         createHeader();
-        //header.setComponentPopupMenu(popupHeader);
+        header.setComponentPopupMenu(popupHeader);
         plTable.setTableHeader(header);
         //hideAllCol(table);
 
         //stopFileCol(plTable);
+        redrawColumns(plTable);
 
 
         Dimension minimumSize = new Dimension(100, 50);
@@ -1049,7 +1044,7 @@ public class MusicPlayerGUI {
                         table.setModel(library.sortData(order));
 
                         //Get the current toggle state of the columns and draw it
-                        redrawColumns();
+                        redrawColumns(table);
                     }
                 }
             });
@@ -1080,6 +1075,8 @@ public class MusicPlayerGUI {
 
                         sorter.setSortKeys(sortKeys);
                         sorter.sort();
+
+                        redrawColumns(plTable);
                     }
                 }
             });
@@ -1513,6 +1510,15 @@ public class MusicPlayerGUI {
                         popupLibraryMenu.add(deleteFilepop);
                         popupLibraryMenu.add(addToPlaylist);
 
+                        header = table.getTableHeader();
+                        createHeader();
+                        header.setComponentPopupMenu(popupHeader);
+                        table.setTableHeader(header);
+                        //hideAllCol(table);
+
+                        //stopFileCol(plTable);
+                        redrawColumns(table);
+
                         table.setComponentPopupMenu(popupLibraryMenu);
                         scrollPane.setViewportView(table);
                         //currentTable = table;
@@ -1526,7 +1532,11 @@ public class MusicPlayerGUI {
                         popupLibraryMenu.remove(addToPlaylist);
                         popupLibraryMenu.remove(newFilepop);
                         plTable.setComponentPopupMenu(popupLibraryMenu);
-                        //stopFileCol(plTable);
+                        header = plTable.getTableHeader();
+                        createHeader();
+                        header.setComponentPopupMenu(popupHeader);
+                        plTable.setTableHeader(header);
+                        redrawColumns(plTable);
                         scrollPane.setViewportView(plTable);
                         //currentTable = plTable;
                         createHeader();
@@ -1994,7 +2004,7 @@ public class MusicPlayerGUI {
         main.setVisible(true);
     }
 
-    public void redrawColumns() {
+    public void redrawColumns(JTable table) {
         toggleColumn(table, "FILE", filePop.getState());
         toggleColumn(table, "TITLE", titlePop.getState());
         toggleColumn(table, "ALBUM", albumPop.getState());
