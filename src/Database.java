@@ -155,14 +155,20 @@ public class Database {
     }
 
     //This is a method used for the GUI. This is relaying the information back for the table to use.
-    protected static DefaultTableModel buildSongsTable()
+    protected static DefaultTableModel buildSongsTable(int order)
     {
         Vector<Vector<Object>> output = new Vector<Vector<Object>>();
         Vector<String> columnNames = new Vector<String>();
         try
         {
+
+            ResultSet results;
             stmt = conn.createStatement();
-            ResultSet results = stmt.executeQuery("select * from " + tableName);
+            if(order == 0) {
+                results = stmt.executeQuery("select * from " + tableName + " Order by Title desc");
+            } else {
+                results = stmt.executeQuery("select * from " + tableName + " Order by Title asc");
+            }
             ResultSetMetaData rsmd = results.getMetaData();
             int numberCols = rsmd.getColumnCount();
             for (int i=1; i<=numberCols; i++)
@@ -203,9 +209,6 @@ public class Database {
         }
     }
 
-    protected static void sortSongs(){
-
-    }
 
     protected static void shutdown()
     {

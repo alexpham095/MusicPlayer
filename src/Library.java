@@ -7,8 +7,8 @@ public class Library {
         data = database;
     }
 
-    protected DefaultTableModel buildSongsTable(){
-        return data.buildSongsTable();
+    protected DefaultTableModel buildSongsTable(int order){
+        return data.buildSongsTable(order);
     }
 
     protected void shutdown(){

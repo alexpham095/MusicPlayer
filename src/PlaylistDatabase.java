@@ -49,7 +49,7 @@ public class PlaylistDatabase {
         try
         {
             stmt = conn.createStatement();
-            stmt.execute("CREATE TABLE " + tableName + " (Playlist CHAR(150), " + "SongPaths CLOB(1999999999)" + ")");
+            stmt.execute("CREATE TABLE " + tableName + " (Playlist CHAR(150), " + "SongPaths CLOB(1999999999), " + "Sorting CHAR(1)" +")");
             stmt.close();
         }
         catch (SQLException sqlExcept)
@@ -111,9 +111,10 @@ public class PlaylistDatabase {
 
             //insert the playlist
             if (count == 0) {
-                statement = conn.prepareStatement("INSERT INTO " + tableName + " values (?,?)");
+                statement = conn.prepareStatement("INSERT INTO " + tableName + " values (?,?,?)");
                 statement.setString(1, name);
                 statement.setString(2, songPaths);
+                statement.setString(3, "3");
                 statement.executeUpdate();
                 return true;
             } else {
@@ -237,6 +238,55 @@ public class PlaylistDatabase {
         }
         return songPaths;
     }
+
+    protected static String changeSort(String name){
+        String sort= "";
+        try
+        {
+            String queryCheck = "SELECT SORTING from PLAYLISTS WHERE Playlist = ?";
+            PreparedStatement statement = conn.prepareStatement(queryCheck);
+            statement.setString(1, name);
+            ResultSet rs = statement.executeQuery();
+
+            if(rs.next()){
+                sort = rs.getString(1);
+            }
+            statement = conn.prepareStatement("UPDATE PLAYLISTS set SORTING = ? WHERE Playlist = ?");
+            if(sort.equals("0")) {
+                sort = "1";
+                statement.setString(1, sort);
+            } else {
+                sort = "0";
+                statement.setString(1, sort);
+            }
+            statement.setString(2, name);
+            statement.executeUpdate();
+        }
+        catch (SQLException sqlExcept) {
+            sqlExcept.printStackTrace();
+        }
+        return sort;
+    }
+
+    protected static String getSort(String name){
+        String sort= "";
+        try
+        {
+            String queryCheck = "SELECT SORTING from PLAYLISTS WHERE Playlist = ?";
+            PreparedStatement statement = conn.prepareStatement(queryCheck);
+            statement.setString(1, name);
+            ResultSet rs = statement.executeQuery();
+
+            if(rs.next()){
+                sort = rs.getString(1);
+            }
+        }
+        catch (SQLException sqlExcept) {
+            sqlExcept.printStackTrace();
+        }
+        return sort;
+    }
+
 
     protected static void shutdown()
     {
