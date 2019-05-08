@@ -613,8 +613,9 @@ public class MusicPlayerGUI {
                     if(library.insertSong(dialog.getSelectedFile().getAbsolutePath()) == false && !isPlaylist){
                         JOptionPane.showMessageDialog(musicPanel, "Song already exists", "Error", JOptionPane.ERROR_MESSAGE);
                     }
-                    table.setModel(library.buildSongsTable(order)); //refresh table
                     redrawColumns(table);
+                    table.setModel(library.buildSongsTable(order)); //refresh table
+
                     //stopFileCol(table);
                     //hideAllCol(table);
 
@@ -2032,6 +2033,7 @@ public class MusicPlayerGUI {
                     //playlistModel.setRowCount(songNameList.size());
                     for (int col = 0; col < original.getColumnCount(); col++) {
                         //playlistModel.setValueAt(original.getValueAt(modelRow, col), i, col);
+                        System.out.println(original.getValueAt(modelRow, col).toString());
                         data.get(i).add(original.getValueAt(modelRow, col).toString());
                     }
                 }
