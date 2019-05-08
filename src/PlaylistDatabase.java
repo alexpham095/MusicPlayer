@@ -139,7 +139,6 @@ public class PlaylistDatabase {
             ResultSet rs = statement.executeQuery();
 
             if (rs.next()) {
-                System.out.println(rs.getString(1));
                 if(!rs.getString(1).trim().equals("empty")) {
                     songPath = rs.getString(1).trim();
                     songPath = songPath + ", " + songPathToAdd;
@@ -171,13 +170,11 @@ public class PlaylistDatabase {
             ResultSet rs = statement.executeQuery();
 
             if (rs.next()) {
-                System.out.println(rs.getString(1));
                 if(!rs.getString(1).trim().equals("empty")) {
                     index = rs.getString(1).trim();
                     String[] indexes = index.split("\\s*,\\s");
 
                     for(int i = 0; i < indexes.length; i++){
-                        System.out.println(indexes[i]);
                         if(!indexes[i].equals(songPath)){
                             if(!indexVal.equals("")) {
                                 indexVal = indexVal + ", " + indexes[i];

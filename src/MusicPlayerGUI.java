@@ -167,20 +167,15 @@ public class MusicPlayerGUI {
                 int curVal = (int) currentValue;
                 //Task task = new Task(progressBar,mainGUI);
                 //task.execute();
-                System.out.println(curVal);
                 progressBar.setValue(curVal);
 
 
                 passedTimeText.setText(timeLapsed);
                 remainTimeText.setText(duration);
-                if(songLength == songTime) {
-                    System.out.println(songTime);
-                }
             }
 
             @Override
             public void stateUpdated(BasicPlayerEvent event) {
-                System.out.println("State Updated: " + event.toString());
                 if (event.getCode() == BasicPlayerEvent.STOPPED && !manuallyClicked && !isRepeating) {
                     if(!isShuffled) {
                         if (!isPlaylist) {
@@ -395,7 +390,6 @@ public class MusicPlayerGUI {
         plTable.getInputMap(JTable.WHEN_ANCESTOR_OF_FOCUSED_COMPONENT).put(leftKey, "ArrowKeys");
         plTable.getInputMap(JTable.WHEN_ANCESTOR_OF_FOCUSED_COMPONENT).put(rightKey, "ArrowKeys");
         header = plTable.getTableHeader();
-        createHeader();
         header.setComponentPopupMenu(popupHeader);
         plTable.setTableHeader(header);
 
@@ -1055,7 +1049,6 @@ public class MusicPlayerGUI {
         } else {
            // if(!isWindow) {
                 plTable.getTableHeader().addMouseListener(new MouseAdapter() {
-
                     @Override
                     public void mouseClicked(MouseEvent e) {
                         int column = plTable.columnAtPoint(e.getPoint());
@@ -1134,7 +1127,7 @@ public class MusicPlayerGUI {
             }
 
             for(int i = 0; i < table.getColumnCount(); i++){
-                //System.out.println(table.getColumnName(i));
+
                 if(column.equals(table.getColumnName(i))){
                     table.getColumnModel().getColumn(i).setMinWidth(toggle);
                     table.getColumnModel().getColumn(i).setMaxWidth(toggle);
@@ -1570,10 +1563,6 @@ public class MusicPlayerGUI {
                         popupLibraryMenu.remove(addToPlaylist);
                         popupLibraryMenu.remove(newFilepop);
                         plTable.setComponentPopupMenu(popupLibraryMenu);
-                        header = plTable.getTableHeader();
-                        createHeader();
-                        header.setComponentPopupMenu(popupHeader);
-                        plTable.setTableHeader(header);
                         redrawColumns(plTable);
                         String sorting = playDB.getSort(playlistName);
                         sortPlaylist(sorting);
@@ -2015,7 +2004,6 @@ public class MusicPlayerGUI {
                     //playlistModel.setRowCount(songNameList.size());
                     for (int col = 0; col < original.getColumnCount(); col++) {
                         //playlistModel.setValueAt(original.getValueAt(modelRow, col), i, col);
-                        System.out.println(original.getValueAt(modelRow, col).toString());
                         data.get(i).add(original.getValueAt(modelRow, col).toString());
                     }
                 }
@@ -2036,7 +2024,6 @@ public class MusicPlayerGUI {
                 plTable.setComponentPopupMenu(popupLibraryMenu);
                 redrawColumns(plTable);
 
-                //System.out.println(plTable.getColumnName(0));
                 plTable.setDragEnabled(true);
                 mouseListenerpop = new MouseAdapter() {
                     //this will print the selected row index when a user clicks the table
