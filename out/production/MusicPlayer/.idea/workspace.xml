@@ -34,8 +34,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/MusicPlayerGUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="1176" column="61" lean-forward="true" selection-start-line="1176" selection-start-column="61" selection-end-line="1176" selection-end-column="61" />
+            <state relative-caret-position="310">
+              <caret line="682" column="60" lean-forward="true" selection-start-line="682" selection-start-column="60" selection-end-line="682" selection-end-column="60" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#22674#22675#0" expanded="true" />
@@ -50,20 +50,8 @@
                 <element signature="e#32358#32359#0" expanded="true" />
                 <element signature="e#32514#32515#0" expanded="true" />
                 <element signature="e#32572#32573#0" expanded="true" />
-                <element signature="e#39723#40418#0" expanded="true" />
-                <element signature="e#40417#40418#0" expanded="true" />
-                <element signature="e#40560#41797#0" expanded="true" />
-                <element signature="e#41796#41797#0" expanded="true" />
-                <element signature="e#50630#50631#0" expanded="true" />
-                <element signature="e#50685#50686#0" expanded="true" />
-                <element signature="e#52775#53106#0" expanded="true" />
-                <element signature="e#53105#53106#0" expanded="true" />
-                <element signature="e#53101#53102#0" expanded="true" />
-                <element signature="e#53136#53137#0" expanded="true" />
-                <element signature="e#60068#62440#0" expanded="true" />
-                <element signature="e#62439#62440#0" expanded="true" />
-                <element signature="e#83992#84375#0" expanded="true" />
-                <element signature="e#84374#84375#0" expanded="true" />
+                <element signature="e#40560#40984#0" expanded="true" />
+                <element signature="e#40983#40984#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -72,7 +60,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/PlaylistDatabase.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="341">
+            <state relative-caret-position="4709">
               <caret line="284" column="34" selection-start-line="284" selection-start-column="34" selection-end-line="284" selection-end-column="34" />
             </state>
           </provider>
@@ -81,7 +69,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Database.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="310">
+            <state relative-caret-position="2754">
               <caret line="168" column="20" selection-start-line="168" selection-start-column="20" selection-end-line="168" selection-end-column="20" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -93,13 +81,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Library.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
+            <state relative-caret-position="238">
               <caret line="24" selection-start-line="24" selection-end-line="24" />
               <folding>
                 <element signature="e#125#126#0" expanded="true" />
                 <element signature="e#156#157#0" expanded="true" />
-                <element signature="e#208#209#0" expanded="true" />
-                <element signature="e#255#256#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -125,11 +111,9 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>plTable</find>
       <find>system.out.println</find>
       <find>setView</find>
       <find>writeToHEader</find>
-      <find>insertSong</find>
       <find>insert</find>
       <find>.add(Progress</find>
       <find>.add(progress</find>
@@ -153,8 +137,10 @@
       <find>buildSongs</find>
       <find>setviewportView(plTable)</find>
       <find>setViewportVIew(plTable</find>
-      <find>sort</find>
       <find>sortPlaylist</find>
+      <find>insertSong</find>
+      <find>sort</find>
+      <find>sortkeys</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -241,7 +227,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -258,10 +243,11 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1557339608707" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1557342854136" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
@@ -397,7 +383,7 @@
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49919224" visible="true" weight="0.23667377" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49919224" visible="true" weight="0.23933902" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -452,6 +438,12 @@
           <line>612</line>
           <properties />
           <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/MusicPlayerGUI.java</url>
+          <line>1586</line>
+          <properties />
+          <option name="timeStamp" value="22" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -574,18 +566,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-11.0.1/lib/src.zip!/java.desktop/javax/swing/table/DefaultTableColumnModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="294" selection-start-line="294" selection-end-line="294" />
-          <folding>
-            <element signature="e#10096#10097#0" expanded="true" />
-            <element signature="e#23897#23898#0" expanded="true" />
-            <element signature="e#23942#23943#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ProgressPanel.java" />
     <entry file="jar://$PROJECT_DIR$/jar files/basicplayer3.0.jar!/javazoom/jlgui/basicplayer/BasicPlayer.class">
       <provider selected="true" editor-type-id="text-editor">
@@ -594,29 +574,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Song.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Library.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="24" selection-start-line="24" selection-end-line="24" />
-          <folding>
-            <element signature="e#125#126#0" expanded="true" />
-            <element signature="e#156#157#0" expanded="true" />
-            <element signature="e#208#209#0" expanded="true" />
-            <element signature="e#255#256#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/librarySortOrder">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/librarySortOrder" />
     <entry file="file://$PROJECT_DIR$/headerToggle.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -638,9 +596,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/PlaylistDatabase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4709">
+          <caret line="284" column="34" selection-start-line="284" selection-start-column="34" selection-end-line="284" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Database.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="310">
+        <state relative-caret-position="2754">
           <caret line="168" column="20" selection-start-line="168" selection-start-column="20" selection-end-line="168" selection-end-column="20" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -648,17 +613,40 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/PlaylistDatabase.java">
+    <entry file="file://$PROJECT_DIR$/src/Library.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="341">
-          <caret line="284" column="34" selection-start-line="284" selection-start-column="34" selection-end-line="284" selection-end-column="34" />
+        <state relative-caret-position="238">
+          <caret line="24" selection-start-line="24" selection-end-line="24" />
+          <folding>
+            <element signature="e#125#126#0" expanded="true" />
+            <element signature="e#156#157#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Song.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-11.0.1/lib/src.zip!/java.desktop/javax/swing/table/DefaultTableColumnModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="206">
+          <caret line="294" selection-start-line="294" selection-end-line="294" />
+          <folding>
+            <element signature="e#10096#10097#0" expanded="true" />
+            <element signature="e#23897#23898#0" expanded="true" />
+            <element signature="e#23942#23943#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/MusicPlayerGUI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="1176" column="61" lean-forward="true" selection-start-line="1176" selection-start-column="61" selection-end-line="1176" selection-end-column="61" />
+        <state relative-caret-position="310">
+          <caret line="682" column="60" lean-forward="true" selection-start-line="682" selection-start-column="60" selection-end-line="682" selection-end-column="60" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#22674#22675#0" expanded="true" />
@@ -673,20 +661,8 @@
             <element signature="e#32358#32359#0" expanded="true" />
             <element signature="e#32514#32515#0" expanded="true" />
             <element signature="e#32572#32573#0" expanded="true" />
-            <element signature="e#39723#40418#0" expanded="true" />
-            <element signature="e#40417#40418#0" expanded="true" />
-            <element signature="e#40560#41797#0" expanded="true" />
-            <element signature="e#41796#41797#0" expanded="true" />
-            <element signature="e#50630#50631#0" expanded="true" />
-            <element signature="e#50685#50686#0" expanded="true" />
-            <element signature="e#52775#53106#0" expanded="true" />
-            <element signature="e#53105#53106#0" expanded="true" />
-            <element signature="e#53101#53102#0" expanded="true" />
-            <element signature="e#53136#53137#0" expanded="true" />
-            <element signature="e#60068#62440#0" expanded="true" />
-            <element signature="e#62439#62440#0" expanded="true" />
-            <element signature="e#83992#84375#0" expanded="true" />
-            <element signature="e#84374#84375#0" expanded="true" />
+            <element signature="e#40560#40984#0" expanded="true" />
+            <element signature="e#40983#40984#0" expanded="true" />
           </folding>
         </state>
       </provider>

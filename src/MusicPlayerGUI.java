@@ -361,7 +361,6 @@ public class MusicPlayerGUI {
         }
 
 
-        //hideAllCol(table);
         currentTable = table;
         KeyStroke leftKey = KeyStroke.getKeyStroke(KeyEvent.VK_LEFT, KeyEvent.CTRL_DOWN_MASK);
         KeyStroke rightKey = KeyStroke.getKeyStroke(KeyEvent.VK_RIGHT, KeyEvent.CTRL_DOWN_MASK);
@@ -401,39 +400,13 @@ public class MusicPlayerGUI {
         plTable.setTableHeader(header);
 
         redrawColumns(plTable);
+        currentTable = plTable;
 
 
         Dimension minimumSize = new Dimension(100, 50);
         scrollPane.setMinimumSize(minimumSize);
     }
 
-    public void stopFileCol(JTable table){
-        if(table.getRowCount() != 0) {
-            table.getColumnModel().getColumn(0).setMinWidth(0);
-            table.getColumnModel().getColumn(0).setMaxWidth(0);
-        }
-    }
-
-    public void hideAllCol(JTable table){
-        JCheckBoxMenuItem[] activeCol = {filePop, titlePop, albumPop, artistPop, yearPop, genrePop, commentPop};
-        if(table.getRowCount() == 0){
-            {
-                for (int i = 2; i < table.getColumnCount(); i++) {
-                    table.getColumnModel().getColumn(i).setMinWidth(0);
-                    table.getColumnModel().getColumn(i).setMaxWidth(0);
-                }
-            }
-        }else {
-
-            for (int i = 0; i < activeCol.length; i++) {
-                toggleColumn(table, activeCol[i].getText(), activeCol[i].getState());
-                //table.getColumnModel().getColumn(i).setMinWidth(0);
-                //table.getColumnModel().getColumn(i).setMaxWidth(0);
-            }
-            table.getTableHeader().repaint();
-        }
-
-    }
 
     //create the tree for the side panel
     public void createTree(){
@@ -652,6 +625,8 @@ public class MusicPlayerGUI {
                         if(!playlistContains) {
                             playDB.addSong(playlistName, selectedPath);
                             populatePlaylist(playlistName);
+                            currentTable = plTable;
+                            redrawColumns(plTable);
                         }
                         scrollPane.setViewportView(plTable);
                         //stopFileCol(plTable);
@@ -688,6 +663,7 @@ public class MusicPlayerGUI {
                         //delete from the playlist, song does not exist in the library anymore.
                         playDB.deleteSong(name, selectedPath);
                         temp.populatePlaylist(name);
+                        currentTable = temp.plTable;
                         temp.scrollPane.setViewportView(temp.plTable);
                         //stopFileCol(plTable);
 
@@ -712,6 +688,8 @@ public class MusicPlayerGUI {
                     }
                     playDB.deleteSong(playlistName, selectedPath);
                     populatePlaylist(playlistName);
+                    currentTable = plTable;
+                    redrawColumns(plTable);
                     scrollPane.setViewportView(plTable);
                     //stopFileCol(plTable);
                 }
@@ -1002,7 +980,6 @@ public class MusicPlayerGUI {
             @Override
             public void actionPerformed(ActionEvent e) {
                 toggleColumn(currentTable, "ALBUM", albumPop.getState());
-
                 //Update the columns base on the boolean of each column
                 writeToHeaderToggle (filePop.getState(), titlePop.getState(), albumPop.getState(), artistPop.getState(), yearPop.getState(), genrePop.getState(), commentPop.getState());
 
@@ -1159,13 +1136,11 @@ public class MusicPlayerGUI {
             for(int i = 0; i < table.getColumnCount(); i++){
                 //System.out.println(table.getColumnName(i));
                 if(column.equals(table.getColumnName(i))){
-                    //System.out.println(table.getValueAt(0,4));
                     table.getColumnModel().getColumn(i).setMinWidth(toggle);
                     table.getColumnModel().getColumn(i).setMaxWidth(toggle);
                     table.getColumnModel().getColumn(i).setPreferredWidth(toggle);
                 }
             }
-            System.out.println();
             table.getTableHeader().repaint();
             table.repaint();
         }
@@ -1243,6 +1218,8 @@ public class MusicPlayerGUI {
                             if(name != null) {
                                 playDB.deleteSong(name, selectedPath);
                                 populatePlaylist(name);
+                                currentTable = plTable;
+                                redrawColumns(currentTable);
                             }
                             redrawColumns(table);
                         }
@@ -1265,7 +1242,9 @@ public class MusicPlayerGUI {
                             }
                             playDB.deleteSong(name, selectedPath);
                             temp.populatePlaylist(name);
+                            currentTable = temp.plTable;
                             temp.scrollPane.setViewportView(temp.plTable);
+                            redrawColumns(temp.plTable);
                             //stopFileCol(temp.plTable);
 
                         }
@@ -1293,6 +1272,7 @@ public class MusicPlayerGUI {
 
                         playDB.deleteSong(playlistName, selectedPath);
                         populatePlaylist(playlistName);
+                        redrawColumns(plTable);
                         scrollPane.setViewportView(plTable);
                        // stopFileCol(plTable);
 
@@ -1364,6 +1344,7 @@ public class MusicPlayerGUI {
                             for (int i = 0; i < windowList.size(); i++) {
                                 windowList.get(i).populatePlaylist(windowList.get(i).getName());
                                 windowList.get(i).scrollPane.setViewportView(windowList.get(i).plTable);
+                                redrawColumns(windowList.get(i).plTable);
                                // stopFileCol(windowList.get(i).plTable);
                             }
                         }
@@ -1964,6 +1945,7 @@ public class MusicPlayerGUI {
             populatePlaylist(playlistName);
         }
         scrollPane.setViewportView(plTable);
+        redrawColumns(plTable);
         //stopFileCol(plTable);
 
         table.setModel(library.buildSongsTable(order)); //refresh table
@@ -2046,6 +2028,14 @@ public class MusicPlayerGUI {
                 }
                 DefaultTableModel playlistModel = new DefaultTableModel(dataArray ,colNames);
                 plTable = new JTable(playlistModel);
+                currentTable = plTable;
+                header = plTable.getTableHeader();
+                createHeader();
+                header.setComponentPopupMenu(popupHeader);
+                plTable.setTableHeader(header);
+                plTable.setComponentPopupMenu(popupLibraryMenu);
+                redrawColumns(plTable);
+
                 //System.out.println(plTable.getColumnName(0));
                 plTable.setDragEnabled(true);
                 mouseListenerpop = new MouseAdapter() {
