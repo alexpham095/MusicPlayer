@@ -12,6 +12,7 @@ import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
 import java.io.File;
 import java.io.IOException;
+import java.lang.reflect.Array;
 import java.util.*;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -93,12 +94,13 @@ public class MusicPlayerGUI {
     MusicPlayerGUI origin;
     int numColumns = 7;
 
+
     public MusicPlayerGUI(Library lib, PlaylistDatabase playDataB, RecentSongDatabase recentData) {
         library = lib;
         playDB = playDataB;
         recentDB = recentData;
         progressBar = new JProgressBar(0,100);
-        progressBar.setValue(0);
+        //progressBar.setValue(0);
         Dimension dim = new Dimension();
         dim.width = 1330;
         dim.height = 20;
@@ -118,7 +120,11 @@ public class MusicPlayerGUI {
         recentDB = recentData;
         player = new BasicPlayer();
         progressBar = new JProgressBar(0,100);
-        progressBar.setValue(0);
+        //progressBar.setValue(0);
+        Dimension dim = new Dimension();
+        dim.width = 1330;
+        dim.height = 20;
+        progressBar.setPreferredSize(dim);
         createBPList();
         player.addBasicPlayerListener(bpListener);
         buttonPanel = new JPanel();
@@ -135,7 +141,6 @@ public class MusicPlayerGUI {
         bpListener = new BasicPlayerListener() {
             @Override
             public void opened(Object o, Map properties) {
-                //System.out.println("opened : "+properties.toString());
                 songLength = (long) properties.get("duration");
                 duration = String.format("%02d:%02d:%02d",
                         TimeUnit.MICROSECONDS.toHours(songLength),
@@ -143,10 +148,7 @@ public class MusicPlayerGUI {
                                 TimeUnit.HOURS.toMinutes(TimeUnit.MICROSECONDS.toHours(songLength)),
                         TimeUnit.MICROSECONDS.toSeconds(songLength) -
                                 TimeUnit.MINUTES.toSeconds(TimeUnit.MICROSECONDS.toMinutes(songLength)));
-                progressBar.setMaximum((int)songLength);
                 remainTimeText.setText(duration);
-                //progressBar.setValue(55);
-                //progressBar.repaint();
             }
 
             @Override
@@ -170,6 +172,8 @@ public class MusicPlayerGUI {
                 int curVal = (int) currentValue;
                 //Task task = new Task(progressBar,mainGUI);
                 //task.execute();
+                System.out.println(curVal);
+                progressBar.setValue(curVal);
 
 
                 passedTimeText.setText(timeLapsed);
@@ -283,10 +287,12 @@ public class MusicPlayerGUI {
         populatePlaylist(name);
         displayPlaylistTable();
         createButtons();
+        createProgressBarPanel();
         //table.setVisible(false);
 
         main.setSize(1500,700);
         main.setJMenuBar(menuBar);
+        main.add(progressPanel, BorderLayout.NORTH);
         main.add(scrollPane, BorderLayout.CENTER);
         main.add(buttonPanel, BorderLayout.SOUTH);
         main.setLocationRelativeTo(null);
@@ -294,6 +300,7 @@ public class MusicPlayerGUI {
 
     public void createProgressBarPanel(){
         progressPanel = new JPanel();
+        progressPanel.setLayout(new BorderLayout());
         passedTimeText = new JTextField("00:00:00"){
             @Override public void setBorder(Border border) {
                 // No!
@@ -306,9 +313,9 @@ public class MusicPlayerGUI {
         };
         passedTimeText.setEditable(false);
         remainTimeText.setEditable(false);
-        progressPanel.add(passedTimeText);
-        progressPanel.add(progressBar);
-        progressPanel.add(remainTimeText);
+        progressPanel.add(passedTimeText,BorderLayout.WEST);
+        progressPanel.add(progressBar, BorderLayout.CENTER);
+        progressPanel.add(remainTimeText, BorderLayout.EAST);
     }
 
     //table creation and mouseListener.
