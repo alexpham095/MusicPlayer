@@ -393,7 +393,7 @@ public class MusicPlayerGUI {
         header.setComponentPopupMenu(popupHeader);
         plTable.setTableHeader(header);
 
-        redrawColumns(plTable);
+        //redrawColumns(plTable);
         currentTable = plTable;
 
 
